@@ -1,0 +1,332 @@
+/*
+Template Name: Bootstrap XTC
+Template URI: http://www.joomlaxtc.com
+Description: Bootstrap XTC Joomla 2.5
+Version: 1.0
+Author: Monev Software LLC
+Author URI: http://www.joomlaxtc.com
+License: #  The CSS, XHTML is released under GPL:
+         #  http://www.opensource.org/licenses/gpl-license.php 
+		 #  Graphics under exclusive license (C)2009-2010 Monev Software LLC 
+		 #  Additional CSS, PHP, and Javascripting under exclusive license (C)2009-2010 Monev Software LLC 
+	     #  http://www.joomlaxtc.com
+
+*/
+/* ----------------------------------------------*/
+/* B 00 - Body
+/* ----------------------------------------------*/
+body {background:#ffffff url('http://enote-vl.ru/templates/enterprise/images/backgrounds/wavy.png') repeat;color:#666666; }
+/* ----------------------------------------------*/
+/* B 01 - Heading,links and titles
+/* ----------------------------------------------*/
+.contentheading {color:#a50729;}
+.componentheading {color:#a50729;}
+a,input.button {color:#666666;}
+a:hover {color:#a50729 !important;}
+a:active {color:#a50729;}
+h1 {color:#a50729;}
+h2 {color:#a50729;}
+h3 {color:#333333;}
+h4 {color:#a50729;}
+h5 {color:#333333;}
+h6 {color:#333333;}
+/* ----------------------------------------------*/
+/* B 02 - Titles
+/* ----------------------------------------------*/
+h1.pagetitle{background-color: #f6f6f6;}
+.pagetitle, .pagetitle a {color:#fff; color:#a50729;}
+.pagetitle span{}
+.title {color:#a50729;}
+.title a {color:#a50729;}
+.title a:hover {color:#666666;}
+h4.title{color:#666;}
+/* ----------------------------------------------*/
+/* B 03 - Basecolor styles, used in JXTC Walls and 3rd party components
+/* ----------------------------------------------*/
+.basecolor_1 {color:#a50729;}
+.basecolor_2 {color:#393939;}
+.basecolor_2 a {color:#393939;}
+.basecolor_3 {color:#aaaaaa;}
+.basecolor_4 {color:#cccccc;}
+.basecolor_5 {color:#a50729;}
+.basecolor_6 {color:#a50729;}
+.basecolor_7 {color:#333333;}
+.basecolor_8 {color:#c6c6c6;}
+
+/* ----------------------------------------------*/
+/* L 00 - Header,logo,menu,inset,message,breadcrumb
+/* ----------------------------------------------*/
+#headerwrap{background:transparent url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') repeat-x 0 0;}
+#header{background:#fff url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') ;border-bottom:6px solid #a50729;border-left:1px solid #ebebeb; border-right:1px solid #ebebeb;}
+#logo a{background:url(http://enote-vl.ru/templates/enterprise/images/logos/eplogo-s2.png) no-repeat 0 0;height: 36px;width:143px;padding:0px;}
+#search input{-moz-box-shadow: -1px -1px 0px rgba(0,0,0,0.3), 1px 1px 0px rgba(255,255,255,0.075); -webkit-box-shadow: -1px -1px 0px rgba(0,0,0,0.3), 1px 1px 0px rgba(255,255,255,0.075); box-shadow: -1px -1px 0px rgba(0,0,0,0.3), 1px 1px 0px rgba(255,255,255,0.075);}
+/* ----------------------------------------------*/
+/* L 01 - Region 1
+/* ----------------------------------------------*/
+#region1wrap{background:transparent url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') bottom center no-repeat;}
+#region1{background:#fff url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') bottom repeat-x;border-left:1px solid #ebebeb; border-right:1px solid #ebebeb;}
+/* ----------------------------------------------*/
+/* L 02 - Region 2
+/* ----------------------------------------------*/
+#region2wrap{background:transparent url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') top center no-repeat;}
+#region2{background:#0D0D0D url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') bottom repeat-x;border-left:1px solid #ebebeb; border-right:1px solid #ebebeb;}
+/* ----------------------------------------------*/
+/* L 03 - Region 3
+/* ----------------------------------------------*/
+#region3wrap{background:transparent url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') repeat-x bottom left;}
+#region3wrapnoimg{background:transparent;}
+#region3{ background:#fff url('http://enote-vl.ru/templates/enterprise/images/backgrounds/regionsep.png') bottom repeat-x;border-left:1px solid #ebebeb; border-right:1px solid #ebebeb;}
+/* ----------------------------------------------*/
+/* L 04 - Region 4
+/* ----------------------------------------------*/
+#region4wrap{background:transparent url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') repeat-x;}
+#region4{background:#eeeeee url('http://enote-vl.ru/templates/enterprise/images/backgrounds/whitestripes-new.png') bottom repeat-x;border-bottom:5px solid #c9c9c9; border-top:1px solid #ebebeb;border-left:1px solid #ebebeb; border-right:1px solid #ebebeb;}
+/* ----------------------------------------------*/
+/* L 05 - Region 5
+/* ----------------------------------------------*/
+#region5wrap{background:transparent url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') repeat-x top left;}
+#region5{background:#fff url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') ;border-left:1px solid #ebebeb; border-right:1px solid #ebebeb;}
+/* ----------------------------------------------*/
+/* L 06 - Region 6
+/* ----------------------------------------------*/
+#region6wrap{background:transparent url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') repeat-x top left;}
+#region6{background:#fff url('http://enote-vl.ru/templates/enterprise/images/backgrounds/regionsep.png') bottom repeat-x;border-left:1px solid #ebebeb; border-right:1px solid #ebebeb;}
+/* ----------------------------------------------*/
+/* L 07 - Region 7
+/* ----------------------------------------------*/
+#region7wrap{background:transparent url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') repeat-x top left;}
+#region7{background:#fff url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') ;border-left:1px solid #ebebeb;}
+/* ----------------------------------------------*/
+/* L 08 - Region 8
+/* ----------------------------------------------*/
+#region8wrap{background:transparent url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') repeat-x top left;}
+#region8{background:#fff url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') ;border-left:1px solid #ebebeb; border-right:1px solid #ebebeb;}
+/* ----------------------------------------------*/
+/* L 09 - Region 9
+/* ----------------------------------------------*/
+#region9wrap{background:transparent url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') repeat-x top left;}
+#region9{background:#242424 url('http://enote-vl.ru/templates/enterprise/images/backgrounds/-1') ;}
+#region9 input.inputbox{background:#333!important;border:1px solid #333!important;border-left:1px solid #ebebeb; border-right:1px solid #ebebeb;}
+/* ----------------------------------------------*/
+/* L 07 - Footerwrap
+/* ----------------------------------------------*/
+#footerwrap{background:transparent;color:#222;}
+#footerpad{background:#fff;border-left:1px solid #ebebeb; border-right:1px solid #ebebeb;}
+
+/* ----------------------------------------------*/
+/* M 00 - XTC Menu
+/* ----------------------------------------------*/
+#menu {background: transparent;}
+/* Top Level */
+#header ul.menu > li > a {color:#292929; background: transparent; border-top:0.1px solid transparent;  }
+#header ul.menu > li > a:hover {color:#a50729;background: transparent;border-top:0.1px solid #a50729; }
+#header ul.menu > li.active > a {color:#a50729;background: transparent;border-top:0.1px solid #393939;}
+/* Dropdown Level */
+#header ul.menu li.parent > ul {background: #fff; border-radius: 0 0 3px 3px; -moz-border-radius: 0 0 3px 3px; -webkit-border-radius: 0 0 3px 3px; box-shadow: 0 10px 15px rgba(0,0,0,0.5); -moz-box-shadow: 0 10px 15px rgba(0,0,0,0.5); -webkit-box-shadow: 0 10px 15px rgba(0,0,0,0.5);}
+#header ul.menu li.parent > ul > li {border-bottom:1px dotted #cccccc;}
+#header ul.menu li.parent > ul > li > a {color:#ccc; color:#292929;background: transparent;}
+#header ul.menu li.parent > ul > li.active > a {color:#a50729;background:  ;}
+#header ul.menu li.parent > ul > li > a:hover {color:#a50729;background: #f5f5f5 ;}
+#header ul.menu li.parent > ul li:first-child a{}
+#header ul.menu li.parent > ul li:last-child a{}
+/* ----------------------------------------------*/
+/* M 01 - Main Menu Dropdown Styles
+/* ----------------------------------------------*/
+.drop1 {border-left: 2px solid #333;}
+.drop1:hover {border-left: 2px solid #a50729;}
+.drop2 {border-left: 2px solid #666;}
+.drop2:hover {border-left: 2px solid #a50729;}
+.drop3 {border-left: 2px solid #999;}
+.drop3:hover {border-left: 2px solid #a50729;}
+.drop4 {border-left: 2px solid #ccc;}
+.drop4:hover {border-left: 2px solid #a50729;}
+.drop5 {border-left: 2px solid #999;}
+.drop5:hover {border-left: 2px solid #a50729;}
+.drop6 {border-left: 2px solid #666;}
+.drop6:hover {border-left: 2px solid #a50729;}
+.drop7 {border-left: 2px solid #333;}
+.drop7:hover {border-left: 2px solid #a50729;}
+.drop8 {border-left: 2px solid #666;}
+.drop8:hover {border-left: 2px solid #a50729;}
+.drop9 {border-left: 2px solid #999;}
+.drop9:hover {border-left: 2px solid #a50729;}
+.dropstyles1 {border-left: 4px solid #93107f;}
+.dropstyles2 {border-left: 4px solid #108893;}
+.dropstyles3 {border-left: 4px solid #936d10;}
+.dropstyles4 {border-left: 4px solid #931029;}
+.dropstyles5 {border-left: 4px solid #93107f;}
+.dropstyles6 {border-left: 4px solid #108893;}
+/* ----------------------------------------------*/
+/* M 02 - Horizontal Top Menu
+/* ----------------------------------------------*/
+.menualignwrap {border:1px solid #ff0000;}
+.midmenuwrap1 a.first,.midmenuwrap1 a.last, .midmenuwrap2 a.first, .midmenuwrap2 a.last {
+background-color:#f9f9f9;
+border:1px solid #e0e0e0;
+color:#a2a2a2;
+text-shadow:1.6px 1.6px 0 #fff;
+-moz-box-shadow:0 0 0 6px #eeeeee, 0 0 0 7px #ffffff;
+-webkit-box-shadow:0 0 0 6px #eeeeee, 0 0 0 7px #ffffff;
+box-shadow:0 0 0 6px #eeeeee, 0 0 0 7px #ffffff;
+background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#f9f9f9),color-stop(1,#e9e9e9));
+background:-moz-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);
+background:-webkit-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);
+background:-o-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);
+background:-ms-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);
+background:linear-gradient(to bottom,#f9f9f9 5%,#e9e9e9 100%);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#e9e9e9',GradientType=0);
+
+}
+.xmenu {color:#444;}
+
+/* ----------------------------------------------*/
+/* S 00 - Module Suffixes
+/* ----------------------------------------------*/
+.module{background: ;}
+.module h3{background:   url(http://enote-vl.ru/templates/enterprise/images/icons/-1) no-repeat 0 50%;}
+.module h3 span.first_word{color:#a50729;}
+.module h3 span.rest{color:!important;}
+.rtitle h3 span {background-color:#393939;color:#fff!important; color: rgba(255,255,255,0.75)!important; text-shadow:-1px -1px 0px rgba(0,0,0,0.25);}
+.underline h3 {border-bottom: 4px solid #393939;background:none!important;}
+.frame {border: 8px solid #393939!important;}
+.box{background:#393939!important;color:#fff!important;}
+.tabbed h3{border-bottom-color:#393939!important;background:none!important;}
+.tabbed h3 span{background:#393939!important;	color:#fff!important; color: rgba(255,255,255,0.75)!important; text-shadow:-1px -1px 0px rgba(0,0,0,0.25);}
+
+/* ----------------------------------------------*/
+/* C 00 - Content Overrides
+/* ----------------------------------------------*/
+/* Front Page Article layout */
+.fpwrap h1 {color:#393939;}
+.fpwrap h2 {color:#a50729;}
+.fpwrap span.fptext {color:#797979;}
+ul.fplist li {color:#333;}
+ul.fplist li span i {color:#666;}
+/* Joomla Content */
+.comwrap {background:#f7f7f7;border:5px solid #ffffff;outline:1px solid #f1f1f1;}
+.category_img{border:1px solid #e1e2de;background:#eef0eb;}
+.cat-item div.action span{border-right:1px solid #CCCCCC;}
+.btn input,.btn button{ background:#660066;}
+.btn { background:#ff0000; }
+div.joomla div.item{border-bottom:1px dotted #ccc;} 
+.wallframe {background:#d5d5d5; border: 1px solid #fff;}
+.imgframe,.article_date {background:#fff;  outline:1px solid #f1f1f1; }
+h5.day {color:#fff;}
+h5.month{color:#fff;}
+.article_date_pad{color:#fff;background-color:#393939;}
+div.contact.row-fluid h3 {color:#333;}
+div.breadcrumbs {background:#dddddd;}
+span.showHere {color:#a50729;}
+a.pathway {color:#999999 !important;}
+span.here {color:#999999 !important;}
+.readmore a {color:#a50729 !important; font-weight:normal}
+.readmore a span {color:#393939;}
+div.pagination span {color:#ccc;}
+.pagination ul > li > a, .pagination ul > li > span {background-color:#aaaaaa;color:#ccc;}
+.pagination ul > li > a {color:#fff;}	
+.pagination ul > li > a:hover {color:#666;}
+div.action{}
+legend {color:#a50729 !important;}
+dt.result-title, dt.result-title a {color:#a50729 !important; font-weight:normal;}
+.search_menu_btn {color:#ebebeb;background:#666;}
+.search_menu_btn:hover {color:#fff;background:#a50729;cursor:pointer;}
+.items-more h3 {color:#a50729!important;}
+/* ----------------------------------------------*/
+/* C 01 - Typography
+/* ----------------------------------------------*/
+.numbered:after, .numbered-medium:after, .numbered-small:after {border-color:#fff;}
+.bargraphv,.bargraphv a:hover{ background-color:#a50729!important;}
+.circletag { background-color:#a50729!important;}
+.circlebottom {border-top-color: #a50729!important;}
+.cloud_tag1 {background-color:#393939!important;}
+.bargraphv,.bargraphv a {background-color:#a50729!important;} 
+
+/* ----------------------------------------------*/
+/* H 01 - JXTC  Walls(Newspro News Module)
+/* ----------------------------------------------*/
+/*------Text Colors----------*/
+.newsitemwrap h4 a {color:#333;} 
+p.article-info {color:#999;}
+p.article-intro {color:#5a5a5a}
+/*------Read More Buttons------*/
+/*.newsitemwrap a.article-readmore {-moz-box-shadow:1px 1px 0 0 #bdbdbd;-webkit-box-shadow:1px 1px 0 0 #bdbdbd;box-shadow:1px 1px 0 0 #bdbdbd;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.05,#f9f9f9),color-stop(1,#e9e9e9));background:-moz-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);background:-webkit-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);background:-o-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);background:-ms-linear-gradient(top,#f9f9f9 5%,#e9e9e9 100%);background:linear-gradient(to bottom,#f9f9f9 5%,#e9e9e9 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#e9e9e9',GradientType=0);background-color:#f9f9f9;border:5px solid #e3e3e3;display:inline-block;color:#a6a6a6;text-shadow:1px 1px 0 #fff;}
+*/
+/*------Border Styles----------*/
+.newswrap {border-top:1px solid #ebebeb; border-bottom:1px solid #ebebeb;}
+.newsitemwrap {border-right:1px solid #ebebeb;}
+.newsitemwrap img.intimage {border-bottom:1px solid #ebebeb;}
+/*------ToolTips----------*/
+.tt-wrapper li a.first{ background-color:#a50729;}
+.tt-wrapper li a.middle{ background-color:#333333;}
+.tt-wrapper li a.last{ background-color:#c6c6c6;}
+.tt-wrapper li a span{color: #719DAB;text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);border: 4px solid #fff;background:#fff;box-shadow: 1px 1px 2px rgba(0,0,0,0.1);}
+.tt-wrapper li a span:before,.tt-wrapper li a span:after{border-top: 10px solid rgba(0,0,0,0.1);}
+.tt-wrapper li a span:after{border-top: 10px solid #fff;}
+/* ----------------------------------------------*/
+/* H 02 - JXTC Slide Panel
+/* ----------------------------------------------*/
+.slide-container{background: #ffffff;border-radius: 4px;color: #7e7975;box-shadow: 0 2px 2px rgba(0,0,0,0.2),0 1px 5px rgba(0,0,0,0.2),0 0 0 12px rgba(255,255,255,0.4);}
+.slide-container h1 {color: #bdb5aa;border-bottom: 1px solid #EBE6E2;text-shadow: 0 2px 0 rgba(255,255,255,0.8);box-shadow: 0 1px 0 rgba(255,255,255,0.8);}
+.slide-container h1 .log-in {color: #6c6763;}
+.slide-container h1 .sign-up {color: #ffb347;}
+.slide-container .float {border-top: 1px solid rgba(255,255,255,1);}
+.slide-container label {color:#000;text-shadow: 0 1px 0 rgba(255,255,255,0.8);}
+.login_slide_btn {color:#ebebeb;background:#a50729;}
+.login_slide_btn:hover {color:#fff;background:#a50729;cursor:pointer;}
+.logout_slide_btn {color:#a50729;background:#ebebeb;}
+.logout_slide_btn:hover {color:#fff;background:#a50729;cursor:pointer;}
+div.slide-leftbox li a {color:#a50729;font-size:10px; font-weight:bold; text-transform:uppercase;}
+div.slide-leftbox input.button, input.button {background:#a50729 !important;	color:#fff;}
+/* ----------------------------------------------*/
+/* H 03 - Acymailing
+/* ----------------------------------------------*/
+#user_name_formAcymailing {background:#666!important;}
+#user_email_formAcymailing {background:#666!important;}
+/* ----------------------------------------------*/
+/* H 04 - JXTC Contact Wall
+/* ----------------------------------------------*/
+.circle1:hover {background-color:#a50729;}
+/* ----------------------------------------------*/
+/* H 05 - Custom HTML Markup
+/* ----------------------------------------------*/
+.embelemwrap {
+background: url(http://enote-vl.ru/templates/enterprise/images/backgrounds/embelem-lg-s2.png) 50% 50% no-repeat;
+-moz-background-size:contain; -webkit-background-size:contain; background-size:contain;
+}
+.embelem-lg {background: url(http://enote-vl.ru/templates/enterprise/images/backgrounds/embelem-lg-s2.png) 50% 50% no-repeat;
+-moz-background-size:contain; -webkit-background-size:contain; background-size:contain;}
+ul.social li a {color:#393939;}
+ul.social li {border-right: 1px solid #ebebeb;}
+ul.social1 li {color:#999;}
+.map {background: url(http://enote-vl.ru/templates/enterprise/images/backgrounds/usamap-s2.png) 50% 50% no-repeat; max-width:100%; height:164px;
+-moz-background-size:100%; -webkit-background-size:100%; background-size:100%;}
+ul.fplist1 li .iwrap {border:8px solid #fff; box-shadow: 0 0 0 10px rgba(0,0,0,0.025);}
+ul.fplist1 li.first .iwrap {background:#a50729;}
+ul.fplist1 li.middle .iwrap {background:#c6c6c6;}
+ul.fplist1 li.last .iwrap {background:#333333;}
+/* ----------------------------------------------*/
+/* H 06 - Kommento
+/* ----------------------------------------------*/
+.kmt-readmore span {color:#393939;}
+.kmt-readmore a {color:#a50729 !important;border-right:1px solid #ccc;}
+.kmt-readmore a:hover {color:#a50729 !important;}
+.kmt-comment span {color:#393939;}
+.kmt-comment a {color:#a50729 !important;border-right:1px solid #ccc;}
+.kmt-comment a:hover {color:#a50729 !important;}
+.kmt-hits span {color:#393939;}
+.kmt-hits a {color:#a50729 !important;}
+.kmt-hits a:hover {color:#a50729 !important;}
+#section-kmt .input.button {background:#a50729 !important;color:#fff !important;	}
+#section-kmt .kmt-btn-submit {background:#a50729 !important;color:#fff !important;}
+div.kmt-content p {background:#fff;}
+div.kmt-content p:after {border-color:transparent #fff;}
+/* ----------------------------------------------*/
+/* H 07 - JXTC Easy Image Gallery
+/* ----------------------------------------------*/
+.unoslider_title {color:#fff;}
+.unoslider_description {color:#f1f1f1;}
+
+/* ----------------------------------------------*/
+/* T 01 MOBILE
+/* ----------------------------------------------*/
+.mobilebtn {background-color:rgba(0,0,0,0.4);}

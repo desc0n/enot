@@ -1,0 +1,515 @@
+/*
+Template Name:Enterprise XTC
+Template URI:http://www.joomlaxtc.com
+Description:Enterprise XTC Joomla 2.5
+Version:1.0
+Author:Monev Software LLC
+Author URI:http://www.joomlaxtc.com
+License:#  The CSS, XHTML is released under GPL:#  http://www.opensource.org/licenses/gpl-license.php 
+		 #  Graphics under exclusive license (C)2009-2012 Monev Software LLC 
+		 #  Additional CSS, PHP, and Javascripting under exclusive license (C)2009-2010 Monev Software LLC 
+	     #  http://www.joomlaxtc.com
+
+*/
+/* ----------------------------------------------*/
+/* G 00 - Body
+/* ----------------------------------------------*/
+/* ----------------------------------------------*/
+/* G 01 - Basic Structure 
+/* ----------------------------------------------*/
+.xtc-bodygutter{padding:0 1%;}
+.xtc-wrapper {max-width:1280px;}
+.xtc-wrapperpad {max-width:1280px;margin:0 auto;}
+/* ----Header---------------------------*/
+#headerwrap .xtc-wrapperpad {width:auto!important;margin:0 auto;}
+#headerwrap .xtc-wrapper {max-width:1200px;padding-top:10px!important;padding-bottom:10px!important;padding-left:40px!important;padding-right:40px!important;margin:0 auto;}
+#header.row-fluid{width:auto;}
+#headerwrap{z-index:9999999999999999;position:relative;}
+/* ----Region1---------------------------*/
+#region1wrap .xtc-wrapperpad {width:auto!important;margin:0 auto;}
+#region1wrap .xtc-wrapper {max-width:1280px;padding-top:0px!important;padding-bottom:0px!important;padding-left:0px!important;padding-right:0px!important;margin:0 auto;}
+#region1.row-fluid{width:auto;}
+/* ----Region2---------------------------*/
+#region2wrap .xtc-wrapperpad {width:auto!important;margin:0 auto;}
+#region2wrap .xtc-wrapper {max-width:1280px;padding-top:20px!important;padding-bottom:20px!important;padding-left:0px!important;padding-right:0px!important;margin:0 auto;}
+#region2.row-fluid{width:auto;}
+/* ----Region3---------------------------*/
+#region3wrap .xtc-wrapperpad {width:auto!important;margin:0 auto;}
+#region3wrap .xtc-wrapper {max-width:1280px;padding-top:40px!important;padding-bottom:40px!important;margin:0 auto;}
+#component{padding-left:40px;padding-right:40px;}
+#left{padding-left:40px!important;}
+#right{padding-right:40px!important;}
+#region3.row-fluid{width:auto;}
+.r3spacer {padding-bottom:0 !important;}
+.r3spacer_bottom {padding-bottom:0 !important;}
+/* ----Region4---------------------------*/
+#region4wrap .xtc-wrapperpad {width:auto!important;margin:0 auto;}
+#region4wrap .xtc-wrapper {max-width:1280px;padding-top:0px!important;padding-bottom:0px!important;padding-left:0px!important;padding-right:0px!important;margin:0 auto;}
+#region4.row-fluid{width:auto;}
+/* ----Region5---------------------------*/
+#region5wrap .xtc-wrapperpad {width:auto!important;margin:0 auto;}
+#region5wrap .xtc-wrapper {max-width:1200px;padding-top:0px!important;padding-bottom:0px!important;padding-left:40px!important;padding-right:40px!important;margin:0 auto;}
+#region5.row-fluid{width:auto;}
+/* ----Region6---------------------------*/
+#region6wrap .xtc-wrapperpad {width:auto!important;margin:0 auto;}
+#region6wrap .xtc-wrapper {max-width:1280px;padding-top:0px!important;padding-bottom:0px!important;padding-left:0px!important;padding-right:0px!important;margin:0 auto;}
+#region6.row-fluid{width:auto;}
+/* ----Region7---------------------------*/
+#region7wrap .xtc-wrapperpad {width:auto!important;margin:0 auto;}
+#region7wrap .xtc-wrapper {max-width:1280px;padding-top:0px!important;padding-bottom:0px!important;padding-left:0px!important;padding-right:0px!important;margin:0 auto;}
+#region7.row-fluid{width:auto;}
+/* ----Region8---------------------------*/
+#region8wrap .xtc-wrapperpad {width:auto!important;margin:0 auto;}
+#region8wrap .xtc-wrapper {max-width:1280px;padding-top:0px!important;padding-bottom:0px!important;padding-left:0px!important;padding-right:0px!important;margin:0 auto;}
+#region8.row-fluid{width:auto;}
+/* ----Region9---------------------------*/
+#region9wrap .xtc-wrapperpad {width:auto!important;margin:0 auto;}
+#region9wrap .xtc-wrapper {max-width:1200px;padding-top:20px!important;padding-bottom:20px!important;padding-left:40px!important;padding-right:40px!important;margin:0 auto;}
+#region9.row-fluid{width:auto;}
+/* ----Footer---------------------------*/
+#footerwrap .xtc-wrapperpad {width:auto!important;margin:0 auto;}
+#footerwrap .xtc-wrapper {max-width:1260px;padding-top:10px!important;padding-bottom:10px!important;padding-left:10px!important;padding-right:10px!important;margin:0 auto;}
+#footerpad.row-fluid{width:auto;}
+/* ----Region Padding---------------------------*/
+.xtc-spacer {margin-bottom:3.727865px;}
+.xtc-gutter {padding:0px;}
+.xtc-gutter2 {padding:45px 0px 50px;}
+.xtc-gutter3 {padding:0 0px;}
+.header{padding:;}
+.r1spacer{padding:;}
+.r1spacer_top{padding:20px 0 0 0;}
+.r2spacer{padding:;}
+.r2spacer_top{padding:20px 0 0 0;}
+.r3spacer{padding-bottom:!important;}
+.r3spacer_top{padding:20px 0 0 0;}
+.r4spacer{padding:;}
+#region4 {min-height:200px !important;}
+.r4spacer_top{padding:20px 0 0 0;}
+.r5spacer{padding:;}
+.r5spacer_top{padding:20px 0 0 0;}
+.r6spacer{padding:;}
+.r6spacer_top{padding:20px 0 0 0;}
+.r7spacer{padding:;}
+.r7spacer_top{padding:20px 0 0 0;}
+.r8spacer{padding:;}
+.r8spacer_top{padding:20px 0 0 0;}
+.r9spacer{padding:;}
+.r9spacer_bottom{padding: 0 0 0;}
+/* ----Module Padding---------------------------*/
+.firstarea .module, #left .module:first-child, #right .module:first-child,#region4_banner .module:first-child{margin-top:0;}
+.center > div:first-child{padding-top:0;}
+/* Content Pages*/
+.row-fluid > .xtc-leading > div:first-child,.row-fluid > .xtc-leading > div:first-child+div,.row-fluid > .xtc-leading >div:first-child+div+div{margin-bottom:30px;}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{margin-bottom:12px;}
+.xtc-intro .row-fluid > div > div{margin-bottom:30px;;}
+.blog-featured > .xtc-leading > div > div,.blog-featured > .row-fluid > .row-fluid > div{margin-bottom:30px;}
+/* ----------------------------------------------*/
+/* G 02 - Header,logo,menu,top
+/* ----------------------------------------------*/
+#headerglobal{width:100%;padding:0;position:fixed;top:0;z-index:999;}
+#header{position:relative;z-index:9999;}
+#logo{float:left;margin:6px 0 0 0;}
+#top{float:right;margin-top:30px;position:relative;z-index:997;}
+#search{float:right;}
+#search .module{margin:0;padding:0;}
+#search input{}
+#search input.button{}
+#search input#mod-search-searchword{}
+#messagewrap{padding:10px 0;}
+/* ----------------------------------------------*/
+/* G 03 - Menu
+/* ----------------------------------------------*/
+#menu{float:right;margin:8px 0 0 0;padding:0 13px 0 0;}
+#menu > ul.menu{float:left;}
+#menu ul.menu > li:first-child > a,#menu ul.menu > li:first-child > a:hover,#menu ul.menu > li.current:first-child > a{}
+#menu ul.menu > li > a{}
+#menu ul.menu li.parent > ul{}
+#menuright1,#menuright2{float:right;padding:4px 0 0 10px;}
+#menu > div:first-child{padding:16px 0 0 0;}
+.xtcmobilemenu{float:left;}
+/* Side Menu */
+ul.sidemenu{}
+ul.sidemenu li{line-height:280%;padding:0;border-top:1px solid #ccc;}
+ul.sidemenu li:first-child{border-top:none;}
+/* Dual Menu */
+.dualcol{clear:both;overflow:hidden;}
+.dualcol li {float:left;width:50%;padding:0;text-align:left!important;font-size:0.9em;line-height:220%;}
+/* ----------------------------------------------*/
+/* G 04 - Content
+/* ----------------------------------------------*/
+#component{}
+body.frontpage #component{}
+body.frontpage div.item-page {} 
+body.frontpage #region3wrap .xtc-wrapper {padding-bottom:0!important;}
+/* ----------------------------------------------*/
+/* G 05 - Footer
+/* ----------------------------------------------*/
+#footerwrap .module{margin:0;font-size:10px;text-align:center;}
+/* ----------------------------------------------*/
+/* G 06 - Module
+/* ----------------------------------------------*/
+.module{margin:40px 0 0 0;}
+.module h3{margin:0 0 30px 0;}
+/* ----------------------------------------------*/
+/* G 07 - Content Overrides
+/* ----------------------------------------------*/
+.btn input,.btn button{margin:0;padding:0;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;display:block;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:bold;padding:10px 20px;text-align:center;}
+.btn {-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;display:inline-block;font-family:arial;font-size:13px;font-weight:bold;padding:8px 18px;text-decoration:none; box-shadow:none; -webkit-box-shadow:none; -moz-box-shadow:none;}
+.article_header{margin:0 0 20px 0;border-bottom: 1px solid #cccccc; padding-bottom: 24px;}
+.newsdate{float:left;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;display:inline-block;font-family:arial;font-size:16px;font-weight:normal;padding:12px 18px;text-decoration:none;text-transform:uppercase;}
+.article_info{margin-left:112px;}
+.article_info_nodate{}
+h1.pagetitle{padding:0 10px;}
+h5.month{display:inline-block;font-family arial;font-size:16px;font-weight:bold;text-decoration:none;text-transform:uppercase;}
+.article_date{float:left;padding:8px;}
+.article_date_pad{float:left;width:80px;height:80px;text-align:center;}
+h5.day {margin:0;width:80px!important;text-align:center;padding:18px 0 0 0;line-height:70%;}
+h5.month{margin:0;width:80px!important;text-align:center;padding:0 0 6px 0;line-height:70%;}
+.category_header span, .article_header span, .action span {font-size:11px;line-height:144%;display:inline-block;}
+div.breadcrumbs { padding:4px 4px;text-transform:uppercase;font-size:0.7em!important;text-align:center;}
+span.showHere {padding:0 5px;}
+a.pathway {padding:0 5px 0 0;}
+span.here {padding-left:5px;}
+.readmore a span {font-size:100%;padding-right:8px;}
+.pagination ul > li > a, .pagination ul > li > span {font-size:87%;line-height:28px;font-weight:bold;}
+div.action.float:right img {width:10px!important;}
+email-icon img {width:10px!important;}
+.readmore{float:left;}
+.iconbar{float:right;}
+.category_date{float:left;}
+.category_info{margin:0 0 0 96px;}
+div.action{position:relative;bottom:0;}
+.cat-item{position:relative;}
+.cat-item div.action{position:absolute;bottom:-38px;right:0;}
+.cat-item div.action img,div.action img{width:12px;}
+.cat-item div.action span{padding-right:10px;margin:0 12px 0 0;}
+.cat-item div.action span:first-child{padding-right:0;margin:0;border-right:none;}
+.day {font-size:36px!important;line-height:100%;}
+.wallframe  {padding:8px;}
+.imgframe  {padding:8px;}
+div.phrases-box {margin:0 0 12px 0;}
+div.form-limit {margin-top:18px;}
+div.login-fields {margin-bottom:12px;}
+form#login-form > ul > li {line-height:144%!important;}
+form#login-form > ul > li a {font-size:10px;font-weight:bold;text-transform:uppercase;}
+td.wb-title h4.title {font-size:100%;}
+th.hits {font-size:100%!important;}
+div#bottom1 ul li {list-style:none;text-align:center;}
+.xtc-leading > div:first-child+div+div+div /* Third column */{margin-left:0;}
+div#bottom1 .module, div#bottom2 .module, div#bottom3 .module, div#bottom4 .module, div#bottom6 .module {margin-bottom:20px;padding:20px;}
+.comwrap {padding:12px 22px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+div.contact.row-fluid {padding-top:12px;}
+div.contact.row-fluid img {margin-top:-28px;}
+div.contact.row-fluid span.subheading-category {display:inline-block;margin-bottom:12px 0 20px;}
+div.contact.row-fluid h3 {margin-bottom:20px;font-size:1.5em;font-weight:normal;}
+div.contact.row-fluid h2 {margin:-15px 0 20px -5px;padding:0;font-size:3em;font-weight:normal;}
+div.contact.row-fluid div.ctfields img {margin-top:-10px;}
+.pager a, .pager span{background:none!important;border:none!important;}
+.items-leading .span6 p{display:none;}
+div.items-leading.xtc-leading div.span6 .art_info {display:inline-block;margin:9px 0!important;padding-right:12px;}
+.items-leading.xtc-leading .span6 .cat-item{margin-bottom:0;}
+.category_text p {margin:1em 0!important;}
+h4.title{padding:18px 0 6px 0;font-size:21px;line-height:110%;}
+div.items-leading.xtc-leading.span12 div.span6 h4 {font-size:28px;letter-spacing:-1px;}
+div.items-leading.xtc-leading.span12 div.span6 .category_text p {display:none;}
+div.items-leading.xtc-leading.span12 div.span6 div.kmt-readon {margin-top:3px;}
+div.items-leading.xtc-leading.span12 div.span6 .cat-item div.action {bottom:-21px;}
+.art_info{font-size:0.75em!important;display:block;margin:8px 0 8px 0!important;} 
+div.items-leading.xtc-leading.span12 div.span6 .art_info{display:inline-block;margin:9px 0 9px 0!important;padding-right:12px;}
+/* Front Page Article layout */
+.fpwrap {padding:0;}
+.fpwrap h1 {font-size:4em;font-weight:100;letter-spacing:-2px;}
+.fpwrap h2 {font-size:3em;font-weight:100;}
+.fpwrap span.fptext {display:block;font-size:120%!important;padding:20px 0;}
+ul.fplist {padding:0;display:inline-block;}
+ul.fplist li {font-size:1.2em!important;padding-left:0;}
+ul.fplist li span i {font-size:0.875em;margin:4px 6px 0 0;}
+img.signature {display:inline-block;margin:-42px 0 0 50px;}
+.article_info .btn{background:none!important;border-color:transparent!important;}
+.article_info .btn-group.open .dropdown-toggle{background:none!important;border:none!important;box-shadow:none!important;}
+span.caret{float:none!important;}
+.article_info ul li{float:left;}
+.article_info ul li a:hover,.article_info ul li a:focus{background:none!important;}
+.xtc-full-img{margin:0 0 20px 0;}
+
+/* ----------------------------------------------*/
+/* S 00 - Module Overrides,overrides for default suffix within specific areas of the regions
+/* ----------------------------------------------*/
+#topbanner .module:first-child,#top .module:first-child,#inset .module:first-child,#showcasegrid .module:first-child,#left .module:first-child,#right .module:first-child,#left1 .module:first-child,#right1 .module:first-child,#left2 .module:first-child,#right2 .module:first-child,#left3 .module:first-child,#right3 .module:first-child,#left4 .module:first-child,#right4 .module:first-child,#left5 .module:first-child,#right5 .module:first-child,#left6 .module:first-child,#right6 .module:first-child,#left7 .module:first-child,#right7 .module:first-child,#left8 .module:first-child,#right8 .module:first-child,#newsflash .module:first-child,
+#banner1 .module:first-child,#breadsearch .module:first-child,#banner .module:first-child,
+.singlearea .module,.firstarea .module,#region1 .module:first-child{margin:0;}
+/* ----------------------------------------------*/
+/* S 01 - Box Styles
+/* ----------------------------------------------*/
+.box h3 span, .darkbox h3 span,.bluebox h3 span,.redbox h3 span,.greenbox h3 span,.pinkbox h3 span,.aquabox h3 span,.tanbox h3 span{color:#fff!important;color:rgba(255,255,255,0.75)!important;text-shadow:-1px -1px 0px rgba(0,0,0,0.25);}
+.box,.darkbox,.bluebox,.bluebox,.redbox,.greenbox,.pinkbox,.aquabox,.tanbox,.lightbox{padding:20px; border:8px solid #fff !important; outline:1px solid #f1f1f1;}
+.box h3,.darkbox h3,.bluebox h3,.redbox h3,.greenbox h3,.pinkbox h3,.aquabox h3,.tanbox h3{ background:none!important;border:none!important; }
+.darkbox{background:#222222;color:#fff;}
+.bluebox{background:#5e8bc9;color:#fff;}
+.redbox{background:#a50729;color:#fff;}
+.greenbox{background:#529ca6;color:#fff;}
+.pinkbox{background:#e55171;color:#fff;}
+.aquabox{background:#007489;color:#fff;}
+.tanbox{background:#c0b69f;color:#fff;}
+.lightbox {background:#f1f0f0;color:#666;}
+.lightbox h3{background:none!important;border:none!important;}
+.lightbox h3 span{}
+.custom_1 {background:#ffffff;color:#666;}
+.custom_1 h3{background:none!important;border:none!important;}
+.custom_1 h3 span{}
+/*.custom_1 a {
+    font-size: 14px;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+*/
+}
+ 
+.custom_1 a:hover {
+    font-size: 18px;
+}
+/* ----------------------------------------------*/
+/* S 02 - Bottom 
+/* ----------------------------------------------*/
+.bottom h3 span {font-weight:normal!important;color:#6f7576!important;font-size:0.6em!important;font-family:Arial, Helvetica, sans-serif!important;text-transform:uppercase;letter-spacing:1px!important;}
+.bottom h3 {border-bottom:1px solid #2a2a2a;padding-bottom:12px;}
+/* ----------------------------------------------*/
+/* S 03 - Underline (underline)
+/* ----------------------------------------------*/
+.underline h3 span {color:#cecece!important;}
+.underline h3 {border-bottom:4px solid #cecece;padding-bottom:8px;background:none!important;}
+.underlinedark h3 span {color:#666666!important;}
+.underlinedark h3 {border-bottom:4px solid #666666;padding-bottom:8px;background:none!important;}
+.underlineblue h3 span {color:#5e8bc9!important;}
+.underlineblue h3 {border-bottom:4px solid #5e8bc9;padding-bottom:8px;background:none!important;}
+.underlinered h3 span {color:#a50729!important;}
+.underlinered h3 {border-bottom:4px solid #a50729;padding-bottom:8px;background:none!important;}
+.underlinegreen h3 span {color:#529ca6!important;}
+.underlinegreen h3 {border-bottom:4px solid #529ca6;padding-bottom:8px;background:none!important;}
+.underlinepink  h3 span {color:#e55171!important;}
+.underlinepink h3 {border-bottom:4px solid #e55171;padding-bottom:8px;background:none!important;}
+.underlineaqua h3 span {color:#007489!important;}
+.underlineaqua h3 {border-bottom:4px solid #007489;padding-bottom:8px;background:none!important;}
+.underlinetan h3 span {color:#c0b69f!important;}
+.underlinetan h3 {border-bottom:4px solid #c0b69f;padding-bottom:8px;background:none!important;}
+/* ----------------------------------------------*/
+/* S 04 -Icons (classname as suffix)
+/* ----------------------------------------------*/
+.alert h3,.articlez h3,.briefcase h3,.camera h3,.cart h3,.ccards h3,.chart h3,.clack h3,.clipboard h3,.clock h3,.comment h3,.envelope h3,.file h3,.film h3,.graph h3,.heart h3,.inbox h3,.mic h3,.movie h3,.paperclip h3,.phone h3,.phones h3,.picto h3,.radar h3,.srch h3,.speech h3,.stylus h3,.tag h3,.userz h3,.world h3{padding-left:65px!important;padding-top:14px!important;padding-bottom:14px!important;background-size:28px!important;border:none!important;}
+.alert h3 span.rest,.articlez h3 span.rest,.briefcase h3 span.rest,.camera h3 span.rest,.cart h3 span.rest,.ccards h3 span.rest,.chart h3 span.rest,.clack h3 span.rest,.clipboard h3 span.rest,.clock h3 span.rest,.comment h3 span.rest,.envelope h3 span.rest,.file h3 span.rest,.film h3 span.rest,.graph h3 span.rest,.heart h3 span.rest,.inbox h3 span.rest,.mic h3 span.rest,.movie h3 span.rest,.paperclip h3 span.rest,.phone h3 span.rest,.phones h3 span.rest,.picto h3 span.rest,.radar h3 span.rest,.srch h3 span.rest,.speech h3 span.rest,.stylus h3 span.rest,.tag h3 span.rest,.userz h3 span.rest,.world h3 span.rest{color:#999;}
+.alert h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/alert.png) no-repeat 0 50%!important;}
+.articlez h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/article.png) no-repeat 0 50%!important;}
+.briefcase h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/briefcase.png) no-repeat 0 50%!important;}
+.camera h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/camera.png) no-repeat 0 50%!important;}
+.cart h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/cart.png) no-repeat 0 50%!important;}
+.ccards h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/ccards.png) no-repeat 0 50%!important;}
+.chart h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/chart.png) no-repeat 0 50%!important;}
+.clack h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/clack.png) no-repeat 0 50%!important;}
+.clipboard h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/clipboard.png) no-repeat 0 50%!important;}
+.clock h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/clock.png) no-repeat 0 50%!important;}
+.comment h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/comment.png) no-repeat 0 50%!important;}
+.envelope h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/envelope.png) no-repeat 0 50%!important;}
+.file h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/file.png) no-repeat 0 50%!important;}
+.film h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/film.png) no-repeat 0 50%!important;}
+.graph h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/graph.png) no-repeat 0 50%!important;}
+.heart h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/heart.png) no-repeat 0 50%!important;}
+.inbox h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/inbox.png) no-repeat 0 50%!important;}
+.mic h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/mic.png) no-repeat 0 50%!important;}
+.movie h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/movie.png) no-repeat 0 50%!important;}
+.paperclip h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/paperclip.png) no-repeat 0 50%!important;}
+.phone h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/phone.png) no-repeat 0 50%!important;}
+.phones h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/phones.png) no-repeat 0 50%!important;}
+.picto h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/picto.png) no-repeat 0 50%!important;}
+.radar h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/radar.png) no-repeat 0 50%!important;}
+.srch h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/search.png) no-repeat 0 50%!important;}
+.speech h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/speech.png) no-repeat 0 50%!important;}
+.stylus h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/stylus.png) no-repeat 0 50%!important;}
+.tag h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/tag.png) no-repeat 0 50%!important;}
+.userz h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/user.png) no-repeat 0 50%!important;}
+.world h3{background:url(http://enote-vl.ru/templates/enterprise/images/icons/world.png) no-repeat 0 50%!important;}
+/* ----------------------------------------------*/
+/* S 05 - Tabbed (classname as suffix)
+/* ----------------------------------------------*/
+.tabbed h3,.tabbedlight h3,.tabbeddark h3,.tabbedblue h3,.tabbedgreen h3,.tabbedred h3,.tabbedtan h3,.tabbedpink h3,.tabbedaqua h3{border-bottom-style:solid!important;border-bottom-width:2px!important;padding:0 0 10px 0!important;margin:10px 0 40px 0!important;}
+.tabbed h3 span,.tabbedlight h3 span,.tabbeddark h3 span,.tabbedblue h3 span,.tabbedgreen h3 span,.tabbedred h3 span,.tabbedtan h3 span,.tabbedaqua h3 span,.tabbedpink h3 span{padding:10px 24px!important;min-width:120px!important;}
+.tabbedblue h3{border-bottom-color:#33749f!important;background:none!important;}
+.tabbedlight h3{border-bottom-color:#ccc!important;background:none!important;}
+.tabbeddark h3{border-bottom-color:#666666!important;background:none!important;}
+.tabbedred h3{border-bottom-color:#5e1b1b!important;background:none!important;}
+.tabbedgreen h3{border-bottom-color:#529ca6!important;background:none!important;}
+.tabbedpink h3{border-bottom-color:#e55171!important;background:none!important;}
+.tabbedaqua h3{border-bottom-color:#007489!important;background:none!important;}
+.tabbedtan h3{border-bottom-color:#c0b69f!important;background:none!important;}
+.tabbedblue h3 span{background:#33749f!important;color:#fff!important;color:rgba(255,255,255,0.75)!important;text-shadow:-1px -1px 0px rgba(0,0,0,0.25);}
+.tabbedlight h3 span{background:#cccccc!important;color:#999!important;}
+.tabbeddark h3 span{background:#666666!important;color:#fff!important;color:rgba(255,255,255,0.75)!important;text-shadow:-1px -1px 0px rgba(0,0,0,0.25);}
+.tabbedred h3 span{background:#5e1b1b!important;color:#fff!important;color:rgba(255,255,255,0.75)!important;text-shadow:-1px -1px 0px rgba(0,0,0,0.25);}
+.tabbedgreen h3 span{background:#529ca6!important;color:#fff!important;color:rgba(255,255,255,0.75)!important;text-shadow:-1px -1px 0px rgba(0,0,0,0.25);}
+.tabbedaqua h3 span{background:#007489!important;color:#fff!important;color:rgba(255,255,255,0.75)!important;text-shadow:-1px -1px 0px rgba(0,0,0,0.25);}
+.tabbedpink h3 span{background:#e55171!important;color:#fff!important;color:rgba(255,255,255,0.75)!important;text-shadow:-1px -1px 0px rgba(0,0,0,0.25);}
+.tabbedtan h3 span{background:#c0b69f!important;color:#333!important;color:rgba(255,255,255,0.75)!important;text-shadow:-1px -1px 0px rgba(0,0,0,0.25);}
+/* ----------------------------------------------*/
+/* S 06 - Colors (classname as suffix)
+/* ----------------------------------------------*/
+.blue h3,.ltgrey h3,.dkgrey h3,.red h3,.green h3,.aqua h3,.pink h3,.tan h3{background:none!important;border:none!important;}
+.blue h3 span {color:#33749f!important;}
+.ltgrey h3 span {color:#ccc!important;}
+.dkgrey h3 span {color:#666666!important;}
+.red h3 span {color:#5e1b1b!important;}
+.green h3 span {color:#529ca6!important;}
+.aqua h3 span {color:#007489!important;}
+.pink h3 span {color:#e55171!important;}
+.tan h3 span {color:#c0b69f!important;}
+/* ----------------------------------------------*/
+/* S 07 - Nopad (classname as suffix)
+/*------------------------------------------------*/
+.nopad {padding:0px!important;}
+/* ----------------------------------------------*/
+/* S 08  - Nopad (classname as suffix)
+/*------------------------------------------------*/
+.pushleft{margin-left:28.641%!important;}
+/* ----------------------------------------------*/
+/* MOD 00 - Login Slide
+/* ----------------------------------------------*/
+div.slide-leftbox input.button, input.button {padding:12px 35px!important;font-weight:bold;font-size:12px!important;display:inline-block;text-transform:uppercase;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+.slide-container{z-index:999999!important;margin:60px auto 30px;position:relative;border-radius:4px;}
+.slide-container h1 {font-size:15px;font-weight:bold;padding-bottom:8px;margin-bottom:16px;}
+.slide-container h1 .log-in,.slide-container h1 .sign-up {display:inline-block;text-transform:uppercase;}
+.slide-container h1 .log-in {padding-right:2px;}
+.slide-container h1 .sign-up {padding-left:2px;}
+.slide-container .float {width:50%;float:left;padding-top:15px;}
+.slide-container .float:first-of-type {padding-right:5px;}
+.slide-container .float:last-of-type {padding-left:5px;}
+.slide-container label {display:block;padding:0 0 5px 2px;cursor:pointer;text-transform:uppercase;font-weight:400;font-size:11px;}
+.slide-container label i {margin-right:5px;display:inline-block;width:10px;}	
+.ulogin1 {float:left;width:48%;}
+.ulogin2 {float:right;width:48%;}	
+.jlogin1 {float:left;width:20%;margin-right:12px;}
+.jlogin2 {float:left;width:70%;margin-top:14px;color:#999;}
+.jlogintext {float:left;margin:0 12px 12px 0;}
+/* ----------------------------------------------*/
+/* MOD 01 Acymailing
+/* ----------------------------------------------*/
+.acysubbuttons{	text-align:left!important;margin-top:12px;}
+
+/* ----------------------------------------------*/
+/* MOD 02 - JXTC  Walls NewsPro - Grid Styles - Color styles are found in the styles css
+/* ----------------------------------------------*/
+.newsitemwrap {margin:0;padding:0;}
+/*------Text----------*/
+.newstext {padding:20px;text-align:center;}
+.newsitemwrap h4 a {font-size:16px;text-transform:uppercase;}
+/*------Read More Buttons------*/
+/*
+.newsitemwrap a.article-readmore {-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:1em;font-weight:bold;padding:9px 23px;text-decoration:none;margin-top:17px;}
+*/
+/*------ToolTips----------*/
+.tt-wrapper{padding:0;width:100%;height:60px;margin-top:16px;}
+.tt-wrapper li{display:inline-block;padding:0 8px;}
+.tt-wrapper li a{display:block;width:60px;height:60px;border-radius:50%;outline:none;position:relative;}
+.tt-wrapper li a span{width:100px;height:auto;line-height:20px;padding:10px;left:50%;margin-left:-64px;font-family:'Alegreya SC', Georgia, serif;font-weight:400;font-style:italic;font-size:14px;text-align:center;text-indent:0px;border-radius:5px;position:absolute;pointer-events:none;bottom:100px;opacity:0;-webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;-ms-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
+.tt-wrapper li a span:before,.tt-wrapper li a span:after{content:'';position:absolute;bottom:-15px;left:50%;margin-left:-9px;width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;}
+.tt-wrapper li a span:after{bottom:-14px;margin-left:-10px;}
+.tt-wrapper li a:hover span{opacity:0.9;bottom:70px;}
+/* ----------------------------------------------*/
+/* H 01 - Custom HTML Markup(etc)
+/* ----------------------------------------------*/
+.devices {width:408px;height:526px;margin:-105px 60px 0 -40px;z-index:99;position:relative;background:url(http://enote-vl.ru/templates/enterprise/images/backgrounds/devices-fp.png) right bottom no-repeat;float:left;}
+h3.xxl{font-size:204px!important;line-height:100%!important;text-align:center;}
+body h3.medium,body h3.medium span{font-size:180%;line-height:90%;text-align:center;display:block;padding-top:12px;letter-spacing:-2px;}
+h2.spanpink {margin-bottom:8px;}
+p.lgt-drk{text-transform:uppercase;font-size:14px;text-align:center;}
+.gridgutter {display:table-cell;}
+.time-to {width:100%;height:155px;margin-bottom:32px;}
+ul.social li {line-height:70%!important;display:inline-block;margin-right:0px;padding:3px 7px 3px 3px!important;}
+ul.social li span {padding:0;}
+ul.social li.last {padding:0!important;border:none;}
+.social1 {width:100%;margin-top:40px;}
+ul.social1 {display:table;}
+ul.social1 li {display:table-cell;line-height:70%!important;margin:0px;text-align:center;padding:0!important;font-size:3em;}
+/* Grey Bar Embelem/Menu Buttons */
+.embelemmenu {}
+.embelemwrap {margin:-30px 0; float:left; width:33%; height:319px;position:relative;z-index:9999;}
+.embelem-lg {height:598px;}
+/*.embelemwrap img {max-width:100%;position:relative;z-index:9999;}*/
+.midmenuwrap1 {margin-top:78px; width:33.5%;float:left;text-align:right;}
+.midmenuwrap2 {margin-top:78px; width:33%;float:left; text-align:left;}
+.midmenuwrap1 a.article-readmore-last {margin:0 0 0 32px;}
+.midmenuwrap2 a.article-readmore-first {margin:0 32px 0 0;}
+.midmenuwrap1 a.first,.midmenuwrap1 a.last,.midmenuwrap2 a.first, .midmenuwrap2 a.last {
+display:inline-block;
+-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;
+font-weight:100 !important; letter-spacing:0.5px; text-transform:uppercase; font-size:1.05em; font-weight:bold; text-align:center;
+padding:9px 0; width:41%;
+text-decoration:none;
+}
+.midmenuwrap1 a.first {margin:0 32px 0 0;}
+.midmenuwrap1 a.last {margin:0;}
+.midmenuwrap2 a.first {margin:0 32px 0 0;}
+.midmenuwrap2 a.last {margin:0;}
+ul.fplist1 {width:100%;padding:0;}
+ul.fplist1 li {width:40%;text-align:center;font-size:1.7em!important;font-weight:bold;line-height:100%;display:inline-block!important;}
+ul.fplist1 li .iwrap {width:220px;height:220px;margin-bottom:20px;border-radius:50%; border:3px solid #fff;}
+ul.fplist1 li .iwrwap img {max-width:100%;} 
+ul.fplist1 li.first {padding:0 60px 0 0; }
+ul.fplist1 li.middle {padding:0 0 0 60px;}
+ul.fplist1 li.last {margin-left:-12px;}
+.contactwrap {white-space:nowrap;}
+.contactwrap i {padding-top:2px;}
+.contactwrap1 {text-align:center !important;margin-top:28px;}
+.contactwrap1 i {padding-top:6px;}
+input.button.subbutton.btn.btn-primary {background:#444 !important;}
+/* ----------------------------------------------*/
+/* H 02 - Kommento
+/* ----------------------------------------------*/
+div.kmt-readon {margin-top:8px; }
+.kmt-readon span.aligned-left {margin-right:10px;}
+.kmt-readon span.kmt-readmore {background:none!important;font-weight:100 !important;font-size:0.85em;display:inline-block;text-transform:uppercase;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+.kmt-readmore a {padding-right:10px;}
+.kmt-readon span.kmt-comment,.kmt-readon span.kmt-hits  {background:none!important;font-weight:100 !important;font-size:0.85em;display:inline-block;text-transform:uppercase;}
+.kmt-comment a {padding-right:10px;}
+.kmt-readon span {padding:0;}
+#section-kmt #kmt-fame {padding:30px;}
+#section-kmt .avatar {margin-right:20px;}
+#section-kmt .kmt-list > li > div {padding:30px 0!important}
+#section-kmt .input.button {margin-left:6px!important;}
+#section-kmt .kmt-btn-submit,#section-kmt .input.button  {padding:9px 28px!important;font-weight:100 !important;font-family:Arial, Helvetica, sans-serif;font-size:12px!important;display:inline-block;text-transform:uppercase;border:none!important;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+div.kmt-content p {line-height:133%;margin:0 0 35px 20px!important;position:relative;padding:30px!important;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;}
+div.kmt-content p:after {content:"";position:absolute;bottom:-30px;left:50px;border-width:0 20px 30px 0px;border-style:solid;display:block;width:0;}
+#section-kmt .kmt-control-user {padding-left:20px;}
+#section-kmt .kmt-form-length > b {padding:7px 14px 7px 36px!important;}
+#section-kmt .kmt-option{float:none!important;}
+#section-kmt .float-li > li, #section-kmt .float-span > span{float:right!important;}
+#section-kmt ul.kmt-form-author{ margin:0 0 15px 0;}
+#section-kmt h3.kmt-title {font-size:18px;}
+/* ----------------------------------------------*/
+/* T 01 MOBILE
+/* ----------------------------------------------*/
+.mobilebtn {background:url(http://enote-vl.ru/templates/enterprise/images/icons/menu-icon.png) no-repeat  50% 50%;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;cursor:pointer;position:relative;width:20px;height:20px;float:left;margin:10px 0 13px 13px;overflow:hidden;}
+.mobilebtn{display:none;}
+.mobilebtn select {background:none!important;border:none!important;font-size:16px;height:30px;margin-right:40px;width:15px;}
+.mobilelogo {padding:0px 0px 0px 16px;}
+body.mobile{padding:0;width:100%;}
+body.mobile #enterprisemobile,body.mobile #headerwrap{}
+
+body.mobile .mobilepad{padding:20px 0 0 0;}
+body.mobile .enterprisemobile > div:first-child{padding:0;}
+body.mobile #mobilewrap{float:right;width:80%;}
+body.mobile .module{margin:0;}
+body.mobile h3.moduletitle,body.mobile .modulecontent{border-right:none;}
+body.mobile #footerwrap {min-width:100%;}
+body.mobile span.itemImage img{max-width:100%;width:auto!important;}
+body.mobile #mobilewrap .lg > div:first-child,body.mobile #mobilewrap .lg > div:first-child + div{float:none!important;width:100%!important;}
+body.mobile #mobilewrap .lg a{line-height:16px!important;}
+@media
+only screen and (-webkit-min-device-pixel-ratio:1.5),
+only screen and (-o-min-device-pixel-ratio:3/2),
+only screen and (min--moz-device-pixel-ratio:1.5),
+only screen and (min-device-pixel-ratio:1.5){
+html,  body{width:100%;overflow-x:hidden;}
+}
+ul.social1 {display:none;}
+ul.fplist1 {display:none;}
+.embelem-lg {display:none;}}
