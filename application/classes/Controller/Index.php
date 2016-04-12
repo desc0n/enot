@@ -1,13 +1,26 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Index extends Controller {
-
-	public function action_index()
+class Controller_Index extends Controller
+{
+	/**
+	 * @return View
+	 */
+	private function getBaseTemplate()
 	{
-		$template=View::factory('template')
+		/** @var Model_Content $contentModel */
+		$contentModel = Model::factory('Content');
+
+		return View::factory('template')
+			->set('mainmenuData', $contentModel->getMainMenu())
+			->set('slug', $this->request->param('slug'))
 			->set('get', $_GET)
 			->set('post', $_POST)
 		;
+	}
+
+	public function action_index()
+	{
+		$template = $this->getBaseTemplate();
 
 		$template->content = View::factory('index');
 

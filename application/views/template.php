@@ -82,13 +82,39 @@
             <div id="topwrap" class="clearfix">
 
             </div>
-            <div id="logo"><a class="hideTxt" href="/index.php">enote-vl</a></div>
+            <div id="logo">
+                <a class="hideTxt" href="/index.php">enote-vl</a>
+            </div>
 
-            <div id="menu" class="clearfix"><ul class="menu suckerfish xtcdefaultmenu">
-                    <li class="item-21 current active deeper parent"><a href="/" >Главная</a><ul><li class="item-271"><a href="/main/about-us" >О компании</a></li><li class="item-270"><a href="/main/newsfeed-list" >Новости</a></li></ul></li><li class="item-33 deeper parent"><a href="/services" >Услуги и решения</a><ul><li class="item-284"><a href="/services/services-tree" >Клиентам</a></li></ul></li><li class="item-121"><a href="#" >Проекты</a></li><li class="item-22 deeper parent"><a href="#" >Ресурсы</a><ul><li class="item-280"><a href="/resources/articles" >Статьи</a></li></ul></li><li class="item-108"><a href="/contacts" >Контакты</a></li></ul>
+            <div id="menu" class="clearfix">
+                <ul class="menu suckerfish xtcdefaultmenu">
+                    <? foreach ($mainmenuData as $menuData) {?>
+                    <li class="item-<?=$menuData['id'];?> <?=(empty($slug) || $slug == $menuData['path'] ? 'current' : null);?> deeper parent">
+                        <a href="<?=$menuData['path'];?>" ><?=$menuData['title'];?></a>
+                        <?if (count($menuData['submenu'])) {?>
+                        <ul>
+                            <? foreach ($menuData['submenu'] as $submenuData) {?>
+                            <li class="item-<?=$submenuData['id'];?>">
+                                <a href="<?=$submenuData['path'];?>" ><?=$submenuData['title'];?></a>
+                            </li>
+                            <?}?>
+                        </ul>
+                        <?}?>
+                    </li>
+                    <?}?>
+                </ul>
                 <div class="mobilebtn">
                     <select size="1" class="menu suckerfish xtcmobilemenu"  onchange="location.href=this.value">
-                        <option value="/" selected="selected">Главная</option><option value="/main/about-us" >О компании</option><option value="/main/newsfeed-list" >Новости</option><option value="/services" >Услуги и решения</option><option value="/services/services-tree" >Клиентам</option><option value="#" >Проекты</option><option value="#" >Ресурсы</option><option value="/resources/articles" >Статьи</option><option value="/contacts" >Контакты</option></select>
+                        <option value="/" selected="selected">Главная</option>
+                        <option value="/main/about-us" >О компании</option>
+                        <option value="/main/newsfeed-list" >Новости</option>
+                        <option value="/services" >Услуги и решения</option>
+                        <option value="/services/services-tree" >Клиентам</option>
+                        <option value="#" >Проекты</option>
+                        <option value="#" >Ресурсы</option>
+                        <option value="/resources/articles" >Статьи</option>
+                        <option value="/contacts" >Контакты</option>
+                    </select>
                 </div>
 
                 <div id="menuright2">

@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Class Model_Admin
+ */
 class Model_Admin extends Kohana_Model
 {
 
