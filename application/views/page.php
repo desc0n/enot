@@ -1,3 +1,30 @@
+<style>
+    .legend {
+        font-size:12px;
+        font-weight:bold;
+        color:#333333;
+        background-color:#e0e0e0;
+        padding:2px 5px 2px 2px;
+        border-bottom:1px solid #333333;
+    }
+
+    .tag {
+        padding:2px;
+        font-size:10px;
+        font-family:Arial;
+        color:#333333;
+        background-color:#f9f9f9;
+        border-bottom:1px solid #333333;
+    }
+
+    .team {margin:0 0 30px 0; float:left;}
+
+    .team-lft {width:25%;float:left;}
+    .team-lft img {border:5px solid #fff;}
+    .team-rt {width:72%; float:right;}
+    h3.teamtitle-rt{color:#666; font-size:110%; font-weight:bold; letter-spacing:0; margin:0 0 0.6em 0; }
+    .teamintro-rt { margin:0 0 0.4em 0; line-height:144%; font-size:.875em;}
+</style>
 <div id="region3wrap" class="xtc-bodygutter">
     <div id="region3pad" class="xtc-wrapperpad">
         <div id="region3" class="row-fluid xtc-wrapper r3spacer">
@@ -23,7 +50,7 @@
                                                                     <?=mb_substr(trim(strip_tags($news['introtext'])), 0, 80);?>...
                                                                 </div>
                                                                 <a class="smallbluebutton" href="<?=$news['path'];?>">
-                                                                    <span style=""><i class=" icon-circle-arrow-right"></i></span>Далее...
+                                                                    <i class="icon-circle-arrow-right"></i>Далее...
                                                                 </a>
                                                             </div>
                                                         </div>
