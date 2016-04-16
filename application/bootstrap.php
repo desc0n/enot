@@ -126,6 +126,12 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
+Route::set('page', 'page/<slug>', ['slug' =>'[0-9a-z_]+'])
+	->defaults([
+		'controller' => 'index',
+		'action'     => 'page',
+	]);
+
 Route::set('default', '(<controller>(/<action>(/<slug>)))', ['slug' =>'[0-9a-z_]+'])
 	->defaults(array(
 		'controller' => 'index',

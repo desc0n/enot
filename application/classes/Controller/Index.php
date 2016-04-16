@@ -29,19 +29,22 @@ class Controller_Index extends Controller
 
 	public function action_page()
 	{
-		$id = $this->request->param('id');
-		$_GET['id'] = $id;
+		/** @var Model_Content $contentModel */
+		$contentModel = Model::factory('Content');
 
-		$template=View::factory('template')
-			->set('get', $_GET)
+		/** @var Model_News $newsModel */
+		$newsModel = Model::factory('News');
+
+		$path = sprintf('/page/%s', $this->request->param('slug'));
+		$content = View::factory(Arr::get($contentModel->findMenuByPath($path), 'template', 'index'))
+			->set('content', $contentModel->findContentByPath($path))
+			->set('newsAssets', $newsModel->findNewsAssets())
 		;
 
-		$pageData = Model::factory('Admin')->getPage($_GET);
+		$template = $this->getBaseTemplate();
 
-		$template->content = View::factory('page')
-			->set('title', Arr::get(Arr::get($pageData, 0, []), 'title', ''))
-			->set('content', Arr::get(Arr::get($pageData, 0, []), 'content', ''))
-			->set('pageImgsData', Model::factory('Admin')->getPageImgs($_GET))
+		$template
+			->set('content', $content)
 		;
 
 		$this->response->body($template);
