@@ -10,11 +10,9 @@
     <script src="/public/js/bootstrap.js" type="text/javascript"></script>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="аутсорсинг, интегратор, IT, ИТ, информационные технологии, ремонт, компьютер, техника, монтаж, СКС, АТС, телефон, видеонаблюдение, СКУД, сервер, сеть, принтер, оргтехника, связь, интернет, IP, информационная, электронный, программа, обслуживание, автоматизация, администрирование, администратор, цифровой, компьютерный, абонентское, видео" />
-    <meta name="author" content="Super User" />
     <meta name="description" content="Системный интегратор e-note - IT-решения для бизнеса " />
-    <meta name="generator" content="Joomla! - Open Source Content Management" />
     <title>Сервисная компания e-note</title>
-    <link href="/templates/enterprise/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href="/public/i/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <link rel="stylesheet" href="http://enote-vl.ru/plugins/system/jxtcxmenu/xmenu.css" type="text/css" />
     <link rel="stylesheet" href="/public/css/css_default.css" type="text/css" />
     <link rel="stylesheet" href="/public/css/css_typo.css" type="text/css" />
@@ -41,19 +39,43 @@
     <script type="text/javascript">
         window.addEvent('load', function(){ xtcMenu(null, 'menu', 200, 50, 'h', new Fx.Transition(Fx.Transitions.Cubic.easeInOut), 90, false, false); });
         window.addEvent('load', function(){ // 432
-            var jxtc1slidebox = new slidebox('jxtc1','RSO',{xi:0,xo:0,yi:0,yo:0},{fxtype:new Fx.Transition(Fx.Transitions.Quad.easeIn),dura:800,frames:50});
-            var jxtc1jxtcpops = new jxtcpops('jxtc1',{opacityin:1,opacityout:0,verticalin:0,verticalout:0,horizontalin:0,horizontalout:0,durationin:550,durationout:550,pause:1000,fxtype:new Fx.Transition(Fx.Transitions.Quad.easeIn),centered:'1'});
-            var jxtc1jxtctips = new jxtctips('jxtc1',{opacityin:1,opacityout:0,verticalin:0,verticalout:0,horizontalin:0,horizontalout:0,durationin:550,durationout:550,pause:1000,fxtype:new Fx.Transition(Fx.Transitions.Quad.easeIn),centered:'1'});
-            var jxtc1jxtchover = new jxtchover('jxtc1','CECECE','FFFFFF');
+            var jxtc1slidebox = new slidebox('jxtc4','RSO',{xi:0,xo:0,yi:0,yo:0},{fxtype:new Fx.Transition(Fx.Transitions.Quad.easeIn),dura:800,frames:50});
+            var jxtc4jxtcpops = new jxtcpops('jxtc4',{opacityin:1,opacityout:0,verticalin:0,verticalout:0,horizontalin:0,horizontalout:0,durationin:550,durationout:550,pause:1000,fxtype:new Fx.Transition(Fx.Transitions.Quad.easeIn),centered:'1'});
+            var jxtc4jxtctips = new jxtctips('jxtc4',{opacityin:1,opacityout:0,verticalin:0,verticalout:0,horizontalin:0,horizontalout:0,durationin:550,durationout:550,pause:1000,fxtype:new Fx.Transition(Fx.Transitions.Quad.easeIn),centered:'1'});
+            var jxtc4jxtchover = new jxtchover('jxtc4','CECECE','FFFFFF');
         });
-        window.addEvent('load', function(){var jxtc1 = new wallFX('jxtc1',{fxmode:'slideVer',slidestart:'0',fxpause:-1,fxspeed:1500,fxlayer:'0',fxtype:new Fx.Transition(Fx.Transitions.linear)});});
+
+        window.addEvent('load', function(){
+            if (document.getElementById('jxtc4') != null) {
+                var jxtc4 = new wallFX('jxtc4', {
+                    fxmode: 'slideVer',
+                    slidestart: '0',
+                    fxpause: -1,
+                    fxspeed: 1500,
+                    fxlayer: '0',
+                    fxtype: new Fx.Transition(Fx.Transitions.linear)
+                });
+            }
+        });
+
         window.addEvent('load', function(){ // 445
             var jxtc2slidebox = new slidebox('jxtc2','RSO',{xi:0,xo:0,yi:0,yo:0},{fxtype:new Fx.Transition(Fx.Transitions.Quad.easeIn),dura:800,frames:50});
             var jxtc2jxtcpops = new jxtcpops('jxtc2',{opacityin:1,opacityout:0,verticalin:0,verticalout:0,horizontalin:0,horizontalout:0,durationin:550,durationout:550,pause:1000,fxtype:new Fx.Transition(Fx.Transitions.Quad.easeIn),centered:'1'});
             var jxtc2jxtctips = new jxtctips('jxtc2',{opacityin:1,opacityout:0,verticalin:0,verticalout:0,horizontalin:0,horizontalout:0,durationin:550,durationout:550,pause:1000,fxtype:new Fx.Transition(Fx.Transitions.Quad.easeIn),centered:'1'});
             var jxtc2jxtchover = new jxtchover('jxtc2','CECECE','FFFFFF');
         });
-        window.addEvent('load', function(){var jxtc2 = new wallFX('jxtc2',{fxmode:'slideHor',slidestart:'0',fxpause:4000,fxspeed:1500,fxlayer:'0',fxtype:new Fx.Transition(Fx.Transitions.linear)});});
+        window.addEvent('load', function(){
+            if (document.getElementById('jxtc2') != null) {
+                var jxtc2 = new wallFX('jxtc2', {
+                    fxmode: 'slideHor',
+                    slidestart: '0',
+                    fxpause: 4000,
+                    fxspeed: 1500,
+                    fxlayer: '0',
+                    fxtype: new Fx.Transition(Fx.Transitions.linear)
+                });
+            }
+        });
         <!--
         var acymailing = Array();
         acymailing['NAMECAPTION'] = 'Имя';
@@ -64,9 +86,9 @@
         acymailing['CAPTCHA_MISSING'] = 'Пожалуйста, введите защитный код, отображаемый на картинке';
         acymailing['NO_LIST_SELECTED'] = 'Пожалуйста, выберите рассылки, на которые вы хотите подписаться';
         //-->
-        window.addEvent("domready", function(){ jQuery("#jxtc570a0411119e0slider").unoslider({width:'1280',height:'402',preset:['explode','fountain','implode','spiral','sq_random'],order:'random',indicator:false,navigation:false,slideshow:{speed:4,timer:false,hoverPause:true,continuous:true,infinite:true},block:{vertical:15,horizontal:5},animation:{speed:100,delay:900,transition:'stretch',variation:'center',pattern:'random',direction:'',color:'#FFFFFF'}}); });
+        window.addEvent("domready", function(){ jQuery("#jxtc1slider").unoslider({width:'1280',height:'402',preset:['explode','fountain','implode','spiral','sq_random'],order:'random',indicator:false,navigation:false,slideshow:{speed:4,timer:false,hoverPause:true,continuous:true,infinite:true},block:{vertical:15,horizontal:5},animation:{speed:100,delay:900,transition:'stretch',variation:'center',pattern:'random',direction:'',color:'#FFFFFF'}}); });
         window.addEvent('domready', function(){
-            var southslidejxtc570a0411120be = new southslide( 'jxtc570a0411120be', {s1:'sd1'} , {panelW: 600, panelH: 260, panelBg: 'ffffff', panelOpacity: 90, panelDir: 'top', panelSpeedIn: 1000, panelTranIn: new Fx.Transition(Fx.Transitions.linear), panelOutAnim: 'o', panelSpeedOut: 500, panelTranOut: new Fx.Transition(Fx.Transitions.linear), closeText: 'Закрыть', boxesAnimOrder: 'l', boxLW: 600, boxLH: 260, boxLeftDir: 'top', boxLeftSpeed: 1000, boxLeftFx:'o', boxLeftTran: new Fx.Transition(Fx.Transitions.linear), boxRW: 380, boxRH: 300, boxRightDir: 'right', boxRightSpeed: 1000, boxRightFx:'so', boxRightTran: new Fx.Transition(Fx.Transitions.linear) } );
+            var southslidejxtc3 = new southslide( 'jxtc3', {s1:'sd1'} , {panelW: 600, panelH: 260, panelBg: 'ffffff', panelOpacity: 90, panelDir: 'top', panelSpeedIn: 1000, panelTranIn: new Fx.Transition(Fx.Transitions.linear), panelOutAnim: 'o', panelSpeedOut: 500, panelTranOut: new Fx.Transition(Fx.Transitions.linear), closeText: 'Закрыть', boxesAnimOrder: 'l', boxLW: 600, boxLH: 260, boxLeftDir: 'top', boxLeftSpeed: 1000, boxLeftFx:'o', boxLeftTran: new Fx.Transition(Fx.Transitions.linear), boxRW: 380, boxRH: 300, boxRightDir: 'right', boxRightSpeed: 1000, boxRightFx:'so', boxRightTran: new Fx.Transition(Fx.Transitions.linear) } );
         });
         function keepAlive() {	var myAjax = new Request({method: "get", url: "index.php"}).send();} window.addEvent("domready", function(){ keepAlive.periodical(840000); });
     </script>
@@ -83,7 +105,7 @@
 
             </div>
             <div id="logo">
-                <a class="hideTxt" href="/index.php">enote-vl</a>
+                <a class="hideTxt" href="/">enote-vl</a>
             </div>
             <div id="menu" class="clearfix">
                 <ul class="menu suckerfish xtcdefaultmenu">
@@ -116,7 +138,7 @@
                     <a style="display:block;text-align:center;padding:4px; width:24px; height:24px;background:#171717;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;-o-border-radius:50%;" href="/component/search/?searchword=&amp;Itemid=66"><i class="icon-search" style="font-size:16px;color:#ccc;padding-top:2px;"></i></a>
                 </div>
                 <div id="menuright1">
-                    <div id="jxtc570a0411120be">
+                    <div id="jxtc3">
                         <div class="login_open_wrap">
                             <div class="slide_wrap">
                                 <div class="southslide"><div style="text-align:center;padding:4px; width:24px; height:24px;background:#171717;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;-o-border-radius:50%;"><i class="icon-user" style="font-size:16px;color:#ccc;padding-top:2px;"></i></div></div><div id="sd1" style="display:none;"><div>

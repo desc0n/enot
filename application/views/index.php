@@ -3,8 +3,8 @@
         <div id="region1" class="row-fluid xtc-wrapper r1spacer">
             <div class="module title-off  ">
                 <div class="modulecontent">
-                    <div id="jxtc570a0411119e0">
-                        <ul id="jxtc570a0411119e0slider" class="unoslider">
+                    <div id="jxtc1">
+                        <ul id="jxtc1slider" class="unoslider">
                             <li>
                                 <div class="unoslider_caption">
                                     <span class="unoslider_title">e-note</span>
@@ -100,10 +100,10 @@
                             <div class="singlearea">
                                 <div class="module title-off  ">
                                     <div class="modulecontent">
-                                        <div id="jxtc570a0410ebb29">
+                                        <div id="jxtc4">
                                             <div class="newswrap">
-                                                <div id="wallviewjxtc570a0410ebb29" class="wallview columns-4 rows-2" style="overflow:hidden">
-                                                    <div id="wallsliderjxtc570a0410ebb29" class="wallslider">
+                                                <div id="wallviewjxtc4" class="wallview columns-4 rows-2" style="overflow:hidden">
+                                                    <div id="wallsliderjxtc4" class="wallslider">
                                                         <div class="wallsliderrow">
                                                             <div class="wallslidercell">
                                                                 <div class="wallpage singlepage page-1" >
