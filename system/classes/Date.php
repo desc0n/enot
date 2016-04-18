@@ -20,9 +20,9 @@ class Date extends Kohana_Date
         $date_str = strftime($format, $timestamp);
         
         if (stripos($locale, '1251') !== false) {
-            return iconv('windows-1251','utf-8', $date_str);
+            return mb_convert_encoding($date_str,'utf-8', 'windows-1251');
         } elseif (stripos($locale, '1252') !== false) {
-            return iconv('windows-1252','utf-8', $date_str);
+            return mb_convert_encoding($date_str, 'utf-8', 'windows-1251');
         } else {
             return $date_str;
         }
