@@ -24,4 +24,19 @@ class Model_News extends Kohana_Model
             ->as_array()
         ;
     }
+    
+    /**
+     * @return array
+     */
+    public function findNewsAssetsByPath($path)
+    {
+        return DB::select('c.*')
+            ->from(['content', 'c'])
+            ->where('c.path', '=', ':path')
+            ->param(':path', $path)
+            ->limit(1)
+            ->execute()
+            ->current()
+        ;
+    }
 }

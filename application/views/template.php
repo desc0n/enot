@@ -202,7 +202,9 @@
                                 <div class="module title-off  ">
                                     <div class="modulecontent">
                                         <div class="breadcrumbs">
-                                            <span class="showHere">Вы здесь: </span><span class="here">Главная</span></div>
+                                            <span class="showHere">Вы здесь: </span>
+                                            <?=$breadcrumbs;?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
