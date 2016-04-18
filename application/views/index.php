@@ -107,136 +107,28 @@
                                                         <div class="wallsliderrow">
                                                             <div class="wallslidercell">
                                                                 <div class="wallpage singlepage page-1" >
-                                                                    <div class="wallfloat firstrow row-1 firstcol col-1" style="width:25%;height:50%" >
+                                                                    <? foreach ($newsAssets as $i => $news) {
+                                                                        $imgData = json_decode($news['images']);
+
+                                                                        $imgSrc = !empty($imgData) ? $imgData->image_intro : null;
+                                                                        ?>
+                                                                    <div class="wallfloat ceil">
                                                                         <div class="newsitemwrap" >
-                                                                            <a href="/main/newsfeed-list/188-exchange-vs-zimbra">
+                                                                            <a href="<?=$news['path'];?>">
                                                                                 <figure class="tint">
-                                                                                    <img src="/public/i/VMware_468-bw.png" class="intimage"  />
+                                                                                    <img src="<?=$imgSrc;?>" class="intimage"  />
                                                                                 </figure>
                                                                             </a>
                                                                             <div class="newstext">
-                                                                                <h4><a class="titlelink" href="/main/newsfeed-list/188-exchange-vs-zimbra"> Microsoft или VMWare? Exchange VS Zimbra</a></h4>
-                                                                                <p class="article-info">2013-07-22</p>
-                                                                                <p class="article-intro">Система корпоративной работы: только Exchange? Стоп! Есть альтернатива: VMware Zimbra!
-                                                                                    ...</p>
+                                                                                <h4><a class="titlelink" href="<?=$news['path'];?>"><?=$news['title'];?></a></h4>
+                                                                                <p class="article-info"><?=date('d-m-Y', strtotime($news['publish_up']));?></p>
+                                                                                <p class="article-intro"><?=mb_substr(trim(strip_tags($news['introtext'])), 0, 80);?>...</p>
                                                                                 <br />
-                                                                                <p><a href="/main/newsfeed-list/188-exchange-vs-zimbra" class="first"><button class="red-pill"><span>Далее…</span></button></a></p>
+                                                                                <p><a href="<?=$news['path'];?>" class="first"><button class="red-pill"><span>Далее…</span></button></a></p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="wallfloat firstrow row-1 centercol col-2" style="width:25%;height:50%" >
-                                                                        <div class="newsitemwrap" >
-                                                                            <a href="/main/newsfeed-list/186-zoneminder"><figure class="tint">
-                                                                                    <img src="/public/i/zoneminder-camera-bw.jpg" class="intimage"  />
-                                                                                </figure></a>
-                                                                            <div class="newstext">
-                                                                                <h4><a class="titlelink" href="/main/newsfeed-list/186-zoneminder">Видеонаблюдение Zoneminder - говорит и показывает</a></h4>
-                                                                                <p class="article-info">2013-07-02</p>
-                                                                                <p class="article-intro">Закончены тестовые испытания системы видеонаблюдения на основе ПО Zoneminder
-                                                                                    ...</p>
-                                                                                <br />
-                                                                                <p><a href="/main/newsfeed-list/186-zoneminder" class="first"><button class="red-pill"><span>Далее…</span></button></a></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="wallfloat firstrow row-1 centercol col-3" style="width:25%;height:50%" >
-                                                                        <div class="newsitemwrap" >
-                                                                            <a href="/main/newsfeed-list/73-skype-asterisk">
-                                                                                <figure class="tint">
-                                                                                    <img src="/public/i/skype-aster-bw.png" class="intimage"  />
-                                                                                </figure>
-                                                                            </a>
-                                                                            <div class="newstext">
-                                                                                <h4><a class="titlelink" href="/main/newsfeed-list/73-skype-asterisk">Звоните бесплатно. Skype и Asterisk</a></h4>
-                                                                                <p class="article-info">2013-08-16</p>
-                                                                                <p class="article-intro">Завершена интеграция корпоративного аккаунта skype "enote-vl" и офисной АТС Asterisk
-                                                                                    ...</p>
-                                                                                <br />
-                                                                                <p><a href="/main/newsfeed-list/73-skype-asterisk" class="first"><button class="red-pill"><span>Далее…</span></button></a></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="wallfloat firstrow row-1 lastcol col-4" style="width:25%;height:50%" >
-                                                                        <div class="newsitemwrap" >
-                                                                            <a href="/main/newsfeed-list/187-voip-ats-news">
-                                                                                <figure class="tint">
-                                                                                    <img src="/public/i/voip-ats-bw.jpg" class="intimage"  />
-                                                                                </figure>
-                                                                            </a>
-                                                                            <div class="newstext">
-                                                                                <h4><a class="titlelink" href="/main/newsfeed-list/187-voip-ats-news">Дешевая связь - VoIP шлюзы + офисная АТС</a></h4>
-                                                                                <p class="article-info">2015-02-12</p>
-                                                                                <p class="article-intro">Снижаем расходы на международную и междугороднюю связь посредством VoIP-шлюзов.
-                                                                                    ...</p>
-                                                                                <br />
-                                                                                <p><a href="/main/newsfeed-list/187-voip-ats-news" class="first"><button class="red-pill"><span>Далее…</span></button></a></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="wallfloat lastrow row-2 firstcol col-1" style="width:25%;height:50%" >
-                                                                        <div class="newsitemwrap" >
-                                                                            <a href="/main/newsfeed-list/185-trassir-hikvision">
-                                                                                <figure class="tint">
-                                                                                    <img src="/public/i/hikvision_banner-bw.jpg" class="intimage"  />
-                                                                                </figure></a>
-                                                                            <div class="newstext">
-                                                                                <h4><a class="titlelink" href="/main/newsfeed-list/185-trassir-hikvision">TRASSIR в подарок к IP-камерам HikVision</a></h4>
-                                                                                <p class="article-info">2014-01-30</p>
-                                                                                <p class="article-intro">При покупке любых IP-камер HikVision - ПО TRASSIR по прежнему прилагается в подарок
-                                                                                    ...</p>
-                                                                                <br />
-                                                                                <p><a href="/main/newsfeed-list/185-trassir-hikvision" class="first"><button class="red-pill"><span>Далее…</span></button></a></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="wallfloat lastrow row-2 centercol col-2" style="width:25%;height:50%" >
-                                                                        <div class="newsitemwrap" >
-                                                                            <a href="/main/newsfeed-list/72-spiceworks-news">
-                                                                                <figure class="tint">
-                                                                                    <img src="/public/i/spiceworks-logo-standard-bw.png" class="intimage"  />
-                                                                                </figure></a>
-                                                                            <div class="newstext">
-                                                                                <h4><a class="titlelink" href="/main/newsfeed-list/72-spiceworks-news">Spiceworks - система поддержки клиентов</a></h4>
-                                                                                <p class="article-info">2015-02-12</p>
-                                                                                <p class="article-intro">Spiceworks - система подачи, автоматической регистрации и обработки заявок клиентов
-                                                                                    ...</p>
-                                                                                <br />
-                                                                                <p><a href="/main/newsfeed-list/72-spiceworks-news" class="first"><button class="red-pill"><span>Далее…</span></button></a></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="wallfloat lastrow row-2 centercol col-3" style="width:25%;height:50%" >
-                                                                        <div class="newsitemwrap" >
-                                                                            <a href="/main/newsfeed-list/48-nexentastor">
-                                                                                <figure class="tint">
-                                                                                    <img src="/public/i/nexenta-bw.png" class="intimage"  />
-                                                                                </figure></a>
-                                                                            <div class="newstext">
-                                                                                <h4><a class="titlelink" href="/main/newsfeed-list/48-nexentastor">Решение для хранения данных - NexentaStor</a></h4>
-                                                                                <p class="article-info">2015-02-12</p>
-                                                                                <p class="article-intro">Система хранения данных NexentaStor. Готовое решение для корпоративных сетей на основе ZFS
-                                                                                    ...</p>
-                                                                                <br />
-                                                                                <p><a href="/main/newsfeed-list/48-nexentastor" class="first"><button class="red-pill"><span>Далее…</span></button></a></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="wallfloat lastrow row-2 lastcol col-4" style="width:25%;height:50%" >
-                                                                        <div class="newsitemwrap" >
-                                                                            <a href="/main/newsfeed-list/207-ggtp-tungus">
-                                                                                <figure class="tint">
-                                                                                    <img src="/public/i/antifire bw.jpg" class="intimage"  />
-                                                                                </figure></a>
-                                                                            <div class="newstext">
-                                                                                <h4><a class="titlelink" href="/main/newsfeed-list/207-ggtp-tungus">Achtung! Fire! Пожаротушение в серверной</a></h4>
-                                                                                <p class="article-info">2013-07-19</p>
-                                                                                <p class="article-intro">Введена в эксплуатацию система газового пожаротушения на базе модулей ГГПТ "Тунгус"
-                                                                                    ...</p>
-                                                                                <br />
-                                                                                <p><a href="/main/newsfeed-list/207-ggtp-tungus" class="first"><button class="red-pill"><span>Далее…</span></button></a></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                                                    <?}?>
                                                                 </div>
                                                             </div>
                                                         </div>

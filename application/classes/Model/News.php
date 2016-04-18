@@ -17,7 +17,7 @@ class Model_News extends Kohana_Model
             ->join(['assets', 'a'])
             ->on('c.asset_id', '=', 'a.id')
             ->where('a.parent_id', '=', 45)
-            ->and_where('c.published', '=', 1)
+            ->and_where('c.state', '=', 1)
             ->order_by('c.ordering', 'DESC')
             ->limit($this->newsAssetsLimit)
             ->execute()

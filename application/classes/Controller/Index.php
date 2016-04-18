@@ -20,9 +20,16 @@ class Controller_Index extends Controller
 
 	public function action_index()
 	{
+		/** @var Model_News $newsModel */
+		$newsModel = Model::factory('News');
+
+		$newsModel->newsAssetsLimit = 8;
+
 		$template = $this->getBaseTemplate();
 
-		$template->content = View::factory('index');
+		$template->content = View::factory('index')
+			->set('newsAssets', $newsModel->findNewsAssets())
+		;
 
 		$this->response->body($template);
 	}

@@ -225,3 +225,7 @@ animation-timing-function: linear;
 	vertical-align:top;
 /*	text-align:left;*/
 }
+.wallfloat.ceil {
+    width: 25%;
+    height: 50%;
+}
