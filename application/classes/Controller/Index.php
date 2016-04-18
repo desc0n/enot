@@ -81,7 +81,7 @@ class Controller_Index extends Controller
 		;
 
 		$template = $this->getBaseTemplate()
-			->set('breadcrumbs', sprintf('<a href="/" class="pathway">Главная</a> &gt; <a href="/news/list" class="pathway">Новости</a> &gt; <span class="here"> %s</span>', $news['title']))
+			->set('breadcrumbs', sprintf('<a href="/" class="pathway">Главная</a> &gt; <a href="/pages/news" class="pathway">Новости</a> &gt; <span class="here"> %s</span>', $news['title']))
 		;
 
 		$template

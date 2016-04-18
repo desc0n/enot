@@ -11,7 +11,13 @@
                         <div class="article_header">
                             <div class="article_date">
                                 <div class="article_date_pad">
-                                    <h5 class="day">23</h5><h5 class="month">Июль</h5>
+                                    <?
+                                    $month = Date::strftime_fix('%b', strtotime($news['publish_up']));
+
+                                    $date = DateTime::createFromFormat('Y-m-d H:i:s', $news['publish_up']);
+
+                                    ?>
+                                    <h5 class="day"><?=$date->format('d');?></h5><h5 class="month"><?=$month;?></h5>
                                 </div>
                             </div>
                             <div class="article_info">
@@ -21,7 +27,7 @@
                                     </a>
                                 </h2>
         	                    <span class="published">
-                                Опубликовано: 23.07.2013 07:22&nbsp;
+                                Опубликовано: <?=$date->format('d.m.Y H:i');?>&nbsp;
                                 </span>
                             </div>
                             <div style="clear:both;"></div>
