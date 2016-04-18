@@ -5,7 +5,8 @@
                 <div id="component" class="r3spacer_top">
                     <div class="item-pageleftlarge">
                         <div class="xtc-full-img img-fulltext-right imgframe">
-                            <img src="<?=!empty($imgData = json_decode($news['images'])) ? $imgData->image_fulltext : null;?>" alt="">
+                            <?$imgData = json_decode($news['images']);?>
+                            <img src="<?=!empty($imgData) ? $imgData->image_fulltext : null;?>" alt="">
                         </div>
                         <div class="article_header">
                             <div class="article_date">

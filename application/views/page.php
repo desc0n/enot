@@ -66,15 +66,16 @@
                         </div>
                     </div>
                 </div>
-            </div>	<div class="center span9">
-
-                <div id="component" class="r3spacer_top"><div class="item-page">
-                    <div class="article_text">
-                        <?=Arr::get($content, 'introtext');?>
+            </div>
+            <div class="center span9">
+                <div id="component" class="r3spacer_top">
+                    <div class="item-page">
+                        <div class="article_text">
+                            <?=Arr::get($content, 'introtext');?>
+                        </div>
                     </div>
-                </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <div id="designcopy">Дизайн : <a href="http://joomlaworld.ru"><img src="http://joomlaworld.ru/copyright/design.png"></a></div></div><a href="http://joomlaworld.ru">	</a></div><a href="http://joomlaworld.ru">
-            </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
