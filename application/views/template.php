@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="/public/css/unoslider.css" type="text/css" />
     <link rel="stylesheet" href="/public/css/enterprise_theme.css" type="text/css" />
     <link rel="stylesheet" href="/public/css/slide_style.css" type="text/css" />
+    <link rel="stylesheet" href="/public/css/custom.css" type="text/css" />
     <script src="/public/js/mootools-core.js" type="text/javascript"></script>
     <script src="/public/js/core.js" type="text/javascript"></script>
     <script src="/public/js/mootools-more.js" type="text/javascript"></script>

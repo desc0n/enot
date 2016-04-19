@@ -46,6 +46,10 @@ class Controller_Index extends Controller
 
 		$path = sprintf('/page/%s', $this->request->param('slug'));
 
+		if ($path === '/page/news_list') {
+			$newsModel->newsAssetsLimit = 8;
+		}
+		
 		$contentData = $contentModel->findContentByPath($path);
 
 		$content = View::factory(Arr::get($contentModel->findMenuByPath($path), 'template', 'index'))

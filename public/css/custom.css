@@ -1,1 +1,5 @@
-﻿
+﻿.news-ceil {
+    width: 50% !important;
+    display: table-cell;
+    padding: 10px;
+}
