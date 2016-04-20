@@ -139,6 +139,12 @@ Route::set('news', 'news/<slug>', ['slug' =>'[0-9a-z_\-.]+'])
 		'action'     => 'news',
 	]);
 
+Route::set('article', 'article/<slug>', ['slug' =>'[0-9a-z_\-.]+'])
+	->defaults([
+		'controller' => 'index',
+		'action'     => 'article',
+	]);
+
 Route::set('default', '(<controller>(/<action>(/<slug>)))', ['slug' =>'[0-9a-z_-]+'])
 	->defaults(array(
 		'controller' => 'index',

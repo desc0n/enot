@@ -44,6 +44,9 @@ class Controller_Index extends Controller
 		/** @var Model_News $newsModel */
 		$newsModel = Model::factory('News');
 
+		/** @var Model_Articles $articleModel */
+		$articleModel = Model::factory('Articles');
+
 		$path = sprintf('/page/%s', $this->request->param('slug'));
 
 		if ($path === '/page/news_list') {
@@ -53,6 +56,35 @@ class Controller_Index extends Controller
 		$contentData = $contentModel->findContentByPath($path);
 
 		$content = View::factory(Arr::get($contentModel->findMenuByPath($path), 'template', 'index'))
+			->set('content', $contentData)
+			->set('newsAssets', $newsModel->findNewsAssets())
+			->set('articleAssets', $articleModel->findArticlesAssets())
+		;
+
+		$template = $this->getBaseTemplate()
+			->set('breadcrumbs', sprintf('<a href="/" class="pathway">Главная</a> &gt; <span class="here"> %s</span>', $contentData['title']))
+		;
+
+		$template
+			->set('content', $content)
+		;
+
+		$this->response->body($template);
+	}
+
+	public function action_article()
+	{
+		/** @var Model_Content $contentModel */
+		$contentModel = Model::factory('Content');
+
+		/** @var Model_News $newsModel */
+		$newsModel = Model::factory('News');
+
+		$path = sprintf('/article/%s', $this->request->param('slug'));
+
+		$contentData = $contentModel->findContentByPath($path);
+
+		$content = View::factory(Arr::get($contentModel->findMenuByPath($path), 'template', 'article'))
 			->set('content', $contentData)
 			->set('newsAssets', $newsModel->findNewsAssets())
 		;
