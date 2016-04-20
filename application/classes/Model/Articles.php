@@ -5,8 +5,6 @@
  */
 class Model_Articles extends Kohana_Model
 {
-    public $newsAssetsLimit = 4;
-
     /**
      * @return array
      */
@@ -18,8 +16,7 @@ class Model_Articles extends Kohana_Model
             ->on('c.asset_id', '=', 'a.id')
             ->where('a.parent_id', '=', 40)
             ->and_where('c.state', '=', 1)
-            ->order_by('c.ordering', 'DESC')
-            ->limit($this->newsAssetsLimit)
+            ->order_by('c.ordering', 'ASC')
             ->execute()
             ->as_array()
         ;

@@ -22,7 +22,7 @@
                                         </div>
                                         <div style="clear:both;"></div>
                                     </div>
-                                <?=(($i % 2) == 1 ? '</div>' : '');?>
+                                <?=(($i % 2) == 1 || $article == end($articleAssets) ? '</div>' : '');?>
                             </div>
                             <?}?>
                         </div>
