@@ -127,7 +127,7 @@ Kohana::modules(array(
  * defaults for the URI.
  */
 
-Route::set('page', 'page/<slug>', ['slug' =>'[0-9a-z_]+'])
+Route::set('page', 'page/<slug>', ['slug' =>'[0-9a-z_\-.]+'])
 	->defaults([
 		'controller' => 'index',
 		'action'     => 'page',
