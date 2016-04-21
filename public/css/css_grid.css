@@ -75,25 +75,25 @@ License:#  The CSS, XHTML is released under GPL:#  http://www.opensource.org/lic
 .xtc-gutter {padding:0px;}
 .xtc-gutter2 {padding:45px 0px 50px;}
 .xtc-gutter3 {padding:0 0px;}
-.header{padding:;}
-.r1spacer{padding:;}
+.header{}
+.r1spacer{}
 .r1spacer_top{padding:20px 0 0 0;}
-.r2spacer{padding:;}
+.r2spacer{}
 .r2spacer_top{padding:20px 0 0 0;}
-.r3spacer{padding-bottom:!important;}
+.r3spacer{}
 .r3spacer_top{padding:20px 0 0 0;}
-.r4spacer{padding:;}
+.r4spacer{}
 #region4 {min-height:200px !important;}
 .r4spacer_top{padding:20px 0 0 0;}
-.r5spacer{padding:;}
+.r5spacer{}
 .r5spacer_top{padding:20px 0 0 0;}
-.r6spacer{padding:;}
+.r6spacer{}
 .r6spacer_top{padding:20px 0 0 0;}
-.r7spacer{padding:;}
+.r7spacer{}
 .r7spacer_top{padding:20px 0 0 0;}
-.r8spacer{padding:;}
+.r8spacer{}
 .r8spacer_top{padding:20px 0 0 0;}
-.r9spacer{padding:;}
+.r9spacer{}
 .r9spacer_bottom{padding: 0 0 0;}
 /* ----Module Padding---------------------------*/
 .firstarea .module, #left .module:first-child, #right .module:first-child,#region4_banner .module:first-child{margin-top:0;}
@@ -160,7 +160,7 @@ body.frontpage #region3wrap .xtc-wrapper {padding-bottom:0!important;}
 .article_info{margin-left:112px;}
 .article_info_nodate{}
 h1.pagetitle{padding:0 10px;}
-h5.month{display:inline-block;font-family arial;font-size:16px;font-weight:bold;text-decoration:none;text-transform:uppercase;}
+h5.month{display:inline-block;font-family: arial;font-size:16px;font-weight:bold;text-decoration:none;text-transform:uppercase;}
 .article_date{float:left;padding:8px;}
 .article_date_pad{float:left;width:80px;height:80px;text-align:center;}
 h5.day {margin:0;width:80px!important;text-align:center;padding:18px 0 0 0;line-height:70%;}
@@ -265,7 +265,7 @@ span.caret{float:none!important;}
     -o-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
 */
-}
+
  
 .custom_1 a:hover {
     font-size: 18px;
@@ -512,4 +512,7 @@ html,  body{width:100%;overflow-x:hidden;}
 }
 ul.social1 {display:none;}
 ul.fplist1 {display:none;}
-.embelem-lg {display:none;}}
+.embelem-lg {display:none;}
+.subcol0 {
+    width: 100% !important;
+}

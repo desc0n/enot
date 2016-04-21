@@ -135,58 +135,6 @@
                         <?}?>
                     </select>
                 </div>
-                <div id="menuright2">
-                    <a style="display:block;text-align:center;padding:4px; width:24px; height:24px;background:#171717;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;-o-border-radius:50%;" href="/component/search/?searchword=&amp;Itemid=66"><i class="icon-search" style="font-size:16px;color:#ccc;padding-top:2px;"></i></a>
-                </div>
-                <div id="menuright1">
-                    <div id="jxtc3">
-                        <div class="login_open_wrap">
-                            <div class="slide_wrap">
-                                <div class="southslide"><div style="text-align:center;padding:4px; width:24px; height:24px;background:#171717;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;-o-border-radius:50%;"><i class="icon-user" style="font-size:16px;color:#ccc;padding-top:2px;"></i></div></div><div id="sd1" style="display:none;"><div>
-                                        <form action="/" method="post" id="login-form" >
-                                            <h1><span class="log-in">Войти</span> или <span class="sign-up">Зарегистрироваться</span></h1>
-                                            <fieldset class="userdata">
-                                                <div class="ulogin1">
-                                                    <label for="login"><i class="icon-user"></i>Имя</label>
-                                                    <input id="modlgn-username" type="text" name="username"  class="inputbox"  size="30" />
-                                                </div>
-                                                <div class="ulogin2">
-                                                    <label for="password"><i class="icon-lock"></i>Пароль</label>
-                                                    <input id="modlgn-passwd" type="password" name="password" class="inputbox" size="30"  />
-                                                </div>
-                                                <div style="clear:both;"></div>
-                                                <div class="jlogin1">
-                                                    <input type="submit" name="Submit" class="button btnmore" value="Войти" />
-                                                </div>
-                                                <div class="jlogin2">
-                                                    Запомнить меня		<input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes"/>
-                                                </div>
-                                                <div style="clear:both;"></div>
-                                                <input type="hidden" name="option" value="com_users" />
-                                                <input type="hidden" name="task" value="user.login" />
-                                                <input type="hidden" name="return" value="aW5kZXgucGhwP0l0ZW1pZD0yMQ==" />
-                                                <input type="hidden" name="4c4f970a2ecc64b0575e621d140a3e17" value="1" />
-                                            </fieldset>
-                                            <br /><br /><div class="jlogintext">
-                                                <a href="/authentication-link?view=reset">
-                                                    <i class="icon-lock"></i>Забыли пароль?</a>
-                                            </div>&nbsp;&nbsp;&nbsp;
-                                            <div class="jlogintext">
-                                                <a href="/authentication-link?view=remind">
-                                                    <i class="icon-user"></i>Забыли логин?</a>
-                                            </div>&nbsp;&nbsp;&nbsp;
-                                            <div class="jlogintext"><a href="/authentication-link?view=registration">
-                                                    <i class="icon-plus-sign"></i>  Регистрация</a></div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div id="sd2" style="display:none;">
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -228,35 +176,23 @@
                             </h3>
                             <div class="modulecontent">
                                 <ul class="menu dualcol  xtcdefaultmenu">
-                                    <li class="item-310 active subcol0">
+                                    <li class="subcol0">
                                         <a href="/" >Главная</a>
                                     </li>
-                                    <li class="item-311 subcol1">
-                                        <a href="/main/about-us" >О компании</a>
+                                    <li class="subcol0">
+                                        <a href="/page/about" >О компании</a>
                                     </li>
-                                    <li class="item-312 subcol0">
-                                        <a href="/main/newsfeed-list" >Новости</a>
+                                    <li class="subcol0">
+                                        <a href="/page/news_list" >Новости</a>
                                     </li>
-                                    <li class="item-313 subcol1">
-                                        <a href="/services" >Услуги и решения</a>
+                                    <li class="ubcol0">
+                                        <a href="/page/services" >Услуги и решения</a>
                                     </li>
-                                    <li class="item-314 subcol0">
-                                        <a href="/services/services-tree" >Клиентам</a>
+                                    <li class="subcol0">
+                                        <a href="/page/articles_list" >Статьи</a>
                                     </li>
-                                    <li class="item-315 subcol1">
-                                        <a href="/?Itemid=121" >Проекты</a>
-                                    </li>
-                                    <li class="item-316 subcol0">
-                                        <a href="/resources/articles" >Статьи</a>
-                                    </li>
-                                    <li class="item-317 subcol1">
-                                        <a href="/contacts" >Контакты</a>
-                                    </li>
-                                    <li class="item-318 subcol0">
-                                        <a href="/search-link" >Поиск</a>
-                                    </li>
-                                    <li class="item-319 subcol1">
-                                        <a href="/authentication-link" >Вход на сайт</a>
+                                    <li class="subcol0">
+                                        <a href="/page/contacts" >Контакты</a>
                                     </li>
                                 </ul>
                             </div>
@@ -264,96 +200,51 @@
                     </div>
                 </div>
                 <div id="bottom2" class="xtcBootstrapGrid span4 centercolumn cols-3 column-2">
+                </div>
+                <div id="bottom4" class="xtcBootstrapGrid span4 lastcolumn cols-3 column-3">
                     <div class="singlearea">
                         <div class="module title-on  bottom">
                             <h3 class="moduletitle">
                                 <span class="first_word">Контакты</span>
                             </h3>
                             <div class="modulecontent">
-                                <div id="jxtc1">
-                                    <div id="wallviewjxtc1" class="wallviewbootstrap columns-1 rows-1" style="overflow:hidden">
-                                        <div id="wallsliderjxtc1" class="wallslider">
-                                            <div class="wallsliderrow">
-                                                <div class="wallslidercell">
-                                                    <div class="wallpage singlepage page-1" >
-                                                        <div class="row-fluid singlerow row-1">
-                                                            <div class="span12 singlecol col-1" >
-                                                                <div class="contactwrap">
-                                                                    <i class="icon-home"></i>&nbsp;&nbsp;г. Владивосток, ул. Русская, д.94а, оф. 913
-                                                                    <br>
-                                                                    <i class="icon-phone"></i>&nbsp;&nbsp;+7 (423) 2 664 991<br>
-                                                                    <i class="icon-print"></i>&nbsp;&nbsp;+7 (423) 2 664 991<br>
-                                                                    <i class="icon-envelope"></i>&nbsp;&nbsp;
-                                                                    <script type='text/javascript'>
-                                                                        <!--
-                                                                        var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
-                                                                        var path = 'hr' + 'ef' + '=';
-                                                                        var addy67593 = '&#105;nf&#111;' + '&#64;';
-                                                                        addy67593 = addy67593 + '&#101;n&#111;t&#101;-vl' + '&#46;' + 'r&#117;';
-                                                                        document.write('<a ' + path + '\'' + prefix + ':' + addy67593 + '\'>');
-                                                                        document.write(addy67593);
-                                                                        document.write('<\/a>');
-                                                                        //-->\n </script><script type='text/javascript'>
-                                                                        <!--
-                                                                        document.write('<span style=\'display: none;\'>');
-                                                                        //-->
-                                                                    </script>Этот адрес электронной почты защищен от спам-ботов. У вас должен быть включен JavaScript для просмотра.
-                                                                    <script type='text/javascript'>
-                                                                        <!--
-                                                                        document.write('</');
-                                                                        document.write('span>');
-                                                                        //-->
-                                                                    </script>
-                                                                    <br />
-                                                                    <div class="contactwrap1">
-                                                                        <span class="circle1"><i class="icon- icon-facebook"></i></span>
-                                                                        <span class="circle1"><i class="icon- icon-twitter"></i></span>
-                                                                        <span class="circle1"><i class="icon- icon-google-plus"></i></span>
-                                                                        <span class="circle1"> <i class="icon- icon-linkedin"></i></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="bottom4" class="xtcBootstrapGrid span4 lastcolumn cols-3 column-3">
-                    <div class="singlearea">
-                        <div class="module title-on  bottom">
-                            <h3 class="moduletitle">
-                                <span class="first_word">Подписаться на новости</span>
-                            </h3>
-                            <div class="modulecontent">
-                                <div class="acymailing_modulebottom" id="acymailing_module_formAcymailing22701">
-                                    <div class="acymailing_fulldiv" id="acymailing_fulldiv_formAcymailing22701" style="text-align:left" >
-                                        <form id="formAcymailing22701" action="/" onsubmit="return submitacymailingform('optin','formAcymailing22701')" method="post" name="formAcymailing22701"  >
-                                            <div class="acymailing_module_form" >
-                                                <div class="acymailing_form">
-                                                    <p class="onefield" id="field_name_formAcymailing22701">								<span class="acyfield_name"><input id="user_name_formAcymailing22701"  onfocus="if(this.value == 'Имя') this.value = '';" onblur="if(this.value=='') this.value='Имя';" class="inputbox" type="text" name="user[name]" style="width:80%" value="Имя" /></span>
-                                                    </p><p class="onefield" id="field_email_formAcymailing22701">								<span class="acyfield_email"><input id="user_email_formAcymailing22701"  onfocus="if(this.value == 'Адрес эл. почты') this.value = '';" onblur="if(this.value=='') this.value='Адрес эл. почты';" class="inputbox" type="text" name="user[email]" style="width:80%" value="Адрес эл. почты" /></span>
-                                                    </p>
-                                                    <p class="acysubbuttons">
-                                                        <input class="button subbutton btn btn-primary" type="submit" value="Подписаться" name="Submit" onclick="try{ return submitacymailingform('optin','formAcymailing22701'); }catch(err){alert('The form could not be submitted '+err);return false;}"/>
-                                                    </p>
-                                                </div>
-                                                <input type="hidden" name="ajax" value="0"/>
-                                                <input type="hidden" name="ctrl" value="sub"/>
-                                                <input type="hidden" name="task" value="notask"/>
-                                                <input type="hidden" name="redirect" value="http%3A%2F%2Fenote-vl.ru%2F"/>
-                                                <input type="hidden" name="redirectunsub" value="http%3A%2F%2Fenote-vl.ru%2F"/>
-                                                <input type="hidden" name="option" value="com_acymailing"/>
-                                                <input type="hidden" name="hiddenlists" value="1"/>
-                                                <input type="hidden" name="acyformname" value="formAcymailing22701" />
-                                            </div>
-                                        </form>
-                                    </div>
+                    <div class="row-fluid singlerow row-1">
+                        <div class="span12 singlecol col-1" >
+                            <div class="contactwrap">
+                                <i class="icon-home"></i>&nbsp;&nbsp;г. Владивосток, ул. Русская, д.94а, оф. 913
+                                <br>
+                                <i class="icon-phone"></i>&nbsp;&nbsp;+7 (423) 2 664 991<br>
+                                <i class="icon-print"></i>&nbsp;&nbsp;+7 (423) 2 664 991<br>
+                                <i class="icon-envelope"></i>&nbsp;&nbsp;
+                                <script type='text/javascript'>
+                                    <!--
+                                    var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+                                    var path = 'hr' + 'ef' + '=';
+                                    var addy67593 = '&#105;nf&#111;' + '&#64;';
+                                    addy67593 = addy67593 + '&#101;n&#111;t&#101;-vl' + '&#46;' + 'r&#117;';
+                                    document.write('<a ' + path + '\'' + prefix + ':' + addy67593 + '\'>');
+                                    document.write(addy67593);
+                                    document.write('<\/a>');
+                                    //-->\n </script><script type='text/javascript'>
+                                    <!--
+                                    document.write('<span style=\'display: none;\'>');
+                                    //-->
+                                </script>Этот адрес электронной почты защищен от спам-ботов. У вас должен быть включен JavaScript для просмотра.
+                                <script type='text/javascript'>
+                                    <!--
+                                    document.write('</');
+                                    document.write('span>');
+                                    //-->
+                                </script>
+                                <br />
+                                <div class="contactwrap1">
+                                    <span class="circle1"><i class="icon- icon-facebook"></i></span>
+                                    <span class="circle1"><i class="icon- icon-twitter"></i></span>
+                                    <span class="circle1"><i class="icon- icon-google-plus"></i></span>
+                                    <span class="circle1"> <i class="icon- icon-linkedin"></i></span>
                                 </div>
                             </div>
                         </div>
