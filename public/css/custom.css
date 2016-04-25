@@ -51,10 +51,10 @@
 
 @media (max-width: 768px) {
     .features-table thead td {
-        font-size: 10px;
+        font-size: 9px;
     }
     .features-table {
-        font-size: 10px;
+        font-size: 9px;
     }
     .dualcol li {
         margin-bottom: 0;
@@ -74,10 +74,10 @@
 
 @media (max-width: 560px) {
     .features-table thead td {
-        font-size: 10px;
+        font-size: 9px;
     }
     .features-table {
-        font-size: 10px;
+        font-size: 9px;
     }
     .dualcol li {
         margin-bottom: 0;
@@ -91,10 +91,10 @@
 
 @media (max-width: 440px) {
     .features-table thead td {
-        font-size: 10px;
+        font-size: 9px;
     }
     .features-table {
-        font-size: 10px;
+        font-size: 9px;
     }
     .dualcol li {
         margin-bottom: 0;
