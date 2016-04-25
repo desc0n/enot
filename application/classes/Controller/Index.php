@@ -26,7 +26,7 @@ class Controller_Index extends Controller
 		$newsModel->newsAssetsLimit = 8;
 
 		$template = $this->getBaseTemplate()
-			->set('breadcrumbs', '<a href="/" class="pathway">Главная</a> &gt; <a href="/main/newsfeed-list" class="pathway">Новости</a> &gt; <span class="here"> Microsoft или VMWare? Exchange VS Zimbra</span>')
+			->set('breadcrumbs', '<a href="/" class="pathway">Главная</a>')
 		;
 
 		$template->content = View::factory('index')
