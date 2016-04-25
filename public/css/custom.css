@@ -5,6 +5,114 @@
     padding: 10px;
 }
 
-.article-intro {
-    min-height: 425px;
+@media (max-width: 3000px) {
+    .newsitemwrap h4 a {
+        font-size: 16px;
+    }
+    .newsitemwrap p {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .newsitemwrap h4 a {
+        font-size: 15px;
+    }
+    .newsitemwrap p {
+        font-size: 95%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .newsitemwrap h4 a {
+        font-size: 12px;
+    }
+    .newsitemwrap p {
+        font-size: 80%;
+    }
+    ul.imgmenu span.image-title {
+        float: none;
+        display: inline;
+    }
+}
+
+@media (max-width: 992px) {
+    .newsitemwrap h4 a {
+        font-size: 13px;
+    }
+    .newsitemwrap p {
+        font-size: 80%;
+    }
+    ul.imgmenu span.image-title {
+        float: none;
+        display: inline;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-table thead td {
+        font-size: 10px;
+    }
+    .features-table {
+        font-size: 10px;
+    }
+    .dualcol li {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .newsitemwrap h4 a {
+        font-size: 12px;
+    }
+    .newsitemwrap p {
+        font-size: 80%;
+    }
+    ul.imgmenu span.image-title {
+        float: none;
+        display: inline;
+    }
+}
+
+@media (max-width: 560px) {
+    .features-table thead td {
+        font-size: 10px;
+    }
+    .features-table {
+        font-size: 10px;
+    }
+    .dualcol li {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    ul.imgmenu span.image-title {
+        float: none;
+        display: inline;
+    }
+}
+
+@media (max-width: 440px) {
+    .features-table thead td {
+        font-size: 10px;
+    }
+    .features-table {
+        font-size: 10px;
+    }
+    .dualcol li {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    ul.imgmenu span.image-title {
+        float: none;
+        display: inline;
+    }
+}
+.modulecontent {
+    text-align: center;
+}
+.imgmenu {
+    float: none !important;
+    margin: auto !important;
+    display: inline-block !important;
+}
+.imgmenu li{
+    margin: auto !important;
 }

@@ -185,7 +185,7 @@
                                     <li class="subcol0">
                                         <a href="/page/news_list" >Новости</a>
                                     </li>
-                                    <li class="ubcol0">
+                                    <li class="subcol0">
                                         <a href="/page/services" >Услуги и решения</a>
                                     </li>
                                     <li class="subcol0">

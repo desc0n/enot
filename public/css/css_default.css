@@ -118,7 +118,7 @@ ul.dropline > li > ul > li > ul {position:absolute;margin:0;top:45px;left:-164px
 #menu > ul.dropline > li > ul > li:first-child,#menu > ul.dropline > li > ul > li:first-child + li,#menu > ul.dropline > li > ul > li:first-child + li + li,#menu > ul.dropline > li > ul > li:first-child + li + li + li,#menu > ul.dropline > li > ul > li:first-child + li + li + li + li,#menu > ul.dropline > li > ul > li ul li:first-child,#menu > ul.dropline > li > ul > li ul li:first-child + li,#menu > ul.dropline > li > ul > li ul li:first-child + li + li,#menu > ul.dropline > li > ul > li ul li:first-child + li + li + li,#menu > ul.dropline > li > ul > li ul li:first-child + li + li + li + li{background:none!important;}
 /* X-Menu */
 .xmenu {text-transform:none;letter-spacing:0;font-size:11px !important; }
-ul.imgmenu{width:100%;display:table; float:right;}
+ul.imgmenu{display:table; float:right;}
 ul.imgmenu li{display:table-cell;}
 ul.imgmenu li:first-child{padding-left:0;}
 ul.imgmenu img{float:left;padding:0 12px 0 0;width:3em;}

@@ -41,11 +41,11 @@
                 <div class="row-fluid">
                     <div id="user1" class="xtcBootstrapGrid span12 singlecolumn cols-1 column-1">
                         <div class="singlearea">
-                            <div class="module title-off   pushleft">
+                            <div class="module title-off">
                                 <div class="modulecontent">
                                     <ul class="menu imgmenu xtcdefaultmenu">
-                                        <li class="item-34 subcol0">
-                                            <a href="/solution-it-top" >
+                                        <li class="">
+                                            <a href="/page/solution-it" >
                                                 <img src="/public/i/computer.png" alt="IT-инфраструктура" />
                                                 <span class="image-title">
                                                   IT-инфраструктура
@@ -53,8 +53,8 @@
                                                 </span>
                                             </a>
                                         </li>
-                                        <li class="item-35 subcol1">
-                                            <a href="/telecommunication-top" >
+                                        <li class="">
+                                            <a href="/page/solution-tele" >
                                                 <img src="/public/i/network.png" alt="Телекоммуникации" />
                                                 <span class="image-title">
                                                     Телекоммуникации
@@ -62,8 +62,8 @@
                                                 </span>
                                             </a>
                                         </li>
-                                        <li class="item-30 subcol0">
-                                            <a href="/security-top" >
+                                        <li class="">
+                                            <a href="/page/solution-security" >
                                                 <img src="/public/i/lock.png" alt="Безопасность" />
                                                 <span class="image-title">
                                                     Безопасность
@@ -71,8 +71,8 @@
                                                 </span>
                                             </a>
                                         </li>
-                                        <li class="item-36 subcol1">
-                                            <a href="/data-top" >
+                                        <li class="">
+                                            <a href="/page/solution-data" >
                                                 <img src="/public/i/data.png" alt="Данные" />
                                                 <span class="image-title">
                                                     Данные
@@ -122,7 +122,7 @@
                                                                             <div class="newstext">
                                                                                 <h4><a class="titlelink" href="<?=$news['path'];?>"><?=$news['title'];?></a></h4>
                                                                                 <p class="article-info"><?=date('d-m-Y', strtotime($news['publish_up']));?></p>
-                                                                                <p class="article-intro"><?=mb_substr(trim(strip_tags($news['introtext'])), 0, 80);?>...</p>
+                                                                                <p class="article-intro"><?=mb_substr(trim(strip_tags($news['fulltext'])), 0, 80);?>...</p>
                                                                                 <br />
                                                                                 <p><a href="<?=$news['path'];?>" class="first"><button class="red-pill"><span>Далее…</span></button></a></p>
                                                                             </div>
