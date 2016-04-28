@@ -97,21 +97,21 @@ License: #  The CSS, XHTML is released under GPL:
 h1, h2, h3, h4, #content h1, #content h2, #content h3, #content h4, #content h5, #content h6, #content .contentheading, #content .componentheading, .jnewstitle, .category, a.mainlevel, .contentheading span,.unoslider_caption, ul.fplist1 li, .midmenuwrap1 a.first,.midmenuwrap1 a.last,.midmenuwrap2 a.first, .midmenuwrap2 a.last,div.pagination a,ul.pagenav a,.items-more h3  {
 /*font-family: LuxiBold, sans-serif !important;*/
 /*font-family: OxygenBold, sans-serif !important;*/
-font-family: SourceSemiBold, sans-serif !important;
+/*font-family: SourceSemiBold, sans-serif !important;*/
 font-weight:100 !important;}  
 #topmenu #mainmenu > li a, .slidetext p,  .flatgreybutton1, .fpwrap h2, ul.fplist li, .fpwrap h1,.unoslider_description  {
 /*font-family: Luxi, sans-serif !important;*/
 /*font-family: Oxygen, sans-serif !important;*/
-font-family: Source, sans-serif !important;
+/*font-family: Source, sans-serif !important;*/
 font-weight:100 !important;}
-.callwrap1 h1, h1.slide {font-family: SourceLight, sans-serif !important;font-weight:100 !important;}
+.callwrap1 h1, h1.slide {/*font-family: SourceLight, sans-serif !important;*/font-weight:100 !important;}
 /*Global */
 body {
-font-family:Source, Arial, Helvetica, sans-serif;font-size:0.9em;direction:ltr;line-height: 160%;}
+/*font-family:Source, Arial, Helvetica, sans-serif;*/font-size:0.9em;direction:ltr;line-height: 160%;}
 /*Content and Component Headings */
-.contentheading,h2.title {font-family:SourceSemiBold, Arial, Helvetica, sans-serif;font-size:3em;line-height:95% !important;padding:12px 0;}
+.contentheading,h2.title {/*font-family:SourceSemiBold, Arial, Helvetica, sans-serif;*/font-size:3em;line-height:95% !important;padding:12px 0;}
 div.joomla div.multicolumns h2.title {font-size:2.1428571428571;line-height:2.1428571428571;}
-.componentheading,.pagetitle {font-family: SourceSemiBold, Arial, Helvetica, sans-serif;font-size:2em;line-height:2em;margin:0 0 20px 0;}
+.componentheading,.pagetitle {/*font-family: SourceSemiBold, Arial, Helvetica, sans-serif;*/font-size:2em;line-height:2em;margin:0 0 20px 0;}
 .pagetitle span {padding:5px 32px 5px 32px;font-weight:bold;display:inline-block;}
 .component h2 {letter-spacing:-2px;}
 .module h3 span {font-size:1.1em;line-height:1.1em;}
@@ -122,11 +122,11 @@ p {line-height:152%;}
 .txt_small {font-size:12px;line-height:14px;}
 .txt_large {font-size:60px;line-height:63px;padding:0;}
 .upper {text-transform:uppercase;}
-.ff_times {font-family:"Times New Roman", Times, serif;}
+.ff_times {/*font-family:"Times New Roman", Times, serif;*/}
 ul.dualfish li a,ul.suckerfish li a,ul.dropline li a {font-size:1em;}
 ul.dualfish li ul.dualfish li a,ul.suckerfish li ul.suckerfish li a,ul.dropline li ul.dropline li a{font-size:0.9em;}
 /*Be nice, IE fix below*/
-div,a,a:link,ul.dualfish li ul li a span, ul.suckerfish li ul li a span, ul.dropline li ul li a span{font-family:Source, Arial, Helvetica, sans-serif;}
+div,a,a:link,ul.dualfish li ul li a span, ul.suckerfish li ul li a span, ul.dropline li ul li a span{/*font-family:Source, Arial, Helvetica, sans-serif;*/}
 /* ----------------------------------------------*/
 /* TYPOGRAPHY
 /* ----------------------------------------------*/
@@ -144,8 +144,8 @@ blockquote.opensmall{background:url(../images/typo/openquote.gif) no-repeat 0 0;
 blockquote.opensmall p{background:url(../images/typo/closequote.gif) no-repeat 100% 100%;padding:0 0 0 15px;font:16px Arial;color:#777}
 blockquote.openlarge{background:url(../images/typo/oquote_lg.png) no-repeat 0 0;border:0;padding:0;text-align:justify}
 blockquote.openlarge p{background:url(../images/typo/equote_lg.png) no-repeat 100% 100%;padding:10px 0 10px 50px;font:18px Arial;line-height:28px;color:#777}
-.highlight{padding:12px;background:#ffc;color:#333;font-family:"Lucida Sans Unicode","Lucida Grande",sans-serif}
-.code{background:#f4f4f4;font-family:"Lucida Sans Unicode","Lucida Grande",sans-serif;padding:12px;color:#333}
+.highlight{padding:12px;background:#ffc;color:#333;/*font-family:"Lucida Sans Unicode","Lucida Grande",sans-serif*/}
+.code{background:#f4f4f4;/*font-family:"Lucida Sans Unicode","Lucida Grande",sans-serif;*/padding:12px;color:#333}
 .note{background:#feef9c url(../images/typo/note.gif) no-repeat right bottom;font-size:1em;color:#000!important;padding-left:20px;padding-right:20px;padding-top:20px;padding-bottom:20px;margin-bottom:15px}
 p.error{padding-left:25px;color:#f10033;background:url(../images/typo/error.gif) no-repeat top left}
 p.message{color:#069;background:url(../images/typo/info.gif) no-repeat top left;padding-left:25px}
@@ -197,7 +197,7 @@ ul.icons li span i.icon-play-circle{color:#222}
 .num-sm:after{content:"";position:absolute;bottom:-10px;right:85px;border-width:0 0 140px 0;border-style:solid}
 button:hover{cursor:pointer}
 button::-moz-focus-inner{border:0}
-button.minimal{background:#e3e3e3;border:1px solid #bbb;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-moz-box-shadow:inset 0 0 1px 1px #f6f6f6;-webkit-box-shadow:inset 0 0 1px 1px #f6f6f6;box-shadow:inset 0 0 1px 1px #f6f6f6;color:#333;font-family:"helvetica neue",helvetica,arial,sans-serif;font-size:12px;font-weight:bold;line-height:1;padding:8px 0 9px;text-align:center;text-shadow:0 1px 0 #fff;width:150px}
+button.minimal{background:#e3e3e3;border:1px solid #bbb;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;-moz-box-shadow:inset 0 0 1px 1px #f6f6f6;-webkit-box-shadow:inset 0 0 1px 1px #f6f6f6;box-shadow:inset 0 0 1px 1px #f6f6f6;color:#333;/*font-family:"helvetica neue",helvetica,arial,sans-serif;*/font-size:12px;font-weight:bold;line-height:1;padding:8px 0 9px;text-align:center;text-shadow:0 1px 0 #fff;width:150px}
 button.minimal:hover{background:#d9d9d9;-moz-box-shadow:inset 0 0 1px 1px #eaeaea;-webkit-box-shadow:inset 0 0 1px 1px #eaeaea;box-shadow:inset 0 0 1px 1px #eaeaea;color:#222;cursor:pointer}
 button.minimal:active{background:#d0d0d0;-moz-box-shadow:inset 0 0 1px 1px #e3e3e3;-webkit-box-shadow:inset 0 0 1px 1px #e3e3e3;box-shadow:inset 0 0 1px 1px #e3e3e3;color:#000}
 button.blue-pill{background:#8296af;-moz-border-radius:18px;-webkit-border-radius:18px;border-radius:18px;color:#fff;font-weight:bold;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;line-height:1;padding:12px 0;text-align:center;text-transform:uppercase;width:150px}
@@ -216,7 +216,7 @@ button.grey-pill{background:#999;-moz-border-radius:18px;-webkit-border-radius:1
 button.grey-pill:hover{background:#7a7a7a;cursor:pointer}
 button.pink-pill{background:#e03960;-moz-border-radius:18px;-webkit-border-radius:18px;border-radius:18px;color:#fff;font-weight:bold;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;line-height:1;padding:12px 0 12px 0;text-align:center;text-transform:uppercase;width:150px}
 button.pink-pill:hover{background:#e03960;cursor:pointer}
-button.blue{background:#8296af;background:-webkit-gradient(linear,0 0,0 100%,from(#8296af),to(#587faf));-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;color:#fff;font-weight:bold;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;line-height:1;padding:12px 0 12px 0!important;text-align:center;text-transform:uppercase;width:150px}
+button.blue{background:#8296af;background:-webkit-gradient(linear,0 0,0 100%,from(#8296af),to(#587faf));-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;color:#fff;font-weight:bold;/*font-family:Arial,Helvetica,sans-serif;*/font-size:11px;font-weight:bold;line-height:1;padding:12px 0 12px 0!important;text-align:center;text-transform:uppercase;width:150px}
 button.blue:hover{background:#587faf;cursor:pointer}
 button.purple{background:#a5b8da;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;color:#fff;font-weight:bold;font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:bold;line-height:1;padding:12px 0 12px 0!important;text-align:center;text-transform:uppercase;width:150px}
 button.purple:hover{background:#9badcc;cursor:pointer}

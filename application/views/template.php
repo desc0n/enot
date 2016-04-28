@@ -240,12 +240,12 @@
                                     //-->
                                 </script>
                                 <br />
-                                <div class="contactwrap1">
-                                    <span class="circle1"><i class="icon- icon-facebook"></i></span>
-                                    <span class="circle1"><i class="icon- icon-twitter"></i></span>
-                                    <span class="circle1"><i class="icon- icon-google-plus"></i></span>
-                                    <span class="circle1"> <i class="icon- icon-linkedin"></i></span>
-                                </div>
+<!--                                <div class="contactwrap1">-->
+<!--                                    <span class="circle1"><i class="icon- icon-facebook"></i></span>-->
+<!--                                    <span class="circle1"><i class="icon- icon-twitter"></i></span>-->
+<!--                                    <span class="circle1"><i class="icon- icon-google-plus"></i></span>-->
+<!--                                    <span class="circle1"> <i class="icon- icon-linkedin"></i></span>-->
+<!--                                </div>-->
                             </div>
                         </div>
                     </div>
