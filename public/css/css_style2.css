@@ -15,7 +15,10 @@ License: #  The CSS, XHTML is released under GPL:
 /* ----------------------------------------------*/
 /* B 00 - Body
 /* ----------------------------------------------*/
-body {background:#ffffff url('http://enote-vl.ru/templates/enterprise/images/backgrounds/wavy.png') repeat;color:#666666; }
+body {
+    background: #f9f9f9;
+    color:#666666;
+}
 /* ----------------------------------------------*/
 /* B 01 - Heading,links and titles
 /* ----------------------------------------------*/
