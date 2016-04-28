@@ -11,4 +11,13 @@ class Controller_Ajax extends Controller {
 	{
 		$this->response->body(View::factory('typeahead_admin')->set('words', Model::factory("Word")->getWords($_POST))->set('post', $_POST));
 	}
+
+
+	public function action_change_password()
+	{
+		/** @var $adminModel Model_Admin */
+		$adminModel = Model::factory('Admin');
+
+		$this->response->body(View::factory('ajax')->set('content', json_encode($adminModel->changePassword())));
+	}
 }

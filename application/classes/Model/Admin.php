@@ -8,6 +8,8 @@ class Model_Admin extends Kohana_Model
 
 	private $user_id;
 
+	public $systemMail = 'descon@bk.ru';
+
 	public function __construct()
 	{
 		if (Auth::instance()->logged_in()) {
@@ -99,6 +101,71 @@ class Model_Admin extends Kohana_Model
 		DB::query(Database::UPDATE,$sql)
 			->param(':id', Arr::get($params,'removeimg',0))
 			->execute();
+	}
+
+
+	/**
+	 * @param string $email
+	 * @param string $subject
+	 * @param null|string $view
+	 * @param null|string $from
+	 *
+	 * @return bool
+	 */
+	public function sendMail($email, $subject, $view = null, $from = null)
+	{
+		$to = $email;
+		$from = $from == null ? 'site@mud.primtapki.ru' : $from;
+		$message = $view !== null ? $view : '';
+		$bound = "0";
+		$header = "From: $from<$from>\r\n";
+		$header .= "Subject: $subject\n";
+		$header .= "Mime-Version: 1.0\n";
+		$header .= "Content-Type: multipart/mixed; boundary=\"$bound\"";
+		$body = "\n\n--$bound\n";
+		$body .= "Content-type: text/html; charset=\"utf-8\"\n";
+		$body .= "Content-Transfer-Encoding: quoted-printable\n\n";
+		$body .= "$message";
+
+		if (mail($to, $subject, $body, $header)) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * @return bool
+	 *
+	 * @throws Kohana_Exception
+	 */
+	public function changePassword()
+	{
+		$newPassword = $this->generatePassword();
+
+		$newHashPassword = Auth::instance()->hash($newPassword);
+
+		if ($this->sendMail($this->systemMail, 'Новый пароль', $newPassword)) {
+			DB::update('users')->set(['password' => $newHashPassword])->where('username', '=', 'admin')->execute();
+
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * @return string
+	 */
+	private function generatePassword()
+	{
+		$code = '';
+		for ($i = 0; $i < 6; $i++) {
+			$ind = rand(0, 9);
+			$code .= $ind;
+		}
+
+		return $code;
 	}
 
 }

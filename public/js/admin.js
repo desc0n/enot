@@ -18,3 +18,15 @@ $(document).ready(function(){
         $('#typeahead .typeahead').css('display', 'none');
     });
 });
+
+
+function changePassword()
+{
+    $('#infoModal .modal-body').html('');
+    $.ajax({type: 'POST', url: '/ajax/change_password', async: true,
+        success: function(data) {
+            $('#infoModal .modal-body').html('<div class="alert alert-success"><strong>Пароль успешно изменен!</strong> Новый пароль отправлен на почту.</div>');
+            $('#infoModal').modal('toggle');
+        }
+    });
+}

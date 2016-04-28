@@ -1,31 +1,17 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Панель управления</title>
-
-
-
     <!-- Bootstrap -->
-
 	  <link href="/public/css/bootstrap.css" rel="stylesheet">
 	  <link href="/public/css/admin.css" rel="stylesheet">
       <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-
     <!--[if lt IE 9]>
-
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-
     <![endif]-->
 	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -75,20 +61,16 @@
             <ul class="dropdown-menu" role="menu">
 				<?if(!Auth::instance()->logged_in()){?>
 				<form class="form-inline form-login" role="form" method="post">
-
 					<div class="input-group">
-
 					  <input type="text" class="form-control" placeholder="Логин" name="username">
-
 					</div>
-
 					<div class="input-group">
-
 					  <input type="password" class="form-control" placeholder="Пароль" name="password">
-
 					</div>
-
-					<button type="submit" class="btn btn-default" name="login">Войти</button>
+					<div class="panel-group">
+						<button type="submit" class="btn btn-default" name="login">Войти</button>
+					</div>
+					<button class="btn btn-default" type="button" onclick="changePassword();">Сменить пароль</button>
 				</form>
 				<?} else{?>
 					<?if(Auth::instance()->logged_in('admin')){?>
@@ -133,20 +115,16 @@
 
 			<?if(!Auth::instance()->logged_in()){?>
 				<form class="form-inline form-login" role="form" method="post">
-
 					<div class="input-group">
-
 					  <input type="text" class="form-control" placeholder="Логин" name="username">
-
 					</div>
-
 					<div class="input-group">
-
 					  <input type="password" class="form-control" placeholder="Пароль" name="password">
-
 					</div>
-
-					<button type="submit" class="btn btn-default" name="login">Войти</button>
+					<div class="panel-group">
+						<button type="submit" class="btn btn-default" name="login">Войти</button>
+					</div>
+					<button class="btn btn-default" type="button" onclick="changePassword();">Сменить пароль</button>
 				</form>
 				<?} else{?>
 					<?if(Auth::instance()->logged_in('admin')){?>
@@ -201,5 +179,19 @@
 	    <p class="text-muted"></p>
     </div>
 </div>
+<div class="modal fade" id="infoModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			</div>
+			<div class="modal-body">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </body>
 </html>
