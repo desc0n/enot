@@ -17,8 +17,59 @@ class Date extends Kohana_Date
             $format = preg_replace('#(?<!%)((?:%%)*)%e#', '\1%#d', $format);
         }
         
-        $date_str = strftime($format, $timestamp);
-        
+        $date_str = strtoupper(strftime($format, $timestamp));
+
+        switch ($date_str) {
+            case 'JAN':
+                $date_str = 'ЯНВ';
+
+                break;
+            case 'FEB':
+                $date_str = 'ФЕВ';
+
+                break;
+            case 'MAR':
+                $date_str = 'МАР';
+
+                break;
+            case 'APR':
+                $date_str = 'АПР';
+
+                break;
+            case 'MAY':
+                $date_str = 'МАЙ';
+
+                break;
+            case 'JUN':
+                $date_str = 'ИЮН';
+
+                break;
+            case 'JUL':
+                $date_str = 'ИЮЛ';
+
+                break;
+            case 'AUG':
+                $date_str = 'АВГ';
+
+                break;
+            case 'SEP':
+                $date_str = 'СЕН';
+
+                break;
+            case 'OCT':
+                $date_str = 'ОКТ';
+
+                break;
+            case 'NOV':
+                $date_str = 'НОЯ';
+
+                break;
+            case 'DEC':
+                $date_str = 'ДЕК';
+
+                break;
+        }
+
         if (stripos($locale, '1251') !== false) {
             return mb_convert_encoding($date_str,'utf-8', 'windows-1251');
         } elseif (stripos($locale, '1252') !== false) {

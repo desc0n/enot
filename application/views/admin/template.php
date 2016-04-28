@@ -76,12 +76,10 @@
         </div>
         <!-- /.navbar-static-side -->
     </nav>
-
     <div id="page-wrapper">
         <?=$admin_content;?>
     </div>
     <!-- /#page-wrapper -->
-
 </div>
 <!-- /#wrapper -->
 <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
@@ -100,7 +98,6 @@
     </div>
 </div>
 <!-- /#errorModal -->
-
 <!-- Bootstrap Core JavaScript -->
 <script src="/public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Metis Menu Plugin JavaScript -->
