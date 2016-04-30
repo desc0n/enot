@@ -98,12 +98,11 @@
 
 </head>
 <body class="frontpage">
-
+<?/*
 <div id="headerwrap" class="xtc-bodygutter">
     <div id="headerpad" class="xtc-wrapperpad">
         <div id="header" class="clearfix xtc-wrapper row-fluid header">
             <div id="topwrap" class="clearfix">
-
             </div>
             <div id="logo">
                 <a class="hideTxt" href="/">enote-vl</a>
@@ -139,6 +138,56 @@
         </div>
     </div>
 </div>
+*/?>
+<nav id="headerwrap" class="navbar navbar-default xtc-bodygutter" role="navigation">
+    <div id="headerpad" class="container">
+        <div id="header" class="container-fluid xtc-wrapper">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" id="mobile-collapsed-nav-btn" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div id="logo" class="navbar-brand visible-xs mob-navbar" ref="#">
+                    <a class="hideTxt" href="/">enote-vl</a>
+                </div>
+            </div>
+            <div id="logo" class="hidden-xs pull-left">
+                <a class="hideTxt" href="/">enote-vl</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse clearfix pull-right" id="menu">
+                <ul class="nav navbar-nav menu suckerfish ">
+                    <li class="dropdown visible-xs">
+                        <? foreach ($mainmenuData as $menuData) {?>
+                        <a href="<?=$menuData['path'];?>"><?=$menuData['title'];?></a>
+                            <? foreach ($menuData['submenu'] as $submenuData) {?>
+                        <a href="<?=$submenuData['path'];?>"><?=$submenuData['title'];?></a>
+                            <?}?>
+                        <?}?>
+                    </li>
+                    <? foreach ($mainmenuData as $menuData) {?>
+                    <li class="hidden-xs mainmenu-item">
+                        <a href="<?=$menuData['path'];?>" class="dropdown-toggle">
+                            <?=$menuData['title'];?>
+                            <?if (count($menuData['submenu'])) {?><span class="glyphicon glyphicon-chevron-down"></span><?}?>
+                        </a>
+                        <?if (count($menuData['submenu'])) {?>
+                        <ul class="dropdown-menu-alt" role="menu">
+                            <? foreach ($menuData['submenu'] as $submenuData) {?>
+                            <li><a href="<?=$submenuData['path'];?>"><?=$submenuData['title'];?></a></li>
+                            <?}?>
+                        </ul>
+                        <?}?>
+                    </li>
+                    <?}?>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </div>
+</nav>
 <?=$content;?>
 <div id="region8wrap" class="xtc-bodygutter">
     <div id="region8pad" class="xtc-wrapperpad">

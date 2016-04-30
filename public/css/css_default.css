@@ -78,7 +78,7 @@ ul.suckerfish > li > a, ul.dropline > li > a, ul.dualfish > li > a {display: blo
 ul.suckerfish > ul > li > a, ul.dropline > ul > li > a, ul.dualfish > ul > li > a {display:block;}
 ul.dualfish > li > ul li > ul,ul.suckerfish > li > ul li > ul,ul.dropline > li > ul li > ul {visibility:hidden;}
 ul.suckerfish li.xtcHover > ul, ul.dropline li.xtcHover > ul, ul.dualfish li.xtcHover > ul,ul.suckerfish li > ul:hover, ul.dropline li > ul:hover, ul.dualfish li > ul:hover {visibility:visible;}
-ul.suckerfish ul,ul.dropline ul,  ul.dualfish ul {display: block;visibility:hidden;overflow:hidden;position:absolute;z-index:9999;top:60px;padding:4px 8px 10px;}
+ul.suckerfish ul,ul.dropline ul,  ul.dualfish ul {display: block;visibility:hidden;overflow:hidden;position:absolute;z-index:9999;top:50px;padding:4px 8px 10px;}
 ul.suckerfish ul:hover, ul.dropline ul:hover, ul.dualfish ul:hover {overflow:visible;}
 ul.suckerfish > li > ul > li:hover > a, ul.dualfish > li > ul > li:hover > a, ul.dropline > li > ul > li:hover > a {padding:0; position:relative; z-index:999;}
 ul.dualfish > li > ul > li > a,ul.suckerfish > li > ul > li > a,ul.dropline > li > ul > li > a,ul.dualfish > li > ul > li.active > a,ul.suckerfish > li > ul > li.active > a, ul.dropline > li > ul > li.active > a {display:block;padding:0;line-height:46px;}
