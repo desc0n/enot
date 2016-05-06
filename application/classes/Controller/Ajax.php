@@ -1,17 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Ajax extends Controller {
-
-	public function action_get_typeahead()
-	{
-		$this->response->body(View::factory('typeahead')->set('words', Model::factory("Word")->getWords($_POST))->set('post', $_POST));
-	}
-
-	public function action_get_typeahead_admin()
-	{
-		$this->response->body(View::factory('typeahead_admin')->set('words', Model::factory("Word")->getWords($_POST))->set('post', $_POST));
-	}
-
+class Controller_Ajax extends Controller
+{
 
 	public function action_change_password()
 	{
@@ -19,5 +9,29 @@ class Controller_Ajax extends Controller {
 		$adminModel = Model::factory('Admin');
 
 		$this->response->body(View::factory('ajax')->set('content', json_encode($adminModel->changePassword())));
+	}
+	
+	public function action_show_content()
+	{
+		/** @var $contentModel Model_Content */
+		$contentModel = Model::factory('Content');
+
+		$this->response->body(View::factory('ajax')->set('content', json_encode($contentModel->showContent($this->request->post('id')))));
+	}
+
+	public function action_hide_content()
+	{
+		/** @var $contentModel Model_Content */
+		$contentModel = Model::factory('Content');
+
+		$this->response->body(View::factory('ajax')->set('content', json_encode($contentModel->hideContent($this->request->post('id')))));
+	}
+	
+	public function action_remove_content()
+	{
+		/** @var $contentModel Model_Content */
+		$contentModel = Model::factory('Content');
+
+		$this->response->body(View::factory('ajax')->set('content', json_encode($contentModel->removeContent($this->request->post('id')))));
 	}
 }

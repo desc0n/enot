@@ -10,10 +10,12 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?foreach($pageNewsData as $news){?>
-				<tr id="rowNews<?=$news['id'];?>" class="gradeA">
+				<?foreach($pageContentData as $news){
+					$date = DateTime::createFromFormat('Y-m-d H:i:s', $news['publish_up']);
+					?>
+				<tr id="rowContent<?=$news['id'];?>" class="gradeA">
 					<td class="text-center media-middle">
-						<?=Date::convertStrDateToFormat($news['date'], 'Y.m.d');?>
+						<?=$date->format('Y.m.d');?>
 					</td>
 					<td class="text-center media-middle">
 						<div class="img-link">
@@ -22,25 +24,16 @@
 					</td>
 					<td class="text-center">
 						<div class="rowBtn1 btn-row">
-							<?=($news['viewed'] == 1 ? sprintf('
-							<button class="btn btn-warning" onclick="hideNews(%d);">
-								<span class="glyphicon glyphicon-eye-close"></span> Скрыть в правом блоке
+							<?=($news['state'] == 1 ? sprintf('
+							<button class="btn btn-warning" onclick="hideContent(%d);">
+								<span class="glyphicon glyphicon-eye-close"></span> Скрыть
 							</button>', $news['id']) : sprintf('
-							<button class="btn btn-success" onclick="showNews(%d);">
-								<span class="glyphicon glyphicon-eye-open"></span> Показать в правом блоке
-							</button>', $news['id']));?>
-						</div>
-						<div class="rowBtn3 btn-row">
-							<?=($news['list_viewed'] == 1 ? sprintf('
-							<button class="btn btn-primary" onclick="hideListNews(%d);">
-								<span class="glyphicon glyphicon-eye-close"></span> Скрыть  на странице новостей
-							</button>', $news['id']) : sprintf('
-							<button class="btn btn-info" onclick="showListNews(%d);">
-								<span class="glyphicon glyphicon-eye-open"></span> Показать  на странице новостей
+							<button class="btn btn-success" onclick="showContent(%d);">
+								<span class="glyphicon glyphicon-eye-open"></span> Показать
 							</button>', $news['id']));?>
 						</div>
 						<div class="rowBtn2 btn-row">
-							<button class="btn btn-danger" onclick="removeNews(<?=$news['id'];?>);">
+							<button class="btn btn-danger" onclick="removeContent(<?=$news['id'];?>);">
 								<span class="glyphicon glyphicon-remove"></span> Удалить новость
 							</button>
 						</div>
@@ -51,10 +44,10 @@
 		</table>
 	</div>
 	<div class="form-row row col-md-12">
-		<button class="btn btn-success" onclick="$('#newNewsModal').modal('toggle');">Добавить новость <span class="glyphicon glyphicon-plus"></span></button>
+		<button class="btn btn-success" onclick="$('#newContentModal').modal('toggle');">Добавить новость <span class="glyphicon glyphicon-plus"></span></button>
 	</div>
 </div>
-<div class="modal fade" id="newNewsModal">
+<div class="modal fade" id="newContentModal">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -68,7 +61,7 @@
 						<input type="text" name="title" id=title" class="form-control">
 					</label>
 					<br />
-					<button type="submit" class="btn btn-default" name="newNews">Добавить</button>
+					<button type="submit" class="btn btn-default" name="newContent">Добавить</button>
 				</form>
 			</div>
 			<div class="modal-footer">

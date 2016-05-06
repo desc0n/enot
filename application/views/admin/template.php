@@ -51,7 +51,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="">Admin panel</a>
+            <a class="navbar-brand">
+                Admin panel
+            </a>
         </div>
         <!-- /.navbar-header -->
 
@@ -65,7 +67,7 @@
                         <a href="#"><i class="fa fa-pencil fa-fw"></i> Редактирование страниц<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li><a href="/admin/control_panel/redact_pages/?slug=page">Основные страницы</a></li>
-                            <li><a href="/admin/control_panel/redact_pages/?slug=news">Новости</a></li>
+                            <li><a href="/admin/control_panel/news_list">Новости</a></li>
                             <li><a href="/admin/control_panel/redact_pages/?slug=articles">Статьи</a></li>
                         </ul>
                         <!-- /.nav-second-level -->
@@ -75,6 +77,10 @@
             <!-- /.sidebar-collapse -->
         </div>
         <!-- /.navbar-static-side -->
+        <form class="col-sm-1 col-md-1 pull-right logout-form" method="post">
+            <button class="btn btn-default"><i class="fa fa-sign-out fa-fw"></i></button>
+            <input type="hidden" name="logout">
+        </form>
     </nav>
     <div id="page-wrapper">
         <?=$admin_content;?>

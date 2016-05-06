@@ -115,7 +115,7 @@ class Model_Admin extends Kohana_Model
 	public function sendMail($email, $subject, $view = null, $from = null)
 	{
 		$to = $email;
-		$from = $from == null ? 'site@mud.primtapki.ru' : $from;
+		$from = $from == null ? 'site@enot-vl.ru' : $from;
 		$message = $view !== null ? $view : '';
 		$bound = "0";
 		$header = "From: $from<$from>\r\n";

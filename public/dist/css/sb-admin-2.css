@@ -405,3 +405,16 @@ table.dataTable thead .sorting:after {
         width: 25% !important;
     }
 }
+
+.logout-form {
+    margin-top: 7px;
+}
+
+.right-content > .row {
+    margin: 0;
+}
+
+.btn-row .btn {
+    margin: 2px;
+    min-width: 200px;
+}

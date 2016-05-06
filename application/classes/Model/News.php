@@ -8,17 +8,21 @@ class Model_News extends Kohana_Model
     public $newsAssetsLimit = 4;
 
     /**
+     * @var null|mixed $state
      * @return array
      */
-    public function findNewsAssets()
+    public function findNewsAssets($state = 1)
     {
-        return DB::select('c.*')
+        $query = DB::select('c.*')
             ->from(['content', 'c'])
             ->join(['assets', 'a'])
             ->on('c.asset_id', '=', 'a.id')
             ->where('a.parent_id', '=', 45)
-            ->and_where('c.state', '=', 1)
-            ->order_by('c.ordering', 'DESC')
+        ;
+
+        $query = null !== $state ? $query->and_where('c.state', '=', $state) : $query;
+
+        return $query->order_by('c.ordering', 'DESC')
             ->limit($this->newsAssetsLimit)
             ->execute()
             ->as_array()
@@ -38,5 +42,27 @@ class Model_News extends Kohana_Model
             ->execute()
             ->current()
         ;
+    }
+
+    /**
+     * @param string $title
+     *
+     * @return int|null
+     */
+    public function addNews($title = 'Заголовок')
+    {
+        $res = DB::insert('assets', ['parent_id', 'level', 'title'])
+            ->values([45, 2, $title])
+            ->execute()
+        ;
+
+        $assetId = Arr::get($res, 0);
+
+        $res = DB::insert('content', ['asset_id', 'title', 'created', 'publish_up'])
+            ->values([$assetId, $title, DB::expr('now()'), DB::expr('now()')])
+            ->execute()
+        ;
+
+        return Arr::get($res, 0);
     }
 }

@@ -64,4 +64,51 @@ class Model_Content extends Kohana_Model
             ->current()
         ;
     }
+
+    /**
+     * @param int $id
+     *
+     * @return true
+     */
+    public function showContent($id)
+    {
+        DB::update('content')
+            ->set(['state' => 1])
+            ->where('id', '=', $id)
+            ->execute()
+        ;
+
+        return true;
+    }
+    
+    /**
+     * @param int $id
+     *
+     * @return true
+     */
+    public function hideContent($id)
+    {
+        DB::update('content')
+            ->set(['state' => 0])
+            ->where('id', '=', $id)
+            ->execute()
+        ;
+
+        return true;
+    }
+
+    /**
+     * @param int $id
+     *
+     * @return true
+     */
+    public function removeContent($id)
+    {
+        DB::delete('content')
+            ->where('id', '=', $id)
+            ->execute()
+        ;
+
+        return true;
+    }
 }

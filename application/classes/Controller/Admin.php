@@ -35,11 +35,13 @@ class Controller_Admin extends Controller {
 			Auth::instance()->logout();
 			HTTP::redirect('/');
 		}
+
 		if (!Auth::instance()->logged_in() && isset($_POST['login'])) {
 			Auth::instance()->login($_POST['username'], $_POST['password'],true);
 			HTTP::redirect('/admin/control_panel/');
 		}
-		$page = $this->request->param('id');
+
+		$page = $this->request->param('slug');
 		$template = !Auth::instance()->logged_in() ? View::factory('admin_template') : View::factory('admin/template');
 
 		$admin_content = View::factory('ajax')
@@ -184,14 +186,16 @@ class Controller_Admin extends Controller {
 					->set('sources', $newsModel->findNewsSources())
 				;
 			} elseif ($page == 'news_list') {
-				if (isset($_POST['newNews'])) {
-					$adminModel->addNews($this->request->post('title'));
+				if (isset($_POST['newContent'])) {
+					$newsModel->addNews($this->request->post('title'));
 
 					HTTP::redirect($this->request->referrer());
 				}
 
-				$admin_content = View::factory('admin/news_list')
-					->set('pageNewsData', $newsModel->findNews(null, null, null, 'all', 'all'))
+				$newsModel->newsAssetsLimit = 100;
+
+				$admin_content = View::factory('admin/content_list')
+					->set('pageContentData', $newsModel->findNewsAssets(null))
 				;
 			} elseif ($page == 'redact_news') {
 				if (isset($_POST['redactnews'])) {
@@ -206,78 +210,7 @@ class Controller_Admin extends Controller {
 				;
 			}
 		}
-		if (isset($_POST['reg'])) {
-			if (Arr::get($_POST,'username','')=="") {
-				$error = View::factory('error');
-				$error->zag = "Не указан логин!";
-				$error->mess = " Укажите Ваш логин.";
-				$admin_content
-					->set('content', $error)
-				;
-			} else if (Arr::get($_POST,'email','')=="") {
-				$error = View::factory('error');
-				$error->zag = "Не указана почта!";
-				$error->mess = " Укажите Вашу почту.";
-				$admin_content
-					->set('content', $error)
-				;
-			} else if (Arr::get($_POST,'password','')=="") {
-				$error = View::factory('error');
-				$error->zag = "Не указан пароль!";
-				$error->mess = " Укажите Ваш пароль.";
-				$admin_content
-					->set('content', $error)
-				;
-			} else if (Arr::get($_POST,'password','')!=Arr::get($_POST,'password2','')) {
-				$error = View::factory('error');
-				$error->zag = "Пароли не совпадают!";
-				$error->mess = " Проверьте правильность подтверждения пароля.";
-				$admin_content
-					->set('content', $error)
-				;
-			} else {
-				$user = ORM::factory('User');
-				$user->values(array(
-					'username' => $_POST['username'],
-					'email' => $_POST['email'],
-					'password' => $_POST['password'],
-					'password_confirm' => $_POST['password2'],
-				));
-				$some_error = false;
-				try {
-					$user->save();
-					$user->add("roles",ORM::factory("Role",1));
-				}
-				catch (ORM_Validation_Exception $e) {
-					$some_error = $e->errors('models');
-				}
-				if ($some_error) {
-					$error = View::factory('error');
-					$error->zag = "Ошибка регистрационных данных!";
-					$error->mess = " Проверьте правильность ввода данных.";
-					if (isset($some_error['username'])) {
-						if ($some_error['username']=="models/user.username.unique") {
-							$error->zag = "Такое имя уже есть в базе!";
-							$error->mess = " Придумайте новое.";
-						}
-					}
-					else if (isset($some_error['email'])) {
-						if ($some_error['email']=="email address must be an email address") {
-							$error->zag = "Некорректный формат почты!";
-							$error->mess = " Проверьте правильность написания почты.";
-						}
-						if ($some_error['email']=="models/user.email.unique") {
-							$error->zag = "Такая почта есть в базе!";
-							$error->mess = " Укажите другую почту.";
-						}
-					}
-
-					$admin_content
-						->set('content', $error)
-					;
-				}
-			}
-		}
+		
 		$this->response->body($template->set('admin_content', $admin_content));
 	}
 }
