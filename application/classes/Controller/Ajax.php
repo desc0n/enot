@@ -50,4 +50,12 @@ class Controller_Ajax extends Controller
 
 		$this->response->body(View::factory('ajax')->set('content', json_encode($contentModel->setMainContentImg($this->request->post('id')))));
 	}
+	
+	public function action_set_intro_content_img()
+	{
+		/** @var $contentModel Model_Content */
+		$contentModel = Model::factory('Content');
+
+		$this->response->body(View::factory('ajax')->set('content', json_encode($contentModel->setIntroContentImg($this->request->post('id')))));
+	}
 }

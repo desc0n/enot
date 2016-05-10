@@ -230,7 +230,7 @@ class Model_Content extends Kohana_Model
                 
                 $newImgData = [];
 
-                if (is_array($contentImgData)) {
+                if (!empty($contentImgData)) {
                     foreach ($contentImgData as $key => $val) {
                         $val = $key == 'image_fulltext' ? sprintf('/public/i/%d_%s', $imgData['id'], $imgData['src']) : $val;
                         $newImgData[$key] = $val;
@@ -238,6 +238,50 @@ class Model_Content extends Kohana_Model
                 } else {
                     $newImgData['image_fulltext'] = sprintf('/public/i/%d_%s', $imgData['id'], $imgData['src']);
                     $newImgData['image_intro'] = '';
+                }
+
+                DB::update('content')
+                    ->set(['images' => json_encode($newImgData)])
+                    ->where('id', '=', $contentData['id'])
+                    ->execute()
+                ;
+            }
+        }
+        
+        return true;
+    }
+    
+    /**
+     * @param int $imgId
+     *
+     * @return bool
+     */
+    public function setIntroContentImg($imgId)
+    {
+        $imgData = DB::select()
+            ->from('content__imgs')
+            ->where('id', '=', $imgId)
+            ->limit(1)
+            ->execute()
+            ->current()
+        ;
+        
+        if ($imgData) {
+            $contentData = $this->findContentById(Arr::get($imgData, 'content_id'));
+
+            if ($contentData) {
+                $contentImgData = json_decode($contentData['images']);
+                
+                $newImgData = [];
+
+                if (!empty($contentImgData)) {
+                    foreach ($contentImgData as $key => $val) {
+                        $val = $key == 'image_intro' ? sprintf('/public/i/%d_%s', $imgData['id'], $imgData['src']) : $val;
+                        $newImgData[$key] = $val;
+                    }
+                } else {
+                    $newImgData['image_fulltext'] = '';
+                    $newImgData['image_intro'] = sprintf('/public/i/%d_%s', $imgData['id'], $imgData['src']);
                 }
 
                 DB::update('content')

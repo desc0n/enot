@@ -35,16 +35,19 @@
 				<?
 				$imgData = json_decode($contentData['images']);
 				$fullTextImg = !empty($imgData) ? $imgData->image_fulltext : null;
+				$introTextImg = !empty($imgData) ? $imgData->image_intro : null;
 
-				foreach($contentImgsData as $img){?>
+				foreach($contentImgsData as $img){
+					$imgSrc = sprintf('/public/i/%d_%s', $img['id'], $img['src']);
+					?>
 					<tr id="rowContentImg<?=$img['id'];?>" class="gradeA">
 						<td class="text-center">
 							<div class="img-link">
-								<img src="/public/i/<?=$img['id'];?>_<?=$img['src'];?>" >
+								<img src="<?=$imgSrc;?>" >
 							</div>
 						</td>
 						<td class="text-center media-middle">
-							<?=sprintf('http://%s/public/i/%d_%s', $_SERVER['HTTP_HOST'], $img['id'], $img['src']);?>
+							<?=sprintf('http://%s%s', $_SERVER['HTTP_HOST'], $imgSrc);?>
 						</td>
 						<td class="text-center media-middle">
 							<div class="btn-row">
@@ -52,10 +55,17 @@
 									<span class="glyphicon glyphicon-remove"></span> Удалить изображение
 								</button>
 							</div>
-							<? if ($fullTextImg != $img['src']) {?>
+							<? if ($fullTextImg != $imgSrc) {?>
 							<div class="btn-row">
 								<button class="btn btn-primary" onclick="setMainContentImg(<?=$img['id'];?>);">
-									<span class="glyphicon glyphicon-star"></span> Сделать главным
+									<span class="glyphicon glyphicon-star"></span> Сделать главным при просмотре
+								</button>
+							</div>
+							<?}?>
+							<? if ($introTextImg != $imgSrc) {?>
+							<div class="btn-row">
+								<button class="btn btn-success" onclick="setIntroContentImg(<?=$img['id'];?>);">
+									<span class="glyphicon glyphicon-star-empty"></span> Сделать главным в списке
 								</button>
 							</div>
 							<?}?>

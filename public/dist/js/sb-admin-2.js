@@ -71,13 +71,27 @@ function removeContentImg(id){
 }
 
 function setMainContentImg(id){
-    var den = confirm('Подтверждаете замену главного изображения?');
+    var den = confirm('Подтверждаете замену главного при просмотре изображения?');
     
     if (!den) {
         return false;
     }
     
     $.ajax({type: 'POST', url: '/ajax/set_main_content_img', async: true, data:{id: id},
+        success: function(data) {
+            location.reload();
+        }
+    });
+}
+
+function setIntroContentImg(id){
+    var den = confirm('Подтверждаете замену главного в списке?');
+    
+    if (!den) {
+        return false;
+    }
+    
+    $.ajax({type: 'POST', url: '/ajax/set_intro_content_img', async: true, data:{id: id},
         success: function(data) {
             location.reload();
         }
