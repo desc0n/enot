@@ -34,4 +34,12 @@ class Controller_Ajax extends Controller
 
 		$this->response->body(View::factory('ajax')->set('content', json_encode($contentModel->removeContent($this->request->post('id')))));
 	}
+	
+	public function action_remove_content_img()
+	{
+		/** @var $contentModel Model_Content */
+		$contentModel = Model::factory('Content');
+
+		$this->response->body(View::factory('ajax')->set('content', json_encode($contentModel->removeContentImg($this->request->post('id')))));
+	}
 }

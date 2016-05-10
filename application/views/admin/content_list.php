@@ -19,7 +19,7 @@
 					</td>
 					<td class="text-center media-middle">
 						<div class="img-link">
-                            <a href="/admin/control_panel/redact_news/?id=<?=$news['id'];?>"><?=$news['title'];?></a>
+                            <a href="/admin/control_panel/redact_pages/?slug=content&id=<?=$news['id'];?>"><?=$news['title'];?></a>
 						</div>
 					</td>
 					<td class="text-center">

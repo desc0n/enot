@@ -56,6 +56,20 @@ function initTypeahead($newSaleProductName) {
     return false;
 }
 
+function removeContentImg(id){
+    var den = confirm('Подтверждаете удаление изображения?');
+    
+    if (!den) {
+        return false;
+    }
+    
+    $.ajax({type: 'POST', url: '/ajax/remove_content_img', async: true, data:{id: id},
+        success: function(data) {
+            $('#rowContentImg' + id).remove();
+        }
+    });
+}
+
 function removeContent(id){
     var den = confirm('Подтверждаете удаление контента?');
     
