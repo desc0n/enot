@@ -31,6 +31,9 @@ class Controller_Admin extends Controller {
 		/** @var Model_News $newsModel */
 		$newsModel = Model::factory('News');
 
+		/** @var Model_Articles $articlesModel */
+		$articlesModel = Model::factory('Articles');
+
 		if (Auth::instance()->logged_in() && isset($_POST['logout'])) {
 			Auth::instance()->logout();
 			HTTP::redirect('/');
@@ -126,6 +129,16 @@ class Controller_Admin extends Controller {
 
 				$admin_content = View::factory('admin/content_list')
 					->set('pageContentData', $newsModel->findNewsAssets(null))
+				;
+			} elseif ($page == 'articles_list') {
+				if (isset($_POST['newContent'])) {
+					$articlesModel->addArticle($this->request->post('title'));
+
+					HTTP::redirect($this->request->referrer());
+				}
+
+				$admin_content = View::factory('admin/content_list')
+					->set('pageContentData', $articlesModel->findArticlesAssets(null))
 				;
 			}
 		}

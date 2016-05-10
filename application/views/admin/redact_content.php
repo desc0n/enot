@@ -32,7 +32,11 @@
 				</tr>
 				</thead>
 				<tbody>
-				<?foreach($contentImgsData as $img){?>
+				<?
+				$imgData = json_decode($contentData['images']);
+				$fullTextImg = !empty($imgData) ? $imgData->image_fulltext : null;
+
+				foreach($contentImgsData as $img){?>
 					<tr id="rowContentImg<?=$img['id'];?>" class="gradeA">
 						<td class="text-center">
 							<div class="img-link">
@@ -48,6 +52,13 @@
 									<span class="glyphicon glyphicon-remove"></span> Удалить изображение
 								</button>
 							</div>
+							<? if ($fullTextImg != $img['src']) {?>
+							<div class="btn-row">
+								<button class="btn btn-primary" onclick="setMainContentImg(<?=$img['id'];?>);">
+									<span class="glyphicon glyphicon-star"></span> Сделать главным
+								</button>
+							</div>
+							<?}?>
 						</td>
 					</tr>
 				<?}?>

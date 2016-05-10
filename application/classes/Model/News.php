@@ -51,6 +51,9 @@ class Model_News extends Kohana_Model
      */
     public function addNews($title = 'Заголовок')
     {
+        /** @var $adminModel Model_Admin */
+        $adminModel = Model::factory('Admin');
+
         $res = DB::insert('assets', ['parent_id', 'level', 'title'])
             ->values([45, 2, $title])
             ->execute()
@@ -58,8 +61,8 @@ class Model_News extends Kohana_Model
 
         $assetId = Arr::get($res, 0);
 
-        $res = DB::insert('content', ['asset_id', 'title', 'created', 'publish_up'])
-            ->values([$assetId, $title, DB::expr('now()'), DB::expr('now()')])
+        $res = DB::insert('content', ['asset_id', 'path', 'title', 'created', 'publish_up'])
+            ->values([$assetId, sprintf('/news/%s', $adminModel->slugify($title)), $title, DB::expr('now()'), DB::expr('now()')])
             ->execute()
         ;
 

@@ -68,7 +68,7 @@
                         <ul class="nav nav-second-level">
                             <li><a href="/admin/control_panel/redact_pages/?slug=page">Основные страницы</a></li>
                             <li><a href="/admin/control_panel/news_list">Новости</a></li>
-                            <li><a href="/admin/control_panel/redact_pages/?slug=articles">Статьи</a></li>
+                            <li><a href="/admin/control_panel/articles_list">Статьи</a></li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>

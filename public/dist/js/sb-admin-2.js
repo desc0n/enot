@@ -70,6 +70,20 @@ function removeContentImg(id){
     });
 }
 
+function setMainContentImg(id){
+    var den = confirm('Подтверждаете замену главного изображения?');
+    
+    if (!den) {
+        return false;
+    }
+    
+    $.ajax({type: 'POST', url: '/ajax/set_main_content_img', async: true, data:{id: id},
+        success: function(data) {
+            location.reload();
+        }
+    });
+}
+
 function removeContent(id){
     var den = confirm('Подтверждаете удаление контента?');
     

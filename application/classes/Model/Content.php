@@ -207,4 +207,41 @@ class Model_Content extends Kohana_Model
         return true;
     }
 
+    public function setMainContentImg($imgId)
+    {
+        $imgData = DB::select()
+            ->from('content__imgs')
+            ->where('id', '=', $imgId)
+            ->limit(1)
+            ->execute()
+            ->current()
+        ;
+        
+        if ($imgData) {
+            $contentData = $this->findContentById(Arr::get($imgData, 'content_id'));
+
+            if ($contentData) {
+                $contentImgData = json_decode($contentData['images']);
+                
+                $newImgData = [];
+
+                if (is_array($contentImgData)) {
+                    foreach ($contentImgData as $key => $val) {
+                        $val = $key == 'image_fulltext' ? sprintf('/public/i/%d_%s', $imgData['id'], $imgData['src']) : $val;
+                        $newImgData[$key] = $val;
+                    }
+                } else {
+                    $newImgData['image_fulltext'] = sprintf('/public/i/%d_%s', $imgData['id'], $imgData['src']);
+                }
+
+                DB::update('content')
+                    ->set(['images' => json_encode($newImgData)])
+                    ->where('id', '=', $contentData['id'])
+                    ->execute()
+                ;
+            }
+        }
+        
+        return true;
+    }
 }
