@@ -207,6 +207,11 @@ class Model_Content extends Kohana_Model
         return true;
     }
 
+    /**
+     * @param int $imgId
+     *
+     * @return bool
+     */
     public function setMainContentImg($imgId)
     {
         $imgData = DB::select()
@@ -232,6 +237,7 @@ class Model_Content extends Kohana_Model
                     }
                 } else {
                     $newImgData['image_fulltext'] = sprintf('/public/i/%d_%s', $imgData['id'], $imgData['src']);
+                    $newImgData['image_intro'] = '';
                 }
 
                 DB::update('content')
