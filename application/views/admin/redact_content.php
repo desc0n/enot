@@ -5,9 +5,6 @@
 	</div>
 	<form class="form-horizontal col-md-12 <?=(Arr::get($get, 'id') === null ? 'hide' : '');?>" method="post">
 		<div class="row form-group">
-			<button type="submit" class="btn btn-primary" name="redactcontent" value="<?=Arr::get($get, 'id', 0);?>">Сохранить</button>
-		</div>
-		<div class="row form-group">
 			<label for="redact_content_title">Заголовок новости</label>
 			<input type="text" id="redact_content_title" name="title" value="<?=Arr::get($contentData, 'title', '');?>" class="form-control">
 		</div>
@@ -18,6 +15,9 @@
 		<div class="row form-group">
 			<label for="redact_content_fulltext">Текст страницы</label>
 			<textarea id="redact_content_fulltext" name="fulltext" class="ckeditor"><?=Arr::get($contentData, 'fulltext', '');?></textarea>
+		</div>
+		<div class="row form-group">
+			<button type="submit" class="btn btn-primary" name="redactcontent" value="<?=Arr::get($get, 'id', 0);?>">Сохранить</button>
 		</div>
 	</form>
 	<div class="row form-row col-md-12 <?=(Arr::get($get, 'id') === null ? 'hide' : '');?>">
