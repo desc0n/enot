@@ -1,7 +1,7 @@
 <script src="//cdn.ckeditor.com/4.5.7/full/ckeditor.js"></script>
 <div class="row right-content">
 	<div class="row">
-		<h3>Редактируем новость</h3>
+		<h3>Редактируем страницу</h3>
 	</div>
 	<form class="form-horizontal col-md-12 <?=(Arr::get($get, 'id') === null ? 'hide' : '');?>" method="post">
 		<div class="row form-group">
