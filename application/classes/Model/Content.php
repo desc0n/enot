@@ -144,7 +144,24 @@ class Model_Content extends Kohana_Model
 
         return true;
     }
-    
+
+    /**
+     * @param int $contentId
+     * @param string $fulltext
+     * 
+     * @return bool
+     */
+    public function setPage($contentId, $fulltext)
+    {
+        DB::update('content')
+            ->set(['fulltext' => $fulltext])
+            ->where('id', '=', $contentId)
+            ->execute()
+        ;
+
+        return true;
+    }
+
     public function findContentImgs($contentId)
     {
         return DB::select()

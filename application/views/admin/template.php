@@ -66,7 +66,7 @@
                     <li class="<?=($page == 'redact_pages' ? 'active' : null);?>">
                         <a href="#"><i class="fa fa-pencil fa-fw"></i> Редактирование страниц<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="/admin/control_panel/redact_pages/?slug=page">Основные страницы</a></li>
+                            <li><a href="/admin/control_panel/pages_list">Основные страницы</a></li>
                             <li><a href="/admin/control_panel/news_list">Новости</a></li>
                             <li><a href="/admin/control_panel/articles_list">Статьи</a></li>
                         </ul>

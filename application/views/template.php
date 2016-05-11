@@ -98,47 +98,6 @@
 
 </head>
 <body class="frontpage">
-<?/*
-<div id="headerwrap" class="xtc-bodygutter">
-    <div id="headerpad" class="xtc-wrapperpad">
-        <div id="header" class="clearfix xtc-wrapper row-fluid header">
-            <div id="topwrap" class="clearfix">
-            </div>
-            <div id="logo">
-                <a class="hideTxt" href="/">enote-vl</a>
-            </div>
-            <div id="menu" class="clearfix">
-                <ul class="menu suckerfish xtcdefaultmenu">
-                    <? foreach ($mainmenuData as $menuData) {?>
-                    <li class="item-<?=$menuData['id'];?> <?=(empty($slug) || $slug == $menuData['path'] ? 'current' : null);?> deeper parent">
-                        <a href="<?=$menuData['path'];?>" ><?=$menuData['title'];?></a>
-                        <?if (count($menuData['submenu'])) {?>
-                        <ul>
-                            <? foreach ($menuData['submenu'] as $submenuData) {?>
-                            <li class="item-<?=$submenuData['id'];?>">
-                                <a href="<?=$submenuData['path'];?>" ><?=$submenuData['title'];?></a>
-                            </li>
-                            <?}?>
-                        </ul>
-                        <?}?>
-                    </li>
-                    <?}?>
-                </ul>
-                <div class="mobilebtn">
-                    <select size="1" class="menu suckerfish xtcmobilemenu"  onchange="location.href=this.value">
-                        <? foreach ($mainmenuData as $menuData) {?>
-                        <option value="<?=$menuData['path'];?>"><?=$menuData['title'];?></option>
-                        <? foreach ($menuData['submenu'] as $submenuData) {?>
-                        <option value="<?=$submenuData['path'];?>" ><?=$submenuData['title'];?></option>
-                        <?}?>
-                        <?}?>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-*/?>
 <nav id="headerwrap" class="navbar navbar-default xtc-bodygutter" role="navigation">
     <div id="headerpad" class="container">
         <div id="header" class="container-fluid xtc-wrapper">

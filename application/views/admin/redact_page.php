@@ -9,53 +9,30 @@ $contentModel = Model::factory('Content');
 			<label for="id">Страница:</label>
 			<select class="form-control" name="id" id="id" onchange="$(this).parent('form').submit();">
 				<option value="0">не выбрано</option>
-				<?foreach ($pageList as $page) {?>
-				<option value="<?=$page['slug'];?>" <?=(Arr::get($get, 'id') == $page['slug'] ? 'selected' : '');?>><?=mb_strtoupper($page['title']);?></option>
-				<?}?>
+				<?foreach ($mainmenuData as $menu) {
+					if ($menu['template'] == 'page') {
+						$page = $contentModel->findContentByPath($menu['path']);?>
+				<option value="<?=Arr::get($page, 'id');?>" <?=(Arr::get($get, 'id') == Arr::get($page, 'id') ? 'selected' : '');?>><?=mb_strtoupper(Arr::get($page, 'title'));?></option>
+						<? foreach ($menu['submenu'] as $submenuData) {
+						$page = $contentModel->findContentByPath($submenuData['path']);?>
+				<option value="<?=Arr::get($page, 'id');?>" <?=(Arr::get($get, 'id') == Arr::get($page, 'id') ? 'selected' : '');?>><?=mb_strtoupper(Arr::get($page, 'title'));?></option>
+						<?}
+					}
+				}?>
 			</select>
-			<input type="hidden" name="slug" value="<?=Arr::get($get, 'slug');?>">
 		</form>
 	</div>
 	<form class="form-horizontal col-md-12 <?=(Arr::get($get, 'id') === null ? 'hide' : '');?>" method="post">
-	<?if (Arr::get($get, 'id') == 'main') {?>
-		<h2>Текст в блоках</h2>
-		<div class="row form-group">
-			<label for="scope1">
-				<?=Arr::get(Arr::get($scopePages, 1, []), 'title');?>
-			</label>
-			<?=Form::textarea('scope1', Arr::get(Arr::get($scopePages, 1, []), 'description'), ['class' => 'form-control', 'id' => 'scope1', 'rows' => 5]);?>
-		</div>
-		<div class="row form-group">
-			<label for="scope2">
-				<?=Arr::get(Arr::get($scopePages, 2, []), 'title');?>
-			</label>
-			<?=Form::textarea('scope2', Arr::get(Arr::get($scopePages, 2, []), 'description'), ['class' => 'form-control', 'id' => 'scope2', 'rows' => 5]);?>
-		</div>
-		<div class="row form-group">
-			<label for="scope3">
-				<?=Arr::get(Arr::get($scopePages, 3, []), 'title');?>
-			</label>
-			<?=Form::textarea('scope3', Arr::get(Arr::get($scopePages, 3, []), 'description'), ['class' => 'form-control', 'id' => 'scope3', 'rows' => 5]);?>
-		</div>
-		<div class="row form-group">
-			<label for="scope4">
-				<?=Arr::get(Arr::get($scopePages, 4, []), 'title');?>
-			</label>
-			<?=Form::textarea('scope4', Arr::get(Arr::get($scopePages, 4, []), 'description'), ['class' => 'form-control', 'id' => 'scope4', 'rows' => 5]);?>
-		</div>
-	<?} else {?>
 		<div class="row">
 			<h3>Редактируем страницу</h3>
 		</div>
 		<div class="row form-group">
 			<label for="redact_content_text">Текст страницы</label>
-			<textarea id="redact_content_text" name="text" class="ckeditor"><?=Arr::get($pageData, 'content', '');?></textarea>
+			<textarea id="redact_content_text" name="text" class="ckeditor"><?=Arr::get($contentData, 'fulltext', '');?></textarea>
 		</div>
-	<?}?>
 		<div class="row form-group">
 			<button type="submit" class="btn btn-primary" name="redactpage" value="<?=Arr::get($get, 'id', 0);?>">Сохранить</button>
 		</div>
-		<input type="hidden" name="slug" value="<?=Arr::get($get, 'slug');?>">
 	</form>
 	<div class="row form-row col-md-12 <?=(Arr::get($get, 'id') === null ? 'hide' : '');?>">
 		<h4>Фото</h4>
@@ -64,40 +41,23 @@ $contentModel = Model::factory('Content');
 				<thead>
 					<tr>
 						<td>Изображение</td>
-						<td>Ссылка на проект</td>
 						<td>Ссылка на изображение</td>
 						<td>Действия</td>
 					</tr>
 				</thead>
 				<tbody>
-					<?foreach($pageImgsData as $img){?>
+					<?foreach($contentImgsData as $img){
+						$imgSrc = sprintf('/public/i/%d_%s', $img['id'], $img['src']);?>
 					<tr id="rowImg<?=$img['id'];?>" class="gradeA">
 						<td class="text-center">
 							<div class="img-link">
-								<img src="/public/img/thumb/<?=$img['src'];?>" >
+								<img src="<?=$imgSrc;?>" >
 							</div>
 						</td>
 						<td class="text-center media-middle">
-							<div class="input-group">
-								<input type="text" data-id="<?=$img['id'];?>" class="form-control project-link" value="<?=$img['project_link'];?>">
-								<div class="input-group-btn">
-									<button class="btn btn-default"><span class="glyphicon glyphicon-ok"></span></button>
-								</div>
-							</div>
+							<?=sprintf('http://%s%s', $_SERVER['HTTP_HOST'], $imgSrc);?>
 						</td>
 						<td class="text-center media-middle">
-							<?=sprintf('http://%s/public/img/original/%s', $_SERVER['HTTP_HOST'], $img['src']);?>
-						</td>
-						<td class="text-center">
-							<div class="rowBtn1 btn-row">
-								<?=($img['enabled'] == 1 ? sprintf('
-								<button class="btn btn-warning" onclick="hideImg(%d);">
-									<span class="glyphicon glyphicon-eye-close"></span> Скрыть изображение
-								</button>', $img['id']) : sprintf('
-								<button class="btn btn-success" onclick="showImg(%d);">
-									<span class="glyphicon glyphicon-eye-open"></span> Показать изображение
-								</button>', $img['id']));?>
-							</div>
 							<div class="rowBtn2 btn-row">
 								<button class="btn btn-danger" onclick="removeImg(<?=$img['id'];?>);">
 									<span class="glyphicon glyphicon-remove"></span> Удалить изображение
@@ -127,9 +87,7 @@ $contentModel = Model::factory('Content');
 						<label for="exampleInputFile">Выбор файла</label>
 						<input type="file" name="imgname[]" id="exampleInputFile" multiple>
 					</div>
-					<input type="hidden" name="loadpageimg" value="<?=Arr::get($pageData, 'id', 0);?>">
-					<input type="hidden" name="id" value="<?=Arr::get($get, 'id');?>">
-					<input type="hidden" name="slug" value="<?=Arr::get($get, 'slug');?>">
+					<input type="hidden" name="loadpageimg" value="<?=Arr::get($contentData, 'id', 0);?>">
 					<button type="submit" class="btn btn-default">Загрузить</button>
 				</form>
 			</div>

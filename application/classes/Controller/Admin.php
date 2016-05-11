@@ -59,40 +59,7 @@ class Controller_Admin extends Controller {
 			if (empty($page)){
 				
 			} else if ($page == 'redact_pages') {
-				if (Arr::get($_GET, 'slug') == 'page') {
-					if (isset($_POST['redactpage'])) {
-						if (Arr::get($_GET, 'id') == 'main') {
-							$adminModel->setScopePageDescription($_POST);
-						} else {
-							$adminModel->setPage($_POST);
-						}
-
-						HTTP::redirect($this->request->referrer());
-					}
-
-					$removeimg = isset($_POST['removeimg']) ? $_POST['removeimg'] : 0;
-					$filename=Arr::get($_FILES, 'imgname', []);
-
-					if (!empty(Arr::get($_POST, 'loadpageimg', 0)) != '' && !empty($filename)) {
-						$adminModel->loadPageImg($_FILES, $_POST['loadpageimg']);
-
-						HTTP::redirect($this->request->referrer());
-					}
-
-					if ($removeimg != 0) {
-						$adminModel->removePageImg($_POST);
-
-						HTTP::redirect($this->request->referrer());
-					}
-
-					$admin_content = View::factory('admin/redact_page')
-						->set('pageData', Arr::get($_GET, 'id') !== null ? Arr::get($contentModel->getPage($_GET), 0, []) : [])
-						->set('pageImgsData', Arr::get($_GET, 'id') ? $contentModel->getPageImgs(['slug' => Arr::get($_GET, 'id'), 'enabled' => 'all']) : [])
-						->set('scopePages', $contentModel->getScopePage())
-						->set('pageList', $contentModel->getPage(['editable' => true]))
-						->set('get', $_GET)
-					;
-				} elseif (Arr::get($_GET, 'slug') == 'content') {
+				if (Arr::get($_GET, 'slug') == 'content') {
 					if (isset($_POST['redactcontent'])) {
 						$contentModel->setContent(
 							$this->request->post('redactcontent'),
@@ -139,6 +106,30 @@ class Controller_Admin extends Controller {
 
 				$admin_content = View::factory('admin/content_list')
 					->set('pageContentData', $articlesModel->findArticlesAssets(null))
+				;
+			} elseif ($page == 'pages_list') {
+				if (isset($_POST['redactpage'])) {
+					$contentModel->setPage(
+						$this->request->post('redactpage'),
+						$this->request->post('text')
+					);
+
+					HTTP::redirect($this->request->referrer());
+				}
+				
+				$filename = Arr::get($_FILES, 'imgname', []);
+
+				if (!empty($this->request->post('loadpageimg')) && !empty($filename)) {
+					$contentModel->loadContentImg($_FILES, $this->request->post('loadpageimg'));
+
+					HTTP::redirect($this->request->referrer());
+				}
+
+				$admin_content = View::factory('admin/redact_page')
+					->set('mainmenuData', $contentModel->getMainMenu())
+					->set('contentData', $contentModel->findContentById($this->request->query('id')))
+					->set('contentImgsData', $contentModel->findContentImgs($this->request->query('id')))
+					->set('get', $_GET)
 				;
 			}
 		}
