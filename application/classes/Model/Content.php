@@ -6,18 +6,23 @@
 class Model_Content extends Kohana_Model
 {
     /**
+     * @var mixed $published
+     * @var mixed $level
+     *
      * @return array
      */
-    public function getMainMenu()
+    public function getMainMenu($published = null, $level = null)
     {
-        $mainElements = DB::select()
+        /** @var Kohana_Database_Query_Builder_Select $query */
+
+        $query = DB::select()
             ->from('menu')
-            ->where('menutype', '=', 'mainmenu')
-            ->and_where('published', '=', 1)
-            ->and_where('level', '=', '1')
-            ->execute()
-            ->as_array()
         ;
+
+        $query = null !== $published ? $query->and_where('published', '=', $published) : $query;
+        $query = null !== $level ? $query->and_where('level', '=', $level) : $query;
+
+        $mainElements = $query->execute()->as_array();
 
         foreach ($mainElements as $key => $element) {
             $submenu = DB::select()
@@ -44,6 +49,22 @@ class Model_Content extends Kohana_Model
         return DB::select()
             ->from('menu')
             ->where('path', '=', $path)
+            ->limit(1)
+            ->execute()
+            ->current()
+        ;
+    }
+
+    /**
+     * @param int $id
+     * 
+     * @return array
+     */
+    public function findMenuById($id)
+    {
+        return DB::select()
+            ->from('menu')
+            ->where('id', '=', $id)
             ->limit(1)
             ->execute()
             ->current()
@@ -311,4 +332,77 @@ class Model_Content extends Kohana_Model
         
         return true;
     }
+
+    /**
+     * @param int $menuId
+     * @param int|null $published
+     * @param int|null $parentId
+     *
+     * @return bool
+     */
+    public function setMenu($menuId, $published = null, $parentId = null)
+    {
+        $colums = ['menutype'];
+        $values = ['mainmenu'];
+
+        if (null !== $published) {
+            $colums[] = 'published';
+            $values[] = $published;
+        }
+        
+        if (null !== $parentId) {
+            $colums[] = 'parent_id';
+            $values[] = $parentId;
+        }
+        
+        $volumes = [];
+        
+        for ($i = 0; $i < count($colums); $i++) {
+            $volumes[$colums[$i]] = $values[$i];
+        }
+        
+        DB::update('menu')
+            ->set($volumes)
+            ->where('id', '=', $menuId)
+            ->execute()
+        ;
+        
+        return true;
+    }
+
+    /**
+     * @param int $id
+     *
+     * @return true
+     */
+    public function removeMenu($id)
+    {
+        DB::delete('menu')
+            ->where('id', '=', $id)
+            ->execute()
+        ;
+
+        return true;
+    }
+
+    /**
+     * @param string $title
+     * @param int $parentId
+     * @param int $level
+     *
+     * @return true
+     */
+    public function addMenu($title, $parentId, $level)
+    {
+        /** @var $adminModel Model_Admin */
+        $adminModel = Model::factory('Admin');
+
+        $res = DB::insert('menu', ['menutype', 'title', 'path', 'parent_id', 'template', 'level'])
+            ->values(['mainmenu', $title, sprintf('/page/%s', $adminModel->slugify($title)), $parentId, 'page', $level])
+            ->execute()
+        ;
+
+        return Arr::get($res, 0);
+    }
+
 }

@@ -5,6 +5,10 @@
 	</div>
 	<form class="form-horizontal col-md-12 <?=(Arr::get($get, 'id') === null ? 'hide' : '');?>" method="post">
 		<div class="row form-group">
+			<label for="content_path">Адрес страницы</label>
+			<span id="content_path"><?=Arr::get($contentData, 'path', '');?></span>
+		</div>
+		<div class="row form-group">
 			<label for="redact_content_title">Заголовок новости</label>
 			<input type="text" id="redact_content_title" name="title" value="<?=Arr::get($contentData, 'title', '');?>" class="form-control">
 		</div>

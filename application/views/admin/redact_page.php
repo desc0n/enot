@@ -27,6 +27,10 @@ $contentModel = Model::factory('Content');
 			<h3>Редактируем страницу</h3>
 		</div>
 		<div class="row form-group">
+			<label for="content_path">Адрес страницы</label>
+			<span id="content_path"><?=Arr::get($contentData, 'path', '');?></span>
+		</div>
+		<div class="row form-group">
 			<label for="redact_content_text">Текст страницы</label>
 			<textarea id="redact_content_text" name="text" class="ckeditor"><?=Arr::get($contentData, 'fulltext', '');?></textarea>
 		</div>

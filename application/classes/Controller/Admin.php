@@ -126,9 +126,31 @@ class Controller_Admin extends Controller {
 				}
 
 				$admin_content = View::factory('admin/redact_page')
-					->set('mainmenuData', $contentModel->getMainMenu())
+					->set('mainmenuData', $contentModel->getMainMenu(1, 1))
 					->set('contentData', $contentModel->findContentById($this->request->query('id')))
 					->set('contentImgsData', $contentModel->findContentImgs($this->request->query('id')))
+					->set('get', $_GET)
+				;
+			} elseif ($page == 'mainmenu_list') {
+				if (isset($_POST['newmenu'])) {
+					$contentModel->addMenu($this->request->post('title'), 1, 1);
+
+					HTTP::redirect($this->request->referrer());
+				}
+				
+				$admin_content = View::factory('admin/redact_mainmenu')
+					->set('menuData', $contentModel->getMainMenu(null, 1))
+					->set('get', $_GET)
+				;
+			} elseif ($page == 'submenu_list') {
+				if (isset($_POST['newmenu'])) {
+					$contentModel->addMenu($this->request->post('title'), 1, 1);
+
+					HTTP::redirect($this->request->referrer());
+				}
+				
+				$admin_content = View::factory('admin/redact_submenu')
+					->set('menuData', $contentModel->getMainMenu(null, 2))
 					->set('get', $_GET)
 				;
 			}

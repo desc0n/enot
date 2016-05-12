@@ -11,7 +11,7 @@ class Controller_Index extends Controller
 		$contentModel = Model::factory('Content');
 
 		return View::factory('template')
-			->set('mainmenuData', $contentModel->getMainMenu())
+			->set('mainmenuData', $contentModel->getMainMenu(1, 1))
 			->set('slug', $this->request->param('slug'))
 			->set('get', $_GET)
 			->set('post', $_POST)

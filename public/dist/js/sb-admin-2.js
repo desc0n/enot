@@ -33,6 +33,17 @@ $(function() {
     }
 
     $('#dataTables-sales').dataTable();
+    
+    $('.selectMainMenu').change(function () {
+        var id = $(this).data('id');
+        var parent_id = $(this).val();
+        
+        $.ajax({type: 'POST', url: '/ajax/set_menu_parent_id', async: true, data:{id: id, parent_id: parent_id},
+            success: function(data) {
+                
+            }
+        });
+    });
 });
 
 function initTypeahead($newSaleProductName) {
@@ -134,6 +145,47 @@ function showContent(id){
                 '</button>';
 
             $('#rowContent' + id + ' .rowBtn1').html(html);
+        }
+    });
+}
+
+
+function removeMenu(id){
+    var den = confirm('Подтверждаете удаление пункта меню?');
+
+    if (!den) {
+        return false;
+    }
+
+    $.ajax({type: 'POST', url: '/ajax/remove_menu', async: true, data:{id: id},
+        success: function(data) {
+            $('#rowMenu' + id).remove();
+        }
+    });
+}
+
+function hideMenu(id){
+    $.ajax({type: 'POST', url: '/ajax/hide_menu', async: true, data:{id: id},
+        success: function() {
+            var html =
+                '<button class="btn btn-success" onclick="showMenu(' + id + ');">' +
+                '<span class="glyphicon glyphicon-eye-open"></span> Показать' +
+                '</button>';
+
+            $('#rowMenu' + id + ' .rowBtn1').html(html);
+        }
+    });
+}
+
+function showMenu(id){
+    $.ajax({type: 'POST', url: '/ajax/show_menu', async: true, data:{id: id},
+        success: function() {
+            var html =
+                '<button class="btn btn-warning" onclick="hideMenu(' + id + ');">' +
+                '<span class="glyphicon glyphicon-eye-close"></span> Скрыть' +
+                '</button>';
+
+            $('#rowMenu' + id + ' .rowBtn1').html(html);
         }
     });
 }

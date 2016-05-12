@@ -58,4 +58,37 @@ class Controller_Ajax extends Controller
 
 		$this->response->body(View::factory('ajax')->set('content', json_encode($contentModel->setIntroContentImg($this->request->post('id')))));
 	}
+
+	public function action_show_menu()
+	{
+		/** @var $contentModel Model_Content */
+		$contentModel = Model::factory('Content');
+
+		$this->response->body(View::factory('ajax')->set('content', json_encode($contentModel->setMenu($this->request->post('id'), 1))));
+	}
+
+	public function action_hide_menu()
+	{
+		/** @var $contentModel Model_Content */
+		$contentModel = Model::factory('Content');
+
+		$this->response->body(View::factory('ajax')->set('content', json_encode($contentModel->setMenu($this->request->post('id'), 0))));
+	}
+
+	public function action_remove_menu()
+	{
+		/** @var $contentModel Model_Content */
+		$contentModel = Model::factory('Content');
+
+		$this->response->body(View::factory('ajax')->set('content', json_encode($contentModel->removeMenu($this->request->post('id')))));
+	}
+
+	public function action_set_menu_parent_id()
+	{
+		/** @var $contentModel Model_Content */
+		$contentModel = Model::factory('Content');
+
+		$this->response->body(View::factory('ajax')->set('content', json_encode($contentModel->setMenu($this->request->post('id'), null, $this->request->post('parent_id')))));
+	}
+
 }

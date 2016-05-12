@@ -63,12 +63,20 @@
                     <li>
                         <a href=""><i class="fa fa-dashboard fa-fw"></i> Панель управления</a>
                     </li>
-                    <li class="<?=($page == 'redact_pages' ? 'active' : null);?>">
+                    <li>
                         <a href="#"><i class="fa fa-pencil fa-fw"></i> Редактирование страниц<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li><a href="/admin/control_panel/pages_list">Основные страницы</a></li>
                             <li><a href="/admin/control_panel/news_list">Новости</a></li>
                             <li><a href="/admin/control_panel/articles_list">Статьи</a></li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-list fa-fw"></i> Редактирование меню<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="/admin/control_panel/mainmenu_list">Главное меню</a></li>
+                            <li><a href="/admin/control_panel/submenu_list">Подменю</a></li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
