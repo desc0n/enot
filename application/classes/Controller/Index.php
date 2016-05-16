@@ -38,6 +38,9 @@ class Controller_Index extends Controller
 
 	public function action_page()
 	{
+        /** @var $adminModel Model_Admin */
+        $adminModel = Model::factory('Admin');
+
 		/** @var Model_Content $contentModel */
 		$contentModel = Model::factory('Content');
 
@@ -46,6 +49,26 @@ class Controller_Index extends Controller
 
 		/** @var Model_Articles $articleModel */
 		$articleModel = Model::factory('Articles');
+
+        if (!empty($this->request->post('check_code'))) {
+            $adminModel->sendMail(
+                'descon@bk.ru',
+                'Запрос со страницы контактов',
+                sprintf('Тема письма: %s<br>\n Текст письма: %s', $this->request->post('subject'), $this->request->post('message')),
+                $this->request->post('email')
+            );
+
+            if (
+                $adminModel->sendMail(
+                    $adminModel->systemMail,
+                    'Запрос со страницы контактов',
+                    sprintf('Тема письма: %s<br>\n Текст письма: %s', $this->request->post('subject'), $this->request->post('message')),
+                    $this->request->post('email')
+                )
+            ) {
+                HTTP::redirect(sprintf('%s/?result=success', $this->request->referrer()));
+            }
+        }
 
 		$path = sprintf('/page/%s', $this->request->param('slug'));
 
@@ -59,6 +82,8 @@ class Controller_Index extends Controller
 			->set('content', $contentData)
 			->set('newsAssets', $newsModel->findNewsAssets())
 			->set('articleAssets', $articleModel->findArticlesAssets())
+			->set('check_code', Captcha::instance()->render())
+			->set('get', $this->request->query())
 		;
 
 		$template = $this->getBaseTemplate()

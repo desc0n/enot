@@ -30,7 +30,6 @@
     <link rel="stylesheet" href="/public/css/slide_style.css" type="text/css" />
     <link rel="stylesheet" href="/public/css/custom.css" type="text/css" />
     <script src="/public/js/mootools-core.js" type="text/javascript"></script>
-    <script src="/public/js/core.js" type="text/javascript"></script>
     <script src="/public/js/mootools-more.js" type="text/javascript"></script>
     <script src="/public/js/xtcMenu.js" type="text/javascript"></script>
     <script src="/public/js/wallFX.js" type="text/javascript"></script>

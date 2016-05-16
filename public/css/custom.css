@@ -1182,3 +1182,41 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .mainmenu-item {
     margin-top: 5px;
 }
+.success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    font-size: 12pt;
+}
+
+#respond,
+#viewSuccess {
+    width:450px;
+    background: #fff;
+    padding:50px 50px 30px 50px;
+    display: none;
+    box-shadow: 0px 10px 100px 0px black;
+}
+.bClose {
+    border-radius: 20px;
+    height: 25px;
+    width: 32px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    background: #222;
+    color: #fff;
+    display: block;
+    text-align: center;
+    padding-top: 7px;
+    font-weight: bold;
+}
+
+.bClose:hover {
+    text-decoration: none;
+    color:#000;
+    background: #888;
+}

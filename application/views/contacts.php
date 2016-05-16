@@ -89,28 +89,32 @@
                                                 <div class="moduletable">
                                                     <style type="text/css"><!--div.rapid_contact tr, div.rapid_contact td { border: none; padding: 3px; }--></style>
                                                     <div class="rapid_contact ">
-                                                        <form action="http://enote-vl.ru/contacts" method="post">
+                                                        <?=Form::open(null, ['id' => 'contactsSendForm'])?>
                                                             <div class="rapid_contact intro_text "></div>
-                                                            <table>
+                                                            <table style="width: 80%;">
                                                                 <tbody>
                                                                     <tr>
                                                                         <td>Ваш Email: *</td>
-                                                                        <td><input class="rapid_contact inputbox " type="text" name="rp_email" size="15" value=""></td>
+                                                                        <td><?=Form::input('email', null, ['id' => 'email', 'class' => 'rapid_contact inputbox', 'style' => 'width: 100%']);?></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>Тема: *</td>
-                                                                        <td><input class="rapid_contact inputbox " type="text" name="rp_subject" size="15" value=""></td>
+                                                                        <td><?=Form::input('subject', null, ['id' => 'subject', 'class' => 'rapid_contact inputbox', 'style' => 'width: 100%']);?></td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td valign="top">Сообщение: *</td>
-                                                                        <td><textarea class="rapid_contact textarea " name="rp_message" cols="13" rows="4"></textarea></td>
+                                                                        <td><?=Form::textarea('message', '', ['id' => 'message', 'class' => 'rapid_contact textarea', 'cols' => '13', 'style' => 'width: 100%']);?></td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td colspan="2"><input class="rapid_contact button " type="submit" value="Отправить сообщение" style="width: 100%"></td>
+                                                                        <td valign="top">Проверочный код: *</td>
+                                                                        <td><?=Form::input('check_code', '', ['id' => 'check_code', 'class' => 'rapid_contact inputbox', 'size' => '5', 'style' => 'width: 100px;']);?><?=$check_code;?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2"><?=Form::button('', 'Отправить сообщение', ['type' => 'button', 'class' => 'rapid_contact button', 'style' => 'width: 100%', 'onclick' => 'checkContactSendForm();']);?></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
-                                                        </form>
+                                                        <?=Form::close();?>
                                                     </div>
                                                 </div>
                                                 <br><br><hr>
@@ -127,3 +131,17 @@
         </div>
     </div>
 </div>
+<div id="viewSuccess">
+    <a class="bClose" href="/page/contacts"><span>X</span></a>
+    <!-- Основной текст сообщения -->
+    <div class="success">Письмо успешно отправлено!</div>
+</div>
+<script src="/public/js/custom.js" type="text/javascript"></script>
+<script src="/public/js/popup.js" type="text/javascript"></script>
+<?if (Arr::get($get, 'result') === 'success') {?>
+<script>
+    jQuery(document).ready(function() {
+        jQuery("#viewSuccess").bPopup();
+    });
+</script>
+<?}?>

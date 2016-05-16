@@ -27,7 +27,7 @@ abstract class Captcha
 	(
 		'style'      	=> 'basic',
 		'width'      	=> 150,
-		'height'     	=> 50,
+		'height'     	=> 45,
 		'complexity' 	=> 4,
 		'background' 	=> '',
 		'fontpath'   	=> '',
@@ -431,7 +431,7 @@ abstract class Captcha
 	{
 		// Output html element
 		if ($html === TRUE)
-			return '<img src="'.URL::site('captcha/'.Captcha::$config['group']).'" width="'.Captcha::$config['width'].'" height="'.Captcha::$config['height'].'" alt="Captcha" class="captcha" />';
+			return '<img src="'.URL::site('captcha/'.Captcha::$config['group']).'" width="'.Captcha::$config['width'].'" style="height: 45px; margin-left: 15px; margin-top: -10px;" class="check" />';
 
 		// Send the correct HTTP header
         Request::current()->headers['Content-Type'] = 'image/'.$this->image_type;

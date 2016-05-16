@@ -279,7 +279,7 @@ p.article-intro {color:#5a5a5a}
 .logout_slide_btn {color:#a50729;background:#ebebeb;}
 .logout_slide_btn:hover {color:#fff;background:#a50729;cursor:pointer;}
 div.slide-leftbox li a {color:#a50729;font-size:10px; font-weight:bold; text-transform:uppercase;}
-div.slide-leftbox input.button, input.button {background:#a50729 !important;	color:#fff;}
+div.slide-leftbox input.button, input.button, button.button {background:#a50729 !important;	color:#fff;}
 /* ----------------------------------------------*/
 /* H 03 - Acymailing
 /* ----------------------------------------------*/

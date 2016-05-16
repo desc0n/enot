@@ -91,4 +91,9 @@ class Controller_Ajax extends Controller
 		$this->response->body(View::factory('ajax')->set('content', json_encode($contentModel->setMenu($this->request->post('id'), null, $this->request->post('parent_id')))));
 	}
 
+	public function action_check_code()
+	{
+		$this->response->body(View::factory('ajax')->set('content', json_encode(Captcha::valid($this->request->post('code')) ? 'success' : 'error')));
+	}
+
 }
