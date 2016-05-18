@@ -120,6 +120,7 @@ Kohana::modules(array(
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
 	'captcha'    => MODPATH.'captcha',
 	//'guestid'    => MODPATH.'guestid',
+	'email'       => MODPATH.'swift', // E-mail
 	));
 
 /**

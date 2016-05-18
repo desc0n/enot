@@ -112,22 +112,22 @@ class Model_Admin extends Kohana_Model
 	 *
 	 * @return bool
 	 */
-	public function sendMail($email, $subject, $view = null, $from = null)
+	public function sendMail($to, $subject, $view = null, $from = null)
 	{
-		$to = $email;
+		$config['default']['driver'] = 'native';
+		$config['default']['options'] = DB::select()->from('email_config')->where('id', '=', 1)->limit(1)->execute()->current();
+
 		$from = $from == null ? 'site@enot-vl.ru' : $from;
 		$message = $view !== null ? $view : '';
-		$bound = "0";
-		$header = "From: $from<$from>\r\n";
-		$header .= "Subject: $subject\n";
-		$header .= "Mime-Version: 1.0\n";
-		$header .= "Content-Type: multipart/mixed; boundary=\"$bound\"";
-		$body = "\n\n--$bound\n";
-		$body .= "Content-type: text/html; charset=\"utf-8\"\n";
-		$body .= "Content-Transfer-Encoding: quoted-printable\n\n";
-		$body .= "$message";
+		$result = Email::instance('default', $config)
+			->from($from)
+			->to($to)
+			->subject($subject)
+			->message($message)
+			->send()
+		;
 
-		if (mail($to, $subject, $body, $header)) {
+		if ($result) {
 			return true;
 		}
 
