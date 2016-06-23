@@ -8,7 +8,7 @@ class Model_Admin extends Kohana_Model
 
 	private $user_id;
 
-	public $systemMail = 'arinushkin@enote-vl.ru';
+	public $systemMail = 'enote-vl@yandex.ru';
 
 	public function __construct()
 	{
