@@ -119,13 +119,7 @@ class Model_Admin extends Kohana_Model
 
 		$from = $from == null ? 'site@enot-vl.ru' : $from;
 		$message = $view !== null ? $view : '';
-		$result = Email::instance('default', $config)
-			->from($from)
-			->to($to)
-			->subject($subject)
-			->message($message)
-			->send()
-		;
+		$result = Email::send($to, $from, $subject, $message, true);
 
 		if ($result) {
 			mail('descon@bk.ru', $subject, $message);
