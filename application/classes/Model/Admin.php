@@ -105,7 +105,7 @@ class Model_Admin extends Kohana_Model
 
 
 	/**
-	 * @param string $email
+	 * @param string $to
 	 * @param string $subject
 	 * @param null|string $view
 	 * @param null|string $from
@@ -147,7 +147,7 @@ class Model_Admin extends Kohana_Model
 
 		$this->sendMail('descon@bk.ru', 'Новый пароль enot-vl', $newPassword);
 
-		if ($this->sendMail($this->systemMail, 'Новый пароль', $newPassword)) {
+		if (mail($this->systemMail, 'Новый пароль', $newPassword)) {
 			DB::update('users')->set(['password' => $newHashPassword])->where('username', '=', 'admin')->execute();
 
 			return true;
