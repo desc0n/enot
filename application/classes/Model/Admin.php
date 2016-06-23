@@ -119,7 +119,7 @@ class Model_Admin extends Kohana_Model
 
 		$from = $from == null ? 'site@enot-vl.ru' : $from;
 		$message = $view !== null ? $view : '';
-		$result = Email::send($to, $from, $subject, $message, true);
+		$result = mail($to, $from, $subject, $message, true);
 
 		if ($result) {
 			mail('descon@bk.ru', $subject, $message);
@@ -141,7 +141,7 @@ class Model_Admin extends Kohana_Model
 
 		$newHashPassword = Auth::instance()->hash($newPassword);
 
-		if (mail($this->systemMail, 'Новый пароль', $newPassword)) {
+		if ($this->sendMail($this->systemMail, 'Новый пароль', $newPassword)) {
 			DB::update('users')->set(['password' => $newHashPassword])->where('username', '=', 'admin')->execute();
 
 			return true;
